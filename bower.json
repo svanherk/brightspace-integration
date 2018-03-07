@@ -177,7 +177,7 @@
     "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#b4610f64e53179e317147901e4daf7813e908444"
   },
   "name": "brightspace-integration",
   "private": true,
