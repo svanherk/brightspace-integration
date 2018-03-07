@@ -41,13 +41,13 @@
     "iron-iconset-svg": "git://github.com/dlockhart/iron-iconset-svg#fix-empty-iconset",
     "jquery-vui-collapsible-section": "^1.2.2",
     "jquery-vui-change-tracking": "^0.6.0",
-    "polymer": "^1.11.3",
+    "polymer": "^2.5.0",
     "susy": "^2.2.12",
     "d2l-users": "^1.1.1"
   },
   "private": true,
   "resolutions": {
     "iron-iconset-svg": "fix-empty-iconset",
-    "webcomponentsjs": "^0.7"
+    "webcomponentsjs": "^1.0"
   }
 }
