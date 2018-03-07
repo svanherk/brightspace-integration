@@ -79,14 +79,14 @@
       "iron-selector": "2.1.0",
       "iron-validatable-behavior": "2.1.0",
       "jquery-vui-change-tracking": "0.6.1",
-      "polymer": "1.11.3",
+      "polymer": "2.7.0",
       "s-html": "1.2.1",
       "shadycss": "1.7.1",
       "siren-parser-import": "7.0.0",
       "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
-      "webcomponentsjs": "0.7.24"
+      "webcomponentsjs": "1.3.0"
     }
   },
   "dependencies": {
@@ -109,7 +109,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#c0952ac31024c6098e25bc0fc61be79a048539f1",
-    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#0a64e279952d3e4adaaa5ac514cb6434cba34da6",
+    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#7eb4dba7822622a27f9f03333e0738e854403ef8",
     "d2l-html-editor": "https://github.com/Brightspace/d2l-html-editor.git#58fe82e3b5f608faeed8e4c900382b1798696ef7",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#33f4172a17d9e567a650022b22d512671499b79d",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#9583dc9d0244cac492d5ccd32ef4e96cf8addfb5",
@@ -168,14 +168,14 @@
     "iron-selector": "https://github.com/PolymerElements/iron-selector.git#82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c",
     "iron-validatable-behavior": "https://github.com/PolymerElements/iron-validatable-behavior.git#4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
     "jquery-vui-change-tracking": "https://github.com/Brightspace/jquery-valence-ui-change-tracking.git#a7af09f5f12d9c2ab39a0e603fa2f236961c7824",
-    "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
+    "polymer": "https://github.com/Polymer/polymer.git#176bc8fb41da317b1b2fa647227e6b1fd47ced11",
     "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "https://github.com/webcomponents/shadycss.git#c9fc89fee69293a24526a55b93c35a3ab7ea0254",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
     "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#1ca4128b3c4f040a6ad833c783525765fc25ac5f"
   },
   "name": "brightspace-integration",
   "private": true,
@@ -199,7 +199,7 @@
     "d2l-fetch-simple-cache": "a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "c0952ac31024c6098e25bc0fc61be79a048539f1",
-    "d2l-hm-constants-behavior": "0a64e279952d3e4adaaa5ac514cb6434cba34da6",
+    "d2l-hm-constants-behavior": "7eb4dba7822622a27f9f03333e0738e854403ef8",
     "d2l-html-editor": "58fe82e3b5f608faeed8e4c900382b1798696ef7",
     "d2l-icons": "33f4172a17d9e567a650022b22d512671499b79d",
     "d2l-image-banner-overlay": "9583dc9d0244cac492d5ccd32ef4e96cf8addfb5",
@@ -258,13 +258,13 @@
     "iron-selector": "82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c",
     "iron-validatable-behavior": "4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
     "jquery-vui-change-tracking": "a7af09f5f12d9c2ab39a0e603fa2f236961c7824",
-    "polymer": "937021964c80c55ed3a2218d830b2520f8195d43",
+    "polymer": "176bc8fb41da317b1b2fa647227e6b1fd47ced11",
     "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "c9fc89fee69293a24526a55b93c35a3ab7ea0254",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
     "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "1ca4128b3c4f040a6ad833c783525765fc25ac5f"
   }
 }
