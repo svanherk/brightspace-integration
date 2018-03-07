@@ -82,7 +82,7 @@
     "vui-input": "https://github.com/Brightspace/valence-ui-input.git#52a259d79389632bae31830c32d7303a5db14345",
     "vui-list": "https://github.com/Brightspace/valence-ui-list.git#95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "vui-validation": "https://github.com/Brightspace/valence-ui-validation.git#757daf55e9fad9aacf31dd34ace60c5015ed3225",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#b4610f64e53179e317147901e4daf7813e908444"
   },
   "private": true,
   "resolutions": {
@@ -167,7 +167,7 @@
     "vui-input": "52a259d79389632bae31830c32d7303a5db14345",
     "vui-list": "95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "vui-validation": "757daf55e9fad9aacf31dd34ace60c5015ed3225",
-    "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "b4610f64e53179e317147901e4daf7813e908444"
   },
   "bowerLocker": {
     "lastUpdated": "2018-06-19T21:10:47.235Z",
@@ -238,7 +238,7 @@
       "iron-validatable-behavior": "2.1.0",
       "jquery-vui-change-tracking": "0.5.4",
       "jquery-vui-collapsible-section": "1.2.1",
-      "polymer": "1.11.3",
+      "polymer": "2.5.0",
       "resize-aware": "1.9.1",
       "s-html": "1.2.0",
       "shadycss": "1.3.1",
@@ -253,7 +253,7 @@
       "vui-input": "2.1.0",
       "vui-list": "1.1.1",
       "vui-validation": "1.1.2",
-      "webcomponentsjs": "0.7.24"
+      "webcomponentsjs": "1.1.0"
     }
   }
 }
