@@ -81,7 +81,7 @@
     "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#b4610f64e53179e317147901e4daf7813e908444"
   },
   "private": true,
   "resolutions": {
@@ -165,7 +165,7 @@
     "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
+    "webcomponentsjs": "b4610f64e53179e317147901e4daf7813e908444"
   },
   "bowerLocker": {
     "lastUpdated": "2018-08-03T15:07:22.125Z",
@@ -242,7 +242,7 @@
       "iron-validatable-behavior": "2.1.0",
       "jquery-vui-change-tracking": "0.6.0",
       "jquery-vui-collapsible-section": "1.2.2",
-      "polymer": "1.11.3",
+      "polymer": "2.5.0",
       "resize-aware": "1.9.1",
       "s-html": "1.2.0",
       "shadycss": "1.4.0",
@@ -250,7 +250,7 @@
       "Sortable": "8794188794",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
-      "webcomponentsjs": "0.7.24"
+      "webcomponentsjs": "1.1.0"
     }
   }
 }
