@@ -14,7 +14,7 @@
   "sources": [],
   "builds": [
     {
-      "name": "bundled",
+      "name": "es6-bundled",
       "bundle": true,
       "addPushManifest": false,
       "addServiceWorker": false,
@@ -24,6 +24,23 @@
       },
       "js": {
         "compile": false,
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      }
+    },
+    {
+      "name": "es5-bundled",
+      "bundle": true,
+      "addPushManifest": false,
+      "addServiceWorker": false,
+      "insertPrefetchLinks": false,
+      "css": {
+        "minify": true
+      },
+      "js": {
+        "compile": true,
         "minify": true
       },
       "html": {
