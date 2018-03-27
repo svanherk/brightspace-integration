@@ -32,7 +32,7 @@
     "uglify:css:datagrid": "cleancss -s ./build/datagrid.css -o ./build/datagrid.min.css",
     "uglify:css:homepages": "cleancss -s ./build/homepages.css -o ./build/homepages.min.css",
     "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js",
-    "jsonpify-imports": "node jsonp-imports.js \"./build/**/*.html\""
+    "jsonpify-imports": "node jsonp-imports.js \"./build/es5-bundled/**/*.html\""
   },
   "repository": {
     "type": "git",
