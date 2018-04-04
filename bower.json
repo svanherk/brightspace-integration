@@ -81,7 +81,7 @@
     "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#b4610f64e53179e317147901e4daf7813e908444"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
   },
   "private": true,
   "resolutions": {
@@ -165,7 +165,7 @@
     "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "b4610f64e53179e317147901e4daf7813e908444"
+    "webcomponentsjs": "2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
   },
   "bowerLocker": {
     "lastUpdated": "2018-08-03T15:07:22.125Z",
@@ -250,7 +250,7 @@
       "Sortable": "8794188794",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
-      "webcomponentsjs": "1.1.0"
+      "webcomponentsjs": "1.1.1"
     }
   }
 }
