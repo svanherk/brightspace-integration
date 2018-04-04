@@ -83,7 +83,7 @@
     "vui-input": "https://github.com/Brightspace/valence-ui-input.git#52a259d79389632bae31830c32d7303a5db14345",
     "vui-list": "https://github.com/Brightspace/valence-ui-list.git#95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "vui-validation": "https://github.com/Brightspace/valence-ui-validation.git#757daf55e9fad9aacf31dd34ace60c5015ed3225",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#b4610f64e53179e317147901e4daf7813e908444"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
   },
   "private": true,
   "resolutions": {
@@ -169,7 +169,7 @@
     "vui-input": "52a259d79389632bae31830c32d7303a5db14345",
     "vui-list": "95245dcfc833c1eae49f3d840ba12b6c2674a55a",
     "vui-validation": "757daf55e9fad9aacf31dd34ace60c5015ed3225",
-    "webcomponentsjs": "b4610f64e53179e317147901e4daf7813e908444"
+    "webcomponentsjs": "2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
   },
   "bowerLocker": {
     "lastUpdated": "2018-07-05T18:20:12.657Z",
@@ -256,7 +256,7 @@
       "vui-input": "2.1.0",
       "vui-list": "1.1.1",
       "vui-validation": "1.1.2",
-      "webcomponentsjs": "1.1.0"
+      "webcomponentsjs": "1.1.1"
     }
   }
 }
