@@ -19,7 +19,6 @@
     "build:navicons": "cpy \"nav-icons/*.*\" build/images/nav-icons",
     "build:email-icons": "node build-email-icons.js",
     "build:wc": "polymer build",
-    "postbuild:wc": "npm run jsonpify-imports",
     "postinstall": "polymer install",
     "lint": "npm run lint:js && npm run lint:html",
     "lint:html": "eslint web-components/*.html",
