@@ -81,13 +81,13 @@
     "iron-validatable-behavior": "https://github.com/PolymerElements/iron-validatable-behavior.git#4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
     "jquery-vui-change-tracking": "https://github.com/Brightspace/jquery-valence-ui-change-tracking.git#9e0507972c74446bab849cd21eae5fcb2c88d4e7",
     "jquery-vui-collapsible-section": "https://github.com/Brightspace/jquery-valence-ui-collapsible-section.git#b7375a4f6fd7c488f56b04d4752bd32bf2b65c27",
-    "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
-    "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
-    "shadycss": "https://github.com/webcomponents/shadycss.git#556978204f17714e195f80bd2dceb2dd40d51ac7",
+    "polymer": "https://github.com/Polymer/polymer.git#00d510f17a19b5b2ffed2fab5c2220b562b69b4f",
+    "s-html": "https://github.com/Brightspace/s-html.git#2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
+    "shadycss": "https://github.com/webcomponents/shadycss.git#b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#44f3606a704dd121e93735a2a4924b3642488c4d"
   },
   "private": true,
   "resolutions": {
@@ -171,13 +171,13 @@
     "iron-validatable-behavior": "4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
     "jquery-vui-change-tracking": "9e0507972c74446bab849cd21eae5fcb2c88d4e7",
     "jquery-vui-collapsible-section": "b7375a4f6fd7c488f56b04d4752bd32bf2b65c27",
-    "polymer": "937021964c80c55ed3a2218d830b2520f8195d43",
-    "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
-    "shadycss": "556978204f17714e195f80bd2dceb2dd40d51ac7",
+    "polymer": "00d510f17a19b5b2ffed2fab5c2220b562b69b4f",
+    "s-html": "2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
+    "shadycss": "b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "2bb2c2c92008d2354b75c0fa633ea404c5c999c3"
+    "webcomponentsjs": "44f3606a704dd121e93735a2a4924b3642488c4d"
   },
   "bowerLocker": {
     "lastUpdated": "2018-09-14T15:29:10.734Z",
@@ -262,13 +262,13 @@
       "iron-validatable-behavior": "2.1.0",
       "jquery-vui-change-tracking": "0.6.0",
       "jquery-vui-collapsible-section": "1.2.2",
-      "polymer": "2.5.0",
+      "polymer": "2.6.0",
       "s-html": "1.2.1",
       "shadycss": "1.5.2",
       "siren-parser-import": "7.0.0",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
-      "webcomponentsjs": "1.1.1"
+      "webcomponentsjs": "1.2.3"
     }
   }
 }
