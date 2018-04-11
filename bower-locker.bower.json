@@ -48,7 +48,7 @@
     "d2l-offscreen": "^3.0.3",
     "d2l-text-input": "^0.4.0",
     "iron-iconset-svg": "fix-empty-iconset",
-    "polymer": "^2.5.0",
+    "polymer": "^2.6.0",
     "shadycss": "^1.2.0",
     "webcomponentsjs": "^1.0"
   }
