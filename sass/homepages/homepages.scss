@@ -114,6 +114,10 @@ $viewport-width-sm: 768px;
 	.d2l-custom-widget .d2l-widget-content .d2l-htmlblock > p:last-child {
 		margin-bottom: 0;
 	}
+
+	.d2l-widget-iframe-wrapper {
+		display: flex;
+	}
 }
 
 .d2l-tile.d2l-widget {
