@@ -1,7 +1,6 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "Stickyfill": "https://github.com/wilddeer/stickyfill.git#ec3a2ba7466515c7863eb108282ad18b10543a15",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#bc6b1ca7a783913cc880858722bf8c10d5a325a5",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#446546624ba2cd4cc01e4140ec73bc159a829fc3",
@@ -68,7 +67,7 @@
     "jquery-vui-change-tracking": "https://github.com/Brightspace/jquery-valence-ui-change-tracking.git#c558628c28517188da5a770566e9f3e7d9b98ca7",
     "jquery-vui-collapsible-section": "https://github.com/Brightspace/jquery-valence-ui-collapsible-section.git#73c304555f5358192e98f8b687b007c04427ab88",
     "jquery-vui-scrollspy": "https://github.com/Brightspace/jquery-valence-ui-scrollspy.git#0f19e12435f0ae80ffadba5b57621e8b052977db",
-    "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
+    "polymer": "https://github.com/Polymer/polymer.git#00d510f17a19b5b2ffed2fab5c2220b562b69b4f",
     "resize-aware": "https://github.com/mlisook/resize-aware.git#14ac99de0b4bca216d306785e57f737ed97bdc8b",
     "s-html": "https://github.com/Brightspace/s-html.git#d5a8cad013e3d9fe1c6f9408ed98f2b7dc1ed23b",
     "shadycss": "https://github.com/webcomponents/shadycss.git#2aea216187280d2db8f50629905810b3388cbe49",
@@ -88,7 +87,6 @@
   },
   "private": true,
   "resolutions": {
-    "Stickyfill": "ec3a2ba7466515c7863eb108282ad18b10543a15",
     "app-localize-behavior": "1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "bc6b1ca7a783913cc880858722bf8c10d5a325a5",
     "d2l-button": "446546624ba2cd4cc01e4140ec73bc159a829fc3",
@@ -155,7 +153,7 @@
     "jquery-vui-change-tracking": "c558628c28517188da5a770566e9f3e7d9b98ca7",
     "jquery-vui-collapsible-section": "73c304555f5358192e98f8b687b007c04427ab88",
     "jquery-vui-scrollspy": "0f19e12435f0ae80ffadba5b57621e8b052977db",
-    "polymer": "937021964c80c55ed3a2218d830b2520f8195d43",
+    "polymer": "00d510f17a19b5b2ffed2fab5c2220b562b69b4f",
     "resize-aware": "14ac99de0b4bca216d306785e57f737ed97bdc8b",
     "s-html": "d5a8cad013e3d9fe1c6f9408ed98f2b7dc1ed23b",
     "shadycss": "2aea216187280d2db8f50629905810b3388cbe49",
@@ -176,7 +174,6 @@
   "bowerLocker": {
     "lastUpdated": "2018-05-23T18:46:43.254Z",
     "lockedVersions": {
-      "Stickyfill": "2.0.3",
       "app-localize-behavior": "2.0.1",
       "d2l-alert": "3.0.1",
       "d2l-button": "4.3.0",
