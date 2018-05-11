@@ -42,8 +42,8 @@ This will run a web server on port `8080` pointing at the `build` directory. You
 To point your Brightspace instance at the local integration project:
 
 1. Go to your `{instance}/config/Infrastructure` directory
-2. Edit `D2L.LP.Web.UI.Bsi.config.json`
-3. Change the `baseLocation` property to `http://localhost:8080/` (or your computer's hostname) - note the trailing `/`
+2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
+3. Change the `daylight-polymer-<version>` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
 4. Restart IIS
 
 The config file will get overwritten during the build.
