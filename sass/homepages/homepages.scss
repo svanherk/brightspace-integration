@@ -115,8 +115,8 @@ $viewport-width-sm: 768px;
 		margin-bottom: 0;
 	}
 
-	.d2l-widget-iframe-wrapper {
-		display: flex;
+	.d2l-widget-iframe-wrapper > iframe {
+		display: block;
 	}
 }
 
