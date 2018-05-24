@@ -1,5 +1,6 @@
 @import '../bower_components/d2l-colors/d2l-colors.scss';
 @import '../bower_components/d2l-button/d2l-button.scss';
+@import '../bower_components/d2l-typography/d2l-typography.scss';
 @import 'common.scss';
 
 .bsi-button-menu > span {
@@ -18,10 +19,7 @@
 	cursor: pointer;
 	display: inline-block;
 	font-family: inherit;
-	font-size: 0.7rem;
-	font-weight: 700;
-	letter-spacing: 0.02rem;
-	line-height: 1rem;
+	@include d2l-label-text();
 	margin: 0 $d2l-button-spacing 0 0;
 	min-height: calc(2rem + 2px);
 	outline: none;
@@ -46,7 +44,7 @@
 .bsi-button-menu:link,
 .bsi-button-menu.vui-disabled:hover,
 .bsi-button-menu.vui-disabled:focus {
-	background-color: $d2l-color-sylvite;
+	background-color: $d2l-color-regolith;
 	border-color: $d2l-color-mica;
 	color: $d2l-color-ferrite;
 }
@@ -55,7 +53,7 @@
 	background-color: $d2l-color-gypsum;
 }
 .bsi-button-menu:not(.vui-disabled):not(.bsi-button-menu-primary):focus {
-	@include _d2l-button-focus();
+	@include _d2l-button-focus-plus-border();
 }
 
 .bsi-button-menu.vui-disabled {
@@ -75,5 +73,5 @@
 	background-color: $d2l-color-celestine-minus-1;
 }
 .bsi-button-menu.bsi-button-menu-primary:not(.vui-disabled):focus {
-	@include _d2l-button-primary-focus();
+	@include _d2l-button-focus();
 }
