@@ -62,7 +62,7 @@
     "imagemin-optipng": "^5.2.1",
     "lie": "^3.3.0",
     "mocha": "^3.2.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.0",
     "polymer-cli": "^1.6.0",
     "postcss-cli": "^2.6.0",
     "rimraf": "^2.5.4",
