@@ -51,10 +51,6 @@
     "iron-iconset-svg": "fix-empty-iconset",
     "webcomponentsjs": "^0.7",
     "shadycss": "^1.2.0",
-    "d2l-fetch-siren-entity-behavior": "^4.0.2",
-    "d2l-textarea": "^0.6.0",
-    "d2l-text-input": "^0.4.0",
-    "d2l-tooltip": "^2.0.4",
-    "s-html": "1.2.0"
+    "d2l-text-input": "^0.4.0"
   }
 }
