@@ -3,7 +3,7 @@
   "dependencies": {
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#bc6b1ca7a783913cc880858722bf8c10d5a325a5",
-    "d2l-button": "https://github.com/BrightspaceUI/button.git#446546624ba2cd4cc01e4140ec73bc159a829fc3",
+    "d2l-button": "https://github.com/BrightspaceUI/button.git#6d3fc625e7bad33c39975f2bb1194d936084cad1",
     "d2l-button-group": "https://github.com/BrightspaceUI/button-group.git#fe468adc715504a33020d9f8d9298e097a88e6fa",
     "d2l-colors": "https://github.com/BrightspaceUI/colors.git#7764f81f88be557760f13cf7a801ed5905662fc2",
     "d2l-course-image": "https://github.com/Brightspace/course-image.git#a1807ea67b51cf80622f9c54845e7012056659e0",
@@ -89,7 +89,7 @@
   "resolutions": {
     "app-localize-behavior": "1c7b334b36508c939fa64d2b4dc8d7c412f536f8",
     "d2l-alert": "bc6b1ca7a783913cc880858722bf8c10d5a325a5",
-    "d2l-button": "446546624ba2cd4cc01e4140ec73bc159a829fc3",
+    "d2l-button": "6d3fc625e7bad33c39975f2bb1194d936084cad1",
     "d2l-button-group": "fe468adc715504a33020d9f8d9298e097a88e6fa",
     "d2l-colors": "7764f81f88be557760f13cf7a801ed5905662fc2",
     "d2l-course-image": "a1807ea67b51cf80622f9c54845e7012056659e0",
@@ -176,7 +176,7 @@
     "lockedVersions": {
       "app-localize-behavior": "2.0.1",
       "d2l-alert": "3.0.1",
-      "d2l-button": "4.3.0",
+      "d2l-button": "4.4.0",
       "d2l-button-group": "2.0.1",
       "d2l-colors": "3.1.2",
       "d2l-course-image": "2.1.3",
