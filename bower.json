@@ -31,7 +31,7 @@
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d54f43397610f53f0c686b66a29dbfd07aa01d17",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#b8f2caa8a3a96e2f1f3eb0dc1be60b66abed32e6",
-    "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#f9c754a17a9c5ee4742eae184a2941a886a1da43",
+    "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#c7faacf6425cbfec103a136c37fc741ac55dca36",
     "d2l-save-status": "https://github.com/Brightspace/d2l-save-status.git#39b57c944387cf504e4a4d13d64192612316198f",
     "d2l-scroll-spy": "https://github.com/BrightspaceUI/scroll-spy.git#1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "git://github.com/Brightspace/d2l-search-widget-ui.git#9a4dff3e9c0da65a2a2bd372b5a2ab0dcda8eb29",
@@ -119,7 +119,7 @@
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d54f43397610f53f0c686b66a29dbfd07aa01d17",
     "d2l-polymer-behaviors": "b8f2caa8a3a96e2f1f3eb0dc1be60b66abed32e6",
-    "d2l-rubric": "f9c754a17a9c5ee4742eae184a2941a886a1da43",
+    "d2l-rubric": "c7faacf6425cbfec103a136c37fc741ac55dca36",
     "d2l-save-status": "39b57c944387cf504e4a4d13d64192612316198f",
     "d2l-scroll-spy": "1163917d64637971ac6d3c8e16ca31c1350c269d",
     "d2l-search-widget": "9a4dff3e9c0da65a2a2bd372b5a2ab0dcda8eb29",
@@ -176,7 +176,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-06-14T15:09:54.436Z",
+    "lastUpdated": "2018-06-15T12:27:23.986Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.1",
       "d2l-alert": "3.0.1",
@@ -208,7 +208,7 @@
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.2",
       "d2l-polymer-behaviors": "1.6.1",
-      "d2l-rubric": "0.62.0",
+      "d2l-rubric": "0.63.0",
       "d2l-save-status": "0.3.0",
       "d2l-scroll-spy": "0.0.3",
       "d2l-search-widget": "3.0.4",
