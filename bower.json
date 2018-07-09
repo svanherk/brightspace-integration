@@ -29,7 +29,7 @@
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#a1d4058f85587e229668b5af14a1adc0c238d8f5",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#d313f38eaa92f41c7136fd2ff59ab16a646858a5",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
-    "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d54f43397610f53f0c686b66a29dbfd07aa01d17",
+    "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#da60a0188cb2f700a2746ff86fe9d0a758757945",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#b8f2caa8a3a96e2f1f3eb0dc1be60b66abed32e6",
     "d2l-resize-observer-polyfill-import": "https://github.com/Brightspace/resize-observer-polyfill-import.git#4101abe201c413a4255be22095c05e0e2f562313",
     "d2l-rubric": "https://github.com/Brightspace/d2l-rubric.git#4b4251e9761630705f4ecb6e5f985ac8bbcaf8d0",
@@ -115,7 +115,7 @@
     "d2l-more-less": "a1d4058f85587e229668b5af14a1adc0c238d8f5",
     "d2l-my-courses": "d313f38eaa92f41c7136fd2ff59ab16a646858a5",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
-    "d2l-organization-hm-behavior": "d54f43397610f53f0c686b66a29dbfd07aa01d17",
+    "d2l-organization-hm-behavior": "da60a0188cb2f700a2746ff86fe9d0a758757945",
     "d2l-polymer-behaviors": "b8f2caa8a3a96e2f1f3eb0dc1be60b66abed32e6",
     "d2l-resize-observer-polyfill-import": "4101abe201c413a4255be22095c05e0e2f562313",
     "d2l-rubric": "4b4251e9761630705f4ecb6e5f985ac8bbcaf8d0",
@@ -172,7 +172,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-07-05T18:20:12.657Z",
+    "lastUpdated": "2018-07-09T16:26:15.000Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.0.1",
@@ -202,7 +202,7 @@
       "d2l-more-less": "4.2.1",
       "d2l-my-courses": "5.4.1",
       "d2l-offscreen": "3.0.3",
-      "d2l-organization-hm-behavior": "2.0.2",
+      "d2l-organization-hm-behavior": "2.0.3",
       "d2l-polymer-behaviors": "1.6.1",
       "d2l-resize-observer-polyfill-import": "1.5.0",
       "d2l-rubric": "0.64.0",
