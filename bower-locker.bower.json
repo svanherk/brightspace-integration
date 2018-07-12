@@ -1,7 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.0.0",
+    "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.2.0",
     "jquery-vui-accordion": "~0.3.2",
     "jquery-vui-collapsible-section": "~0.5.0",
     "jquery-vui-change-tracking": "~0.4.0",
