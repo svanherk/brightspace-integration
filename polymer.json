@@ -1,39 +1,59 @@
 {
+  "npm": true,
   "entrypoint": "web-components/index.html",
   "fragments": [
-    "web-components/bsi.html",
-    "web-components/d2l-activity-alignments.html",
-    "web-components/d2l-image-banner-overlay.html",
-    "web-components/d2l-more-less.html",
-    "web-components/d2l-my-courses.html",
-    "web-components/d2l-my-dashboards.html",
-    "web-components/d2l-opt-in-flyout-webcomponent.html",
-    "web-components/d2l-simple-overlay.html",
-    "web-components/d2l-scroll-spy.html",
-    "web-components/d2l-table.html",
-    "web-components/d2l-rubric.html",
-    "web-components/d2l-rubric-editor.html",
-    "web-components/d2l-rubric-structure-editor.html"
+    "web-components/bsi.js",
+    "web-components/d2l-activity-alignments.js",
+    "web-components/d2l-image-banner-overlay.js",
+    "web-components/d2l-more-less.js",
+    "web-components/d2l-my-courses.js",
+    "web-components/d2l-my-dashboards.js",
+    "web-components/d2l-opt-in-flyout-webcomponent.js",
+    "web-components/d2l-simple-overlay.js",
+    "web-components/d2l-scroll-spy.js",
+    "web-components/d2l-table.js",
+    "web-components/d2l-rubric.js",
+    "web-components/d2l-rubric-editor.js",
+    "web-components/d2l-rubric-structure-editor.js"
   ],
-  "sources": [],
   "extraDependencies": [
     "bower_components/d2l-rubric/editor/images/**",
     "bower_components/d2l-html-editor/skin-4.3.7/**",
     "bower_components/d2l-html-editor/langs/**",
     "bower_components/d2l-html-editor/d2l_lang_plugin/**"
   ],
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
   "builds": [
     {
-      "name": "bundled",
-      "bundle": true,
-      "addPushManifest": false,
+      "preset": "es5-bundled",
       "addServiceWorker": false,
-      "insertPrefetchLinks": false,
+      "bundle": true,
+      "js": {
+        "minify": true,
+        "compile": "es5",
+        "transformModulesToAmd": true
+      },
       "css": {
         "minify": true
       },
+      "html": {
+        "minify": true
+      }
+    },
+    {
+      "preset": "es6-bundled",
+      "addServiceWorker": false,
+      "bundle": true,
       "js": {
-        "compile": false,
+        "minify": true,
+        "compile": "es2015",
+        "transformModulesToAmd": true
+      },
+      "css": {
         "minify": true
       },
       "html": {
