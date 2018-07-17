@@ -1,8 +1,18 @@
-<script src="../js/page-loading/performance-timings.js"></script>
+import '../js/page-loading/performance-timings.js';
 
-<!-- Required for d2l-fetch + IE11 -->
-<script src="../bower_components/fetch/fetch.js"></script>
+import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 
+import 'fastdom';
+
+import '../src/components/hello-world.js';
+
+window.D2L = window.D2L || {};
+window.D2L.FastDom = window.fastdom;
+
+import '../js/timing-debug.js';
+
+// from bsi.html
+/*
 <link rel="import" href="../bower_components/d2l-fetch/d2l-fetch.html">
 <link rel="import" href="../bower_components/d2l-fetch-auth/d2l-fetch-auth.html">
 <link rel="import" href="../bower_components/d2l-fetch-dedupe/d2l-fetch-dedupe.html">
@@ -23,11 +33,12 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/d2l-alert/d2l-alert.html">
 <link rel="import" href="../bower_components/d2l-alert/d2l-alert-toast.html">
-<link rel="import" href="../bower_components/d2l-fastdom-import/fastdom.html">
 <link rel="import" href="../bower_components/d2l-link/d2l-link.html">
-<link rel="import" href="../bower_components/d2l-button/d2l-button-icon.html">
-<link rel="import" href="../bower_components/d2l-button/d2l-button-subtle.html">
-<link rel="import" href="../bower_components/d2l-button/d2l-floating-buttons.html">
+*/
+import '../node_modules/d2l-button/d2l-button-icon.js';
+import '../node_modules/d2l-button/d2l-button-subtle.js';
+import '../node_modules/d2l-button/d2l-floating-buttons.js';
+/*
 <link rel="import" href="../bower_components/d2l-button-group/d2l-button-group.html">
 <link rel="import" href="../bower_components/d2l-button-group/d2l-action-button-group.html">
 <link rel="import" href="../bower_components/d2l-dropdown/d2l-dropdown.html">
@@ -36,7 +47,9 @@
 <link rel="import" href="../bower_components/d2l-dropdown/d2l-dropdown-menu.html">
 <link rel="import" href="../bower_components/d2l-dropdown/d2l-dropdown-more.html">
 <link rel="import" href="../bower_components/d2l-intl-import/d2l-intl.html">
-<link rel="import" href="../bower_components/d2l-icons/d2l-icons.html">
+*/
+import '../node_modules/d2l-icons/d2l-icons.js';
+/*
 <link rel="import" href="../bower_components/d2l-inputs/d2l-input-search.html">
 <link rel="import" href="../bower_components/d2l-loading-spinner/d2l-loading-spinner.html">
 <link rel="import" href="../bower_components/d2l-menu/d2l-menu.html">
@@ -45,7 +58,9 @@
 <link rel="import" href="../bower_components/d2l-polymer-behaviors/d2l-gestures-swipe.html">
 <link rel="import" href="../bower_components/d2l-save-status/d2l-save-status.html">
 <link rel="import" href="../bower_components/d2l-simple-overlay/d2l-simple-overlay.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+*/
+import '../node_modules/@polymer/iron-icon/iron-icon.js';
+/*
 <link rel="import" href="../bower_components/d2l-navigation/d2l-navigation-band.html">
 <link rel="import" href="../bower_components/d2l-navigation/d2l-navigation-button.html">
 <link rel="import" href="../bower_components/d2l-navigation/d2l-navigation-button-close.html">
@@ -56,3 +71,4 @@
 <link rel="import" href="../bower_components/d2l-navigation/d2l-navigation-link-image.html">
 <link rel="import" href="../bower_components/d2l-navigation/d2l-navigation-separator.html">
 <link rel="import" href="navigation-icons.html">
+*/
