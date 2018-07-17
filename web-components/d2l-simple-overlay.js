@@ -1,1 +1,3 @@
+/*
 <link rel="import" href="../bower_components/d2l-simple-overlay/d2l-simple-overlay.html">
+*/
