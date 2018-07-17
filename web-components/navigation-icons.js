@@ -1,6 +1,9 @@
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/iron-iconset-svg/iron-iconset-svg.html">
-<iron-iconset-svg name="navigation-t1" size="18">
+import '../@polymer/polymer/polymer-legacy.js';
+import '../@polymer/iron-iconset-svg/iron-iconset-svg.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = `<iron-iconset-svg name="navigation-t1" size="18">
 	<svg>
 		<defs>
 			<g id="notification-indicator">
@@ -19,4 +22,5 @@
 			</g>
 		</defs>
 	</svg>
-</svg>
+</svg>`;
+document.head.appendChild($_documentContainer.content);
