@@ -1,2 +1,4 @@
+/*
 <link rel="import" href="../bower_components/d2l-activity-alignments/d2l-activity-alignments.html">
 <link rel="import" href="../bower_components/d2l-activity-alignments/d2l-select-outcomes.html">
+*/
