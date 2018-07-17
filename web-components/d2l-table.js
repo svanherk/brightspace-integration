@@ -1,3 +1,4 @@
+/*
 <link rel="import" href="../bower_components/d2l-table/d2l-table.html">
 <custom-style>
 	<style is="custom-style" include="d2l-table-style">
@@ -10,3 +11,4 @@
 		}
 	</style>
 </custom-style>
+*/

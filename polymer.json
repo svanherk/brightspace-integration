@@ -1,33 +1,65 @@
 {
+  "npm": true,
   "entrypoint": "web-components/index.html",
   "fragments": [
-    "web-components/bsi.html",
-    "web-components/d2l-image-banner-overlay.html",
-    "web-components/d2l-more-less.html",
-    "web-components/d2l-my-courses.html",
-    "web-components/d2l-my-dashboards.html",
-    "web-components/d2l-simple-overlay.html",
-    "web-components/d2l-scroll-spy.html",
-    "web-components/d2l-table.html",
-    "web-components/d2l-rubric.html",
-    "web-components/d2l-rubric-editor.html"
+    "web-components/bsi.js",
+    "web-components/d2l-image-banner-overlay.js",
+    "web-components/d2l-more-less.js",
+    "web-components/d2l-my-courses.js",
+    "web-components/d2l-my-dashboards.js",
+    "web-components/d2l-simple-overlay.js",
+    "web-components/d2l-scroll-spy.js",
+    "web-components/d2l-table.js",
+    "web-components/d2l-rubric.js",
+    "web-components/d2l-rubric-editor.js"
   ],
-  "sources": [],
   "extraDependencies": [
     "bower_components/d2l-rubric/editor/images/**"
   ],
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
   "builds": [
     {
-      "name": "bundled",
-      "bundle": true,
-      "addPushManifest": false,
+      "preset": "es5-bundled",
       "addServiceWorker": false,
-      "insertPrefetchLinks": false,
+      "bundle": {
+        "inlineCss": false,
+        "inlineScripts": false,
+        "rewriteUrlsInTemplates": true,
+        "sourcemaps": true,
+        "stripComments": true
+      },
+      "js": {
+        "minify": true,
+        "compile": true,
+        "transformModulesToAmd": true
+      },
       "css": {
         "minify": true
       },
+      "html": {
+        "minify": true
+      }
+    },
+    {
+      "preset": "es6-bundled",
+      "addServiceWorker": false,
+      "bundle": {
+        "inlineCss": false,
+        "inlineScripts": false,
+        "rewriteUrlsInTemplates": true,
+        "sourcemaps": true,
+        "stripComments": true
+      },
       "js": {
-        "compile": false,
+        "minify": true,
+        "compile": "es2015",
+        "transformModulesToAmd": true
+      },
+      "css": {
         "minify": true
       },
       "html": {
