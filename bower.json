@@ -70,7 +70,7 @@
     "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
     "resize-aware": "https://github.com/mlisook/resize-aware.git#14ac99de0b4bca216d306785e57f737ed97bdc8b",
     "s-html": "https://github.com/Brightspace/s-html.git#2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
-    "shadycss": "https://github.com/webcomponents/shadycss.git#454640b4699dab8d88cf686a5dda877f01f9759a",
+    "shadycss": "https://github.com/webcomponents/shadycss.git#52b09d8040862b67a4eba0656b0e4fd990001a35",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
