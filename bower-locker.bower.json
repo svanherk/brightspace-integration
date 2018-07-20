@@ -46,7 +46,6 @@
     "d2l-offscreen": "^3.0.3",
     "iron-iconset-svg": "fix-empty-iconset",
     "webcomponentsjs": "^0.7",
-    "shadycss": "^1.2.0",
     "d2l-text-input": "^0.4.0"
   }
 }
