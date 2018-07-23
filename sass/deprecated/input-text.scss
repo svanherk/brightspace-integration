@@ -1,0 +1,7 @@
+@import 'input-helpers.scss';
+
+@mixin _vui-input-text() {
+	@include _vui-input(
+		$min-width: calc(2rem + 1em)
+	);
+}
