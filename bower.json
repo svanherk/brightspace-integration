@@ -1,7 +1,6 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#427b7b2639987d091f23f7c80a14a8cb2e610833",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#aebdda306fe02b6ee87302e804f9eb6aac1998fd",
@@ -9,6 +8,7 @@
     "d2l-colors": "https://github.com/BrightspaceUI/colors.git#7764f81f88be557760f13cf7a801ed5905662fc2",
     "d2l-course-image": "https://github.com/Brightspace/course-image.git#5682ab53dff8f31b7a648337474fb024aa392a3d",
     "d2l-dropdown": "https://github.com/BrightspaceUI/dropdown.git#6ef6c1d97d3d7fd60658bcc1df68cc2a5a80c50b",
+    "d2l-enrollments": "https://github.com/BrightspaceHypermediaComponents/enrollments.git#0041ca5c9bd1b781443d8cf5b6853819c9014085",
     "d2l-fastdom-import": "https://github.com/Brightspace/fastdom-import.git#bb51586a8e261549cba76f3d5468f9f62b90851c",
     "d2l-fetch": "https://github.com/Brightspace/d2l-fetch.git#742d4e2e1a62786312e6b2daacf8b917bb6ccda4",
     "d2l-fetch-auth": "https://github.com/Brightspace/d2l-fetch-auth.git#6c258ed2743a212ecdf5bd12398e1b6cca5a5981",
@@ -27,7 +27,7 @@
     "d2l-localize-behavior": "https://github.com/BrightspaceUI/d2l-localize-behavior.git#ffb5086e883fafa526b449c31020c4be1a324774",
     "d2l-menu": "https://github.com/BrightspaceUI/menu.git#c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
-    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#1364f51eeba10b3489aa0b0f0f346ba8c4a58565",
+    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#39d59c55a6ab8a5441445f5e4ffdd7be0b1feac6",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
@@ -82,7 +82,6 @@
   },
   "private": true,
   "resolutions": {
-    "1.x-hybrid-components": "427b7b2639987d091f23f7c80a14a8cb2e610833",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "aebdda306fe02b6ee87302e804f9eb6aac1998fd",
@@ -90,6 +89,7 @@
     "d2l-colors": "7764f81f88be557760f13cf7a801ed5905662fc2",
     "d2l-course-image": "5682ab53dff8f31b7a648337474fb024aa392a3d",
     "d2l-dropdown": "6ef6c1d97d3d7fd60658bcc1df68cc2a5a80c50b",
+    "d2l-enrollments": "0041ca5c9bd1b781443d8cf5b6853819c9014085",
     "d2l-fastdom-import": "bb51586a8e261549cba76f3d5468f9f62b90851c",
     "d2l-fetch": "742d4e2e1a62786312e6b2daacf8b917bb6ccda4",
     "d2l-fetch-auth": "6c258ed2743a212ecdf5bd12398e1b6cca5a5981",
@@ -108,7 +108,7 @@
     "d2l-localize-behavior": "ffb5086e883fafa526b449c31020c4be1a324774",
     "d2l-menu": "c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
-    "d2l-my-courses": "1364f51eeba10b3489aa0b0f0f346ba8c4a58565",
+    "d2l-my-courses": "39d59c55a6ab8a5441445f5e4ffdd7be0b1feac6",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
@@ -162,9 +162,8 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-07-23T17:52:37.203Z",
+    "lastUpdated": "2018-07-23T20:50:40.424Z",
     "lockedVersions": {
-      "1.x-hybrid-components": "0.0.2",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
       "d2l-button": "4.5.1",
@@ -172,6 +171,7 @@
       "d2l-colors": "3.1.2",
       "d2l-course-image": "2.1.4",
       "d2l-dropdown": "6.3.0",
+      "d2l-enrollments": "0.0.1",
       "d2l-fastdom-import": "1.0.2",
       "d2l-fetch": "1.8.0",
       "d2l-fetch-auth": "0.9.0",
@@ -190,7 +190,7 @@
       "d2l-localize-behavior": "1.1.1",
       "d2l-menu": "1.1.0",
       "d2l-more-less": "4.3.0",
-      "d2l-my-courses": "5.5.2",
+      "d2l-my-courses": "5.6.0",
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.3",
       "d2l-polymer-behaviors": "1.6.2",
