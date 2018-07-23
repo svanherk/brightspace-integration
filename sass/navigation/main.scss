@@ -85,6 +85,11 @@
 	}
 }
 
+.d2l-navigation-s-group:hover .d2l-navigation-s-group-text,
+.d2l-navigation-s-group:focus .d2l-navigation-s-group-text {
+	color: $d2l-color-celestine;
+}
+
 .d2l-navigation-s-main-wrapper[data-more] .d2l-navigation-s-more {
 	margin-left: 0;
 	margin-right: 0;
