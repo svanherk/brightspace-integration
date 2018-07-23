@@ -10,6 +10,12 @@
 	margin-left: 0;
 }
 
+/* DE30741: overwrite static position for HTML editor */
+.d2l-menuflyout.d2l-htmleditor-menuflyout.d2l-menuflyout-open {
+	position: relative;
+	white-space: nowrap;
+}
+
 .d2l-menuflyout.d2l-htmleditor-menuflyout .d2l-menuflyout-opener {
 	background-color: #FFF;
 	border-radius: 0;
