@@ -34,7 +34,6 @@
     "polymer": "^1.11.3",
     "vui-dropdown": "^0.9.1",
     "vui-grid-system": "^0.0.2",
-    "vui-input": "^2.1.0",
     "vui-list": "^1.1.0",
     "vui-validation": "^1.1.2"
   },
