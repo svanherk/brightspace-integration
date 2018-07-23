@@ -1,0 +1,48 @@
+@import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import '../../bower_components/d2l-offscreen/offscreen.scss';
+@import 'dropdown-icons.scss';
+
+@mixin _vui-dropdown-context-menu() {
+
+	background-color: transparent;
+	background-image: $vui-dropdown-icon-secondary;
+	background-size: 0.8rem 0.8rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: 1px solid transparent;
+	border-radius: 0.3rem;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	min-height: calc(1.4rem + 2px);
+	outline-style: none;
+	padding: 0.5rem 0;
+	vertical-align: middle;
+	width: calc(1.4rem + 2px);
+
+	&:hover,
+	&:focus {
+		@include _vui-dropdown-context-menu-focus();
+	}
+
+	& > span {
+		@include d2l-offscreen();
+	}
+
+}
+
+@mixin _vui-dropdown-context-menu-focus() {
+
+	background-color: transparent;
+	background-image: $vui-dropdown-icon-secondary-focus;
+	border-color: $d2l-color-pressicus;
+
+}
+
+@mixin _vui-dropdown-context-menu-open() {
+
+	background-color: transparent;
+	background-image: $vui-dropdown-icon-secondary-open;
+	border-color: $d2l-color-pressicus;
+
+}
