@@ -1,0 +1,62 @@
+@import '../../bower_components/d2l-colors/d2l-colors.scss';
+
+@keyframes vui-bubble-animation-show {
+	0% { top: 0.75rem; opacity: 0; }
+	100% { top: 0.25rem; opacity: 1; }
+}
+
+.vui-validation-bubble {
+	display: none;
+	position: absolute;
+	max-width: 18.5rem;
+	width: 100%;
+}
+
+.vui-validation-bubble-show {
+	display: block;
+}
+
+.vui-validation-bubble-content {
+
+	animation: vui-bubble-animation-show 200ms ease;
+	background-color: $d2l-color-ferrite;
+	border: 1px solid transparent;
+	border-radius: 0.3rem;
+	color: $d2l-color-white;
+	font-family: inherit;
+	font-size: 0.7rem;
+	font-weight: 400;
+	left: -0.5rem;
+	line-height: 1rem;
+	letter-spacing: 0.02rem;
+	margin: 0;
+	padding: 0.7rem 1rem;
+	position: absolute;
+	top: 0.25rem;
+	z-index: 10;
+
+	[dir='rtl'] & {
+		left: auto;
+		right: -0.5rem;
+	}
+
+	&::before {
+		border: solid;
+		border-color: $d2l-color-ferrite transparent;
+		content: "";
+		left: 1rem;
+		position: absolute;
+		z-index: 10;
+		[dir='rtl'] & {
+			left: auto;
+			right: 1rem;
+		}
+
+	}
+
+	&::before {
+		border-width: 0 0.7rem 0.7rem 0.7rem;
+		top: -0.7rem;
+	}
+
+}
