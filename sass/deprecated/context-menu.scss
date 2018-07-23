@@ -1,5 +1,6 @@
-@import '../bower_components/vui-dropdown/context-menu.scss';
-@import '../bower_components/d2l-colors/d2l-colors.scss';
+@import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import 'dropdown-menu.scss';
+@import 'dropdown-context-menu.scss';
 
 @keyframes vui-dropdown-menu-overlay-flip-x-animation {
 	0% {
@@ -14,7 +15,7 @@
 
 .vui-dropdown-menu {
 	margin-top: $vui-dropdown-menu-offset;
-	@include vui-dropdown-menu-animation;
+	@include _vui-dropdown-menu-animation();
 }
 
 .d2l-overlay-flip-x.vui-dropdown-menu {
@@ -49,7 +50,7 @@
 
 .dcm.dcm_handle.bsi-button-menu,
 .d2l-contextmenu-ph {
-	@include vui-dropdown-context-menu;
+	@include _vui-dropdown-context-menu();
 }
 .dcm.dcm_handle.bsi-button-menu,
 .dcm.bsi-button-menu,
@@ -60,5 +61,5 @@
 
 .dcm.dcm_handle.d2l-contextmenu-opener-open,
 .d2l-contextmenu-ph.d2l-contextmenu-opener-open {
-	@include vui-dropdown-context-menu-open;
+	@include _vui-dropdown-context-menu-open();
 }

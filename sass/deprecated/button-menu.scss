@@ -1,14 +1,15 @@
-@import '../bower_components/d2l-colors/d2l-colors.scss';
-@import '../bower_components/d2l-button/d2l-button.scss';
-@import '../bower_components/d2l-typography/d2l-typography.scss';
-@import 'common.scss';
+@import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import '../../bower_components/d2l-button/d2l-button.scss';
+@import '../../bower_components/d2l-typography/d2l-typography.scss';
+@import '../common.scss';
+@import 'dropdown-button-menu.scss';
 
 .bsi-button-menu > span {
-	@include vui-dropdown-button-menu-content;
+	@include _vui-dropdown-button-menu-content();
 }
 
 .bsi-button-menu.bsi-button-menu-primary > span {
-	@include vui-dropdown-button-menu-primary-content;
+	@include _vui-dropdown-button-menu-primary-content();
 }
 
 .bsi-button-menu {
