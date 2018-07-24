@@ -66,8 +66,8 @@
     "iron-scroll-threshold": "https://github.com/PolymerElements/iron-scroll-threshold.git#e7bba05323f4779042c1e17e290860cf2b1a8ed5",
     "iron-selector": "https://github.com/PolymerElements/iron-selector.git#82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c",
     "iron-validatable-behavior": "https://github.com/PolymerElements/iron-validatable-behavior.git#4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
-    "jquery-vui-change-tracking": "https://github.com/Brightspace/jquery-valence-ui-change-tracking.git#c558628c28517188da5a770566e9f3e7d9b98ca7",
-    "jquery-vui-collapsible-section": "https://github.com/Brightspace/jquery-valence-ui-collapsible-section.git#73c304555f5358192e98f8b687b007c04427ab88",
+    "jquery-vui-change-tracking": "https://github.com/Brightspace/jquery-valence-ui-change-tracking.git#9e0507972c74446bab849cd21eae5fcb2c88d4e7",
+    "jquery-vui-collapsible-section": "https://github.com/Brightspace/jquery-valence-ui-collapsible-section.git#b7375a4f6fd7c488f56b04d4752bd32bf2b65c27",
     "polymer": "https://github.com/Polymer/polymer.git#937021964c80c55ed3a2218d830b2520f8195d43",
     "resize-aware": "https://github.com/mlisook/resize-aware.git#14ac99de0b4bca216d306785e57f737ed97bdc8b",
     "s-html": "https://github.com/Brightspace/s-html.git#2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
@@ -75,7 +75,6 @@
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "vui-focus": "https://github.com/Brightspace/valence-ui-focus.git#d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "private": true,
@@ -145,8 +144,8 @@
     "iron-scroll-threshold": "e7bba05323f4779042c1e17e290860cf2b1a8ed5",
     "iron-selector": "82e8bf6bd3c3bf5a3605271e8ef1ee2cb68f053c",
     "iron-validatable-behavior": "4b6c1c53e44a3bbb31fcfd14ede2234645518c96",
-    "jquery-vui-change-tracking": "c558628c28517188da5a770566e9f3e7d9b98ca7",
-    "jquery-vui-collapsible-section": "73c304555f5358192e98f8b687b007c04427ab88",
+    "jquery-vui-change-tracking": "9e0507972c74446bab849cd21eae5fcb2c88d4e7",
+    "jquery-vui-collapsible-section": "b7375a4f6fd7c488f56b04d4752bd32bf2b65c27",
     "polymer": "937021964c80c55ed3a2218d830b2520f8195d43",
     "resize-aware": "14ac99de0b4bca216d306785e57f737ed97bdc8b",
     "s-html": "2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
@@ -154,7 +153,6 @@
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "vui-focus": "d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
@@ -225,8 +223,8 @@
       "iron-scroll-threshold": "2.0.0",
       "iron-selector": "2.1.0",
       "iron-validatable-behavior": "2.1.0",
-      "jquery-vui-change-tracking": "0.5.4",
-      "jquery-vui-collapsible-section": "1.2.1",
+      "jquery-vui-change-tracking": "0.6.0",
+      "jquery-vui-collapsible-section": "1.2.2",
       "polymer": "1.11.3",
       "resize-aware": "1.9.1",
       "s-html": "1.2.0",
@@ -234,7 +232,6 @@
       "siren-parser-import": "7.0.0",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
-      "vui-focus": "0.7.1",
       "webcomponentsjs": "0.7.24"
     }
   }
