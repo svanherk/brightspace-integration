@@ -37,9 +37,7 @@
   },
   "private": true,
   "resolutions": {
-    "d2l-offscreen": "^3.0.3",
     "iron-iconset-svg": "fix-empty-iconset",
-    "webcomponentsjs": "^0.7",
-    "d2l-text-input": "^0.4.0"
+    "webcomponentsjs": "^0.7"
   }
 }
