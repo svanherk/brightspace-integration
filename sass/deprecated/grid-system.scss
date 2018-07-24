@@ -1,0 +1,48 @@
+@import '../../bower_components/susy/sass/_susy.scss';
+
+$d2l-vui-grid-system-gutters: 30/70 !default;
+
+$susy: (
+	flow: ltr,
+	output: float,
+	math: fluid,
+	column-width: false,
+	container: auto,
+	container-position: center,
+	last-flow: to,
+	columns: 12,
+	gutters: $d2l-vui-grid-system-gutters,
+	gutter-position: after,
+	global-box-sizing: border-box,
+	debug: (
+		image: hide,
+		color: rgba(#66f, .25),
+		output: background,
+		toggle: top right,
+	),
+	use-custom: (
+		background-image: true,
+		background-options: false,
+		box-sizing: true,
+		clearfix: false,
+		rem: true,
+	)
+);
+
+@mixin _vui-gs-container() {
+
+	* {
+		box-sizing: border-box;
+	}
+
+	@include container();
+
+	&.vui-gs-debug {
+		@include show-grid(show background);
+	}
+
+}
+
+@mixin _vui-gs-row() {
+	@include full;
+}

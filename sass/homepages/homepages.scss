@@ -1,5 +1,6 @@
 $d2l-vui-grid-system-gutters: 100/70;
-@import '../../bower_components/vui-grid-system/grid-system.scss';
+
+@import '../deprecated/grid-system.scss';
 
 @function get-col-class($prefix, $index) {
 	@return unquote(".#{$prefix}#{$index}");
@@ -29,11 +30,11 @@ $gutter-width: gutter($columns);
 $viewport-width-sm: 768px;
 
 .homepage-container {
-	@include vui-gs-container();
+	@include _vui-gs-container();
 }
 
 .homepage-row {
-	@include vui-gs-row();
+	@include _vui-gs-row();
 }
 
 .homepage-row > div:not(:last-child),
