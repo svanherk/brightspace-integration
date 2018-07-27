@@ -17,7 +17,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#00649467dd3889539afce3ae8fbed1ae7df1e013",
+    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#00649467dd3889539afce3ae8fbed1ae7df1e013",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#c6cc005026a6007cea9c12359e0242743417702b",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#6cc7dab3e398a44e97021b23120ad82c368cc6cf",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -29,6 +29,7 @@
     "d2l-menu": "https://github.com/BrightspaceUI/menu.git#c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#476d17bf7afca64ae901be095fdb7304549b620f",
+    "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#7ad0f740afe7811fa387aa2c92656cb0b20a80ac",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
@@ -109,6 +110,7 @@
     "d2l-menu": "c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "28b81ce5b8ae56b9590b1d8afca4c65d537f3ef2",
     "d2l-my-courses": "476d17bf7afca64ae901be095fdb7304549b620f",
+    "d2l-navigation": "7ad0f740afe7811fa387aa2c92656cb0b20a80ac",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
     "d2l-polymer-behaviors": "b4a9df1eab33436a3ca6fa8b0a9f5c817096ca4f",
@@ -160,7 +162,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-07-26T18:25:34.130Z",
+    "lastUpdated": "2018-07-27T17:55:57.256Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
@@ -190,6 +192,7 @@
       "d2l-menu": "1.1.0",
       "d2l-more-less": "4.3.0",
       "d2l-my-courses": "5.6.1",
+      "d2l-navigation": "0.1.0",
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.3",
       "d2l-polymer-behaviors": "1.6.2",
