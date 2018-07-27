@@ -17,7 +17,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#00649467dd3889539afce3ae8fbed1ae7df1e013",
+    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#00649467dd3889539afce3ae8fbed1ae7df1e013",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#c6cc005026a6007cea9c12359e0242743417702b",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#6cc7dab3e398a44e97021b23120ad82c368cc6cf",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -78,14 +78,6 @@
     "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "vui-breadcrumbs": "https://github.com/Brightspace/valence-ui-breadcrumbs.git#1a0c1af6745a73b601597eb0d965df9c329bbc12",
-    "vui-dropdown": "https://github.com/Brightspace/valence-ui-dropdown.git#5c50e4d8ae2d19b33514c477c20812f2264837f0",
-    "vui-field": "https://github.com/Brightspace/valence-ui-field.git#613d3cc4fb370ac6ed020fecda4c64c089ed4610",
-    "vui-focus": "https://github.com/Brightspace/valence-ui-focus.git#d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
-    "vui-grid-system": "https://github.com/Brightspace/valence-ui-grid-system.git#0384e87cd068617419d42b3c8a8b6cb773fc507d",
-    "vui-input": "https://github.com/Brightspace/valence-ui-input.git#52a259d79389632bae31830c32d7303a5db14345",
-    "vui-list": "https://github.com/Brightspace/valence-ui-list.git#95245dcfc833c1eae49f3d840ba12b6c2674a55a",
-    "vui-validation": "https://github.com/Brightspace/valence-ui-validation.git#757daf55e9fad9aacf31dd34ace60c5015ed3225",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "private": true,
@@ -167,18 +159,10 @@
     "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "vui-breadcrumbs": "1a0c1af6745a73b601597eb0d965df9c329bbc12",
-    "vui-dropdown": "5c50e4d8ae2d19b33514c477c20812f2264837f0",
-    "vui-field": "613d3cc4fb370ac6ed020fecda4c64c089ed4610",
-    "vui-focus": "d092b7aa3c9eff70cbbbfc8567317f31fee4e563",
-    "vui-grid-system": "0384e87cd068617419d42b3c8a8b6cb773fc507d",
-    "vui-input": "52a259d79389632bae31830c32d7303a5db14345",
-    "vui-list": "95245dcfc833c1eae49f3d840ba12b6c2674a55a",
-    "vui-validation": "757daf55e9fad9aacf31dd34ace60c5015ed3225",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-07-27T15:55:37.956Z",
+    "lastUpdated": "2018-07-27T17:55:57.256Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
@@ -257,14 +241,6 @@
       "Sortable": "8794188794",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
-      "vui-breadcrumbs": "1a0c1af674",
-      "vui-dropdown": "5c50e4d8ae",
-      "vui-field": "613d3cc4fb",
-      "vui-focus": "0.7.1",
-      "vui-grid-system": "0384e87cd0",
-      "vui-input": "52a259d793",
-      "vui-list": "95245dcfc8",
-      "vui-validation": "757daf55e9",
       "webcomponentsjs": "0.7.24"
     }
   }
