@@ -2,14 +2,14 @@
 @import '../../bower_components/d2l-typography/d2l-typography.scss';
 
 @mixin _d2l-dark-overlay() {
-	background:rgba(0,0,0,0.1);
-	content:'';
-	height:100%;
-	left:0;
-	opacity:0;
-	position:absolute;
-	top:0;
-	width:100%;
+	background: rgba(0,0,0,0.1);
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .d2l-navigation-main-ib[ib-pully-focus],
@@ -221,7 +221,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	width: 100%;
 }
 
-.d2l-navigation-main-ib-tray[opened] > .d2l-navigation-main-ib-bottom-cap {
+.d2l-navigation-main-ib-tray[opened] > .d2l-navigation-main-ib-pully-container > .d2l-navigation-main-ib-bottom-cap {
 	border-color: $d2l-color-gypsum;
 }
 
@@ -230,7 +230,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	background-color: rgba(0,111,191,0.05);
 }
 
-.d2l-navigation-main-ib-tray[opened][overflow-bottom] > .d2l-navigation-main-ib-bottom-cap {
+.d2l-navigation-main-ib-tray[opened][overflow-bottom] > .d2l-navigation-main-ib-pully-container > .d2l-navigation-main-ib-bottom-cap {
 	box-shadow: 0 -3px 3px rgba(0,0,0,.05);
 }
 
@@ -251,7 +251,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	position:absolute;
 	top:-9px;
 	width:74px;
-	z-index:6;
 }
 
 .d2l-branding-navigation-light-foreground-color {
@@ -267,7 +266,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 .d2l-branding-navigation-dark-foreground-color {
 	.d2l-navigation-main-ib-pully-container {
-		position:relative;
+		position: relative;
 	}
 
 	.d2l-navigation-main-ib-pully-has-branding[shown]:after {
@@ -275,7 +274,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	}
 
 	.d2l-navigation-main-ib-pully-has-branding[shown]:hover:after {
-	    opacity:1;
+	    opacity: 1;
 	}
 
 	.d2l-navigation-main-ib-pully-icon:after {
@@ -283,17 +282,13 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	}
 
 	.d2l-navigation-main-ib-pully-has-branding[shown]:hover .d2l-navigation-main-ib-pully-icon:after {
-	    opacity:1;
+	    opacity: 1;
 	}
 
 	.d2l-navigation-main-ib-pully-has-branding[shown]:focus .d2l-navigation-main-ib-pully-tab-button {
 		background-color: rgba(0,0,0,0.1);
 		opacity: 1;
 	}
-}
-
-.d2l-navigation-main-ib-pully-icon > d2l-icon {
-	z-index:7;
 }
 
 .d2l-navigation-main-ib-pully-tab {
