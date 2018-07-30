@@ -49,7 +49,7 @@
 }
 
 .dcm.dcm_handle.bsi-button-menu,
-.d2l-contextmenu-ph {
+.d2l-contextmenu-ph-anchor {
 	@include _vui-dropdown-context-menu();
 }
 .dcm.dcm_handle.bsi-button-menu,
@@ -60,6 +60,6 @@
 }
 
 .dcm.dcm_handle.d2l-contextmenu-opener-open,
-.d2l-contextmenu-ph.d2l-contextmenu-opener-open {
+.d2l-contextmenu-ph-anchor.d2l-contextmenu-opener-open {
 	@include _vui-dropdown-context-menu-open();
 }
