@@ -91,7 +91,7 @@ The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 ## Updating LP to reference the new version of BSI
 
 Once you've drafted a new release of BSI, you'll need to update LP to reference your version. Create a PR in LP
-that updates the `daylight-polymer-1` line of https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json
+that updates the `daylight-polymer-1` line of (https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 
