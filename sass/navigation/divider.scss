@@ -1,7 +1,9 @@
 @import 'common.scss';
 
-.d2l-navigation-s-divider {
-	@media (max-width: $d2l-navigation-bp-separators) {
- 		display: none;
- 	}
+.d2l-navigation-s d2l-navigation-separator {
+	flex: 0 0 auto;
+
+    @media (max-width: $d2l-navigation-bp-separators) {
+        display: none;
+    }
 }
