@@ -12,6 +12,9 @@
     "web-components/d2l-rubric-editor.html"
   ],
   "sources": [],
+  "extraDependencies": [
+    "bower_components/d2l-rubric/editor/images/**"
+  ],
   "builds": [
     {
       "name": "bundled",

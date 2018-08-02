@@ -16,6 +16,9 @@ $d2l-navigation-bp-title-hidden: 488px;
 $d2l-navigation-bp-mobile-menu-compact: 380px;
 $d2l-navigation-bp-title: 740px;
 
+$d2l-branding-navigation-dark-foreground-color: #565A5C;
+$d2l-branding-navigation-light-foreground-color: #FFFFFF;
+
 
 .d2l-navigation-s-centerer {
 	margin: 0 auto;
@@ -38,8 +41,21 @@ a.d2l-navigation-s-link:visited {
 	cursor: pointer;
 	text-decoration: none;
 }
-a.d2l-navigation-s-link:hover,
-a.d2l-navigation-s-link:focus {
+
+.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link,
+.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:link,
+.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:visited {
+	color: $d2l-branding-navigation-dark-foreground-color
+}
+
+.d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link,
+.d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link:link,
+.d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link:visited {
+	color: $d2l-branding-navigation-light-foreground-color
+}
+
+.d2l-navigation-s a.d2l-navigation-s-link:hover,
+.d2l-navigation-s a.d2l-navigation-s-link:focus {
 	color: $d2l-color-celestine;
 	text-decoration: underline;
 	outline: none;
