@@ -1,17 +1,7 @@
-@import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import 'common.scss';
 
 .d2l-navigation-s-divider {
-	display: inline-block;
-	flex: 0 0 auto;
-	margin: 0 9px;
-	d2l-icon {
-		color: $d2l-color-mica;
-	}
 	@media (max-width: $d2l-navigation-bp-separators) {
  		display: none;
  	}
-}
-.d2l-navigation-s-divider-no-margin {
-	margin: 0;
 }
