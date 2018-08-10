@@ -41,7 +41,6 @@
   "private": true,
   "resolutions": {
     "iron-iconset-svg": "fix-empty-iconset",
-    "webcomponentsjs": "^0.7",
-    "shadycss": "^v1.1.0"
+    "webcomponentsjs": "^0.7"
   }
 }

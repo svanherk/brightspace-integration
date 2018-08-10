@@ -17,7 +17,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
-    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#6a5984d5cf2d92b54432264ae7478650aa7c1e6f",
+    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#6a5984d5cf2d92b54432264ae7478650aa7c1e6f",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#ab1cc946dad1a0f4ba465a6950d5077dd7637015",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#6cc7dab3e398a44e97021b23120ad82c368cc6cf",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
@@ -170,7 +170,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-10T19:05:25.707Z",
+    "lastUpdated": "2018-08-10T19:36:07.342Z",
     "lockedVersions": {
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
