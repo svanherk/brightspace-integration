@@ -1,8 +1,14 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import '../common.scss';
 
-.d2l-navigation-s-main {
+.d2l-navigation-s-no-branding .d2l-navigation-s-main {
+	border-top: 1px solid $d2l-color-gypsum;
 	border-bottom: 1px solid $d2l-color-gypsum;
+}
+
+.d2l-navigation-s-has-branding .d2l-navigation-s-main {
+	border-top: 1px solid $d2l-color-light-galena;
+	border-bottom: 1px solid $d2l-color-light-galena;
 }
 
 .d2l-navigation-s-main-wrapper {
@@ -100,7 +106,6 @@
 	&:focus,
 	&:hover .d2l-navigation-s-group-wrapper d2l-icon,
 	&:focus .d2l-navigation-s-group-wrapper d2l-icon {
-		color: $d2l-color-celestine;
 		cursor: pointer;
 	}
 	&:hover .d2l-navigation-s-group-text,
@@ -109,9 +114,13 @@
 	}
 }
 
-.d2l-navigation-s-group:hover .d2l-navigation-s-group-text,
-.d2l-navigation-s-group:focus .d2l-navigation-s-group-text {
-	color: $d2l-color-celestine;
+.d2l-navigation-s-no-branding {
+	.d2l-navigation-s-group:hover .d2l-navigation-s-group-text,
+	.d2l-navigation-s-group:focus .d2l-navigation-s-group-text,
+	.d2l-navigation-s-group:hover .d2l-navigation-s-group-wrapper d2l-icon,
+	.d2l-navigation-s-group:focus .d2l-navigation-s-group-wrapper d2l-icon {
+		color: $d2l-color-celestine;
+	}
 }
 
 .d2l-navigation-s-main-wrapper[data-more] .d2l-navigation-s-more {

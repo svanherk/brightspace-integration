@@ -1,10 +1,6 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import 'common.scss';
 
-.d2l-navigation-s-header {
-	border-bottom: 1px solid $d2l-color-gypsum;
-}
-
 .d2l-navigation-s-gutter {
 	display: inline-block;
 	flex: 1 1 auto;
@@ -80,7 +76,7 @@
 	white-space: nowrap;
 }
 
-.d2l-navigation-s-has-branding .d2l-navigation-s-header-logo-area > .d2l-navigation-s-link {
+.d2l-navigation-s .d2l-navigation-s-header-logo-area > .d2l-navigation-s-link {
 	font-size: 1.25rem;
 	@media (max-width: $d2l-navigation-bp-username) {
  		font-size: 1.1rem;
