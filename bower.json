@@ -1,7 +1,6 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#8316dd9dd4b4437a568ae9da6cd80b83a0849688",
@@ -80,13 +79,13 @@
     "s-html": "https://github.com/Brightspace/s-html.git#2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
     "shadycss": "https://github.com/webcomponents/shadycss.git#4ce47b78bac96b66ff0855f305f8695d13a7f025",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "https://github.com/RubaXa/Sortable.git#8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "private": true,
   "resolutions": {
-    "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "8316dd9dd4b4437a568ae9da6cd80b83a0849688",
@@ -165,6 +164,7 @@
     "s-html": "2ab4fad235f4c5e1d179b0131a6e04a692dd7585",
     "shadycss": "4ce47b78bac96b66ff0855f305f8695d13a7f025",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
+    "Sortable": "8794188794eff5685ded3e5755fe8e9212ab994f",
     "stickyfill": "dfa336fb0723cae19e65eeb1986394ad565f7e6b",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -172,7 +172,6 @@
   "bowerLocker": {
     "lastUpdated": "2018-08-14T14:28:50.265Z",
     "lockedVersions": {
-      "Sortable": "8794188794",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
       "d2l-button": "4.6.0",
@@ -251,6 +250,7 @@
       "s-html": "1.2.0",
       "shadycss": "1.4.0",
       "siren-parser-import": "7.0.0",
+      "Sortable": "8794188794",
       "stickyfill": "2.0.5",
       "susy": "2.2.14",
       "webcomponentsjs": "0.7.24"
