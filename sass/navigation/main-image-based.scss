@@ -11,19 +11,8 @@
 	width: 100%;
 }
 
-.d2l-navigation-s-has-branding {
-	.d2l-navigation-main-ib[ib-pully-focus],
-	.d2l-navigation-main-ib[ib-pully-hover] {
-		border-bottom-color: $d2l-color-light-galena;
-	}
-}
-
-.d2l-navigation-s-no-branding,
-.d2l-navigation-s-linkarea-no-color {
-	.d2l-navigation-main-ib[ib-pully-focus],
-	.d2l-navigation-main-ib[ib-pully-hover] {
-		border-bottom-color: rgba(0, 111, 191, 0.2);
-	}
+.d2l-navigation-s .d2l-navigation-main-ib {
+	border-bottom-style: none;
 }
 
 .d2l-navigation-main-ib-list {
@@ -224,6 +213,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 .d2l-navigation-main-ib-bottom-cap {
 	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 	box-sizing: border-box;
 	height: 0.7rem;
 	text-align: center;
@@ -241,25 +231,46 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 .d2l-navigation-main-ib-pully-tab {
 	background-color: #fff;
-	border: 1px solid $d2l-color-gypsum;
-	border-top-style: none;
 	border-bottom-left-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
 	display: none;
-	height: 0.75rem;
-	margin-top: 0.64rem;
+	height: 0.8rem;
+	margin-top: 0.59rem;
 	position: relative;
-	width: 4rem;
+	width: 4.1rem;
 	z-index: 5;
+}
+
+.d2l-navigation-main-ib-pully-icon {
+	border: 1px solid $d2l-color-gypsum;
+	border-top-style: none;
+	border-bottom-left-radius: 0.45rem;
+	border-bottom-right-radius: 0.45rem;
+	display: inline-block;
+	height: 100%;
+	width: 4rem;
+}
+
+.d2l-navigation-s-has-branding .d2l-navigation-main-ib-pully-icon {
+	border-bottom-left-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+}
+
+.d2l-navigation-main-ib-pully[shown] > .d2l-navigation-main-ib-pully-tab {
+	display: inline-block;
 }
 
 .d2l-navigation-s-no-branding
 .d2l-navigation-main-ib-tray[opened] > .d2l-navigation-main-ib-pully-container > .d2l-navigation-main-ib-bottom-cap {
-	border-color: $d2l-color-gypsum;
+	border-top-color: $d2l-color-gypsum;
 }
 
 .d2l-navigation-s-no-branding,
 .d2l-navigation-s-linkarea-no-color {
+	.d2l-navigation-main-ib-bottom-cap {
+		border-bottom-color: $d2l-color-light-galena;
+	}
+
 	.d2l-navigation-main-ib-pully[shown]:focus,
 	.d2l-navigation-main-ib-pully[shown]:hover {
 		background-color: rgba(0,111,191,0.05);
@@ -269,10 +280,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	.d2l-navigation-main-ib-pully[shown]:focus .d2l-navigation-main-ib-pully-icon,
 	.d2l-navigation-main-ib-pully[shown]:hover .d2l-navigation-main-ib-pully-icon {
 		background-color: rgba(0,111,191,0.05);
-	}
-
-	.d2l-navigation-main-ib-pully[shown]:focus .d2l-navigation-main-ib-pully-tab,
-	.d2l-navigation-main-ib-pully[shown]:hover .d2l-navigation-main-ib-pully-tab {
 		border-color: rgba(0, 111, 191, 0.2);
 	}
 }
@@ -285,10 +292,10 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	height: 18px;
-	left: 5px;
+	left: 6px;
 	opacity: 0;
 	position: absolute;
-	top: -8px;
+	top: -7px;
 	width: 70px;
 }
 
@@ -307,8 +314,11 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 	.d2l-navigation-main-ib-pully-icon:after {
 		@include _d2l-nav-overlay;
-		border-bottom-left-radius: 0.5rem;
-		border-bottom-right-radius: 0.5rem;
+		border: 1px solid transparent;
+		border-top-style: none;
+		border-bottom-left-radius: 0.4rem;
+		border-bottom-right-radius: 0.4rem;
+		width: 4rem;
 	}
 
 	.d2l-navigation-main-ib-pully[shown]:hover .d2l-navigation-main-ib-pully-icon:after {
@@ -319,7 +329,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 		border-color: $d2l-color-light-galena;
 	}
 
-	.d2l-navigation-main-ib-pully-tab {
+	.d2l-navigation-main-ib-pully-icon {
 		border-color: $d2l-color-light-galena;
 	}
 }
@@ -360,19 +370,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	.d2l-navigation-main-ib-pully[shown]:focus .d2l-navigation-main-ib-pully-tab-button {
 		background-color: rgba(0,0,0,0.1);
 	}
-}
-
-.d2l-navigation-main-ib-pully-icon {
-	border-style: none;
-	border-bottom-left-radius: 0.45rem;
-	border-bottom-right-radius: 0.45rem;
-	display: inline-block;
-	height: 100%;
-	width: 100%;
-}
-
-.d2l-navigation-main-ib-pully[shown] > .d2l-navigation-main-ib-pully-tab {
-	display: inline-block;
 }
 
 .d2l-navigation-main-ib-pully-icon > d2l-icon {
