@@ -5,9 +5,11 @@
   "main": "src/index.js",
   "scripts": {
     "autoprefix": "postcss -c postcss.config.json",
-    "build": "npm run build:wc && npm run build:js && npm run build:sass && npm run build:icons && npm run build:navicons && npm run build:email-icons",
+    "build": "npm run build:wc && npm run build:js && npm run build:sass && npm run build:icons && npm run build:navicons && npm run build:email-icons && npm run build:babelHelpers && npm run build:esm-amd-loader",
     "build:js": "rollup -c ./rollup/rollup.config.js -o ./build/bsi.js -- ./js/index.js",
     "postbuild:js": "npm run uglify:js",
+    "build:babelHelpers": "babel-external-helpers > ./build/babel-helpers.js",
+    "build:esm-amd-loader": "cpy --cwd=node_modules/@polymer/esm-amd-loader/lib \"esm-amd-loader.min.js\" ../../../../build",
     "build:sass": "npm run build:sass:bsi && npm run build:sass:datagrid && npm run build:sass:homepages",
     "build:sass:bsi": "node-sass --output-style expanded ./sass/bsi.scss ./build/bsi.css",
     "build:sass:datagrid": "node-sass --output-style expanded ./sass/datagrid/datagrid.scss ./build/datagrid.css",
@@ -46,6 +48,9 @@
   },
   "homepage": "https://github.com/Brightspace/brightspace-integration",
   "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@polymer/esm-amd-loader": "^1.0.2",
     "autoprefixer": "^6.4.0",
     "bower-locker": "^1.0.7",
     "chai": "^3.5.0",
