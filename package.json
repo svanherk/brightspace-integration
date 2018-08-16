@@ -6,9 +6,11 @@
   "main": "js/index.js",
   "scripts": {
     "autoprefix": "postcss -c postcss.config.json",
-    "build": "npm run build:wc && npm run build:js && npm run build:sass && npm run build:icons",
+    "build": "npm run build:wc && npm run build:js && npm run build:sass && npm run build:icons && npm run build:babelHelpers && npm run build:esm-amd-loader",
     "build:js": "rollup -c ./rollup/rollup.config.js -o ./build/bsi.js -- ./js/index.js",
     "postbuild:js": "npm run uglify:js",
+    "build:babelHelpers": "babel-external-helpers > ./build/babel-helpers.js",
+    "build:esm-amd-loader": "cpy --cwd=node_modules/@polymer/esm-amd-loader/lib \"esm-amd-loader.min.js\" ../../../../build",
     "build:sass": "node-sass --output-style expanded ./sass/bsi.scss ./build/bsi.css",
     "postbuild:sass": "npm run autoprefix && npm run uglify:css",
     "build:icons": "cpy ./bower_components/vui-icons/images/**/*.png ./build/images",
@@ -39,6 +41,9 @@
   },
   "homepage": "https://github.com/Brightspace/brightspace-integration",
   "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.1",
+    "@babel/core": "^7.0.0-rc.1",
+    "@polymer/esm-amd-loader": "^1.0.2",
     "autoprefixer": "^6.4.2",
     "bower-locker": "^1.0.7",
     "clean-css": "^3.4.28",
