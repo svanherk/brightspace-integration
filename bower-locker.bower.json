@@ -1,6 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
+    "1.x-hybrid-components": "BrightspaceHypermediaComponents/1.x-hybrid-components#0.0.2",
     "d2l-alert": "^3.1.0",
     "d2l-button": "^4.5.1",
     "d2l-button-group": "^2.1.0",
@@ -18,7 +19,7 @@
     "d2l-loading-spinner": "^6.0.3",
     "d2l-menu": "^1.1.0",
     "d2l-more-less": "^4.3.0",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.5.0",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#5.5.3",
     "d2l-offscreen": "^3.0.3",
     "d2l-polymer-behaviors": "^1.5.0",
     "d2l-rubric": "Brightspace/d2l-rubric#^0.70.1",
