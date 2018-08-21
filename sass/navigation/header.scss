@@ -1,15 +1,6 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import 'common.scss';
 
-.d2l-navigation-s-header-open-button-wrapper {
-	display: inline-block;
-	flex: 0 1 auto;
-	height: 100%;
-	@media (min-width: ($d2l-navigation-bp-mobile-menu + 1)) {
-		display: none;
-	}
-}
-
 .d2l-navigation-s-header-logo-area {
  	.d2l-navigation-s-header-container & {
 		@media (max-width: $d2l-navigation-bp-title-hidden) {
