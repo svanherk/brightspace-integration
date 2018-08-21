@@ -19,7 +19,7 @@
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#345e6a50e9f9dd7d4f783908329686a7b35b378c",
     "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#0987b7ffbcb1a25d99f2ca10efd5b8f9d1fc329b",
-    "d2l-icons": "https://github.com/BrightspaceUI/icons.git#7952b02ba149c694b10ae0f54382c59b8d3e78d2",
+    "d2l-icons": "https://github.com/BrightspaceUI/icons.git#ce42c1d4ba6db7192af06707330dbf9f4197f38b",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#7169e7c25b09a0b39857f359b5ee9457aaf3c29b",
     "d2l-image-selector": "git://github.com/Brightspace/image-selector.git#6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
     "d2l-intersection-observer-polyfill-import": "https://github.com/Brightspace/intersection-observer-polyfill-import.git#ac06d07a3066e5f517ec888ed3497cee3d4b4f9a",
@@ -105,7 +105,7 @@
     "d2l-fetch-siren-entity-behavior": "a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "345e6a50e9f9dd7d4f783908329686a7b35b378c",
     "d2l-hm-constants-behavior": "0987b7ffbcb1a25d99f2ca10efd5b8f9d1fc329b",
-    "d2l-icons": "7952b02ba149c694b10ae0f54382c59b8d3e78d2",
+    "d2l-icons": "ce42c1d4ba6db7192af06707330dbf9f4197f38b",
     "d2l-image-banner-overlay": "7169e7c25b09a0b39857f359b5ee9457aaf3c29b",
     "d2l-image-selector": "6278acf1f91811a4eb4b7d39b0c5b872466aaaa9",
     "d2l-intersection-observer-polyfill-import": "ac06d07a3066e5f517ec888ed3497cee3d4b4f9a",
@@ -172,7 +172,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-21T14:11:06.679Z",
+    "lastUpdated": "2018-08-21T17:37:50.642Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.3",
       "app-localize-behavior": "2.0.2",
@@ -192,7 +192,7 @@
       "d2l-fetch-siren-entity-behavior": "5.0.2",
       "d2l-hierarchical-view": "1.0.2",
       "d2l-hm-constants-behavior": "5.19.2",
-      "d2l-icons": "5.0.5",
+      "d2l-icons": "5.1.0",
       "d2l-image-banner-overlay": "3.2.3",
       "d2l-image-selector": "3.1.0",
       "d2l-intersection-observer-polyfill-import": "1.0.0",
