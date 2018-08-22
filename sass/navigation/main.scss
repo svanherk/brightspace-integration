@@ -1,6 +1,14 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import '../common.scss';
 
+.d2l-navigation-s-main-no-links {
+	border-bottom: 1px solid $d2l-color-gypsum;
+}
+
+.d2l-navigation-s-has-branding .d2l-navigation-s-main-no-links {
+	border-bottom: 1px solid $d2l-color-light-galena;
+}
+
 .d2l-navigation-s-no-branding .d2l-navigation-s-main {
 	border-top: 1px solid $d2l-color-gypsum;
 	border-bottom: 1px solid $d2l-color-gypsum;
