@@ -21,7 +21,7 @@
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.7.8",
     "d2l-navigation": "^0.2.0",
     "d2l-offscreen": "^3.0.3",
-    "d2l-polymer-behaviors": "^1.7.3",
+    "d2l-polymer-behaviors": "^1.7.4",
     "d2l-rubric": "Brightspace/d2l-rubric#^0.94.0",
     "d2l-save-status": "Brightspace/d2l-save-status#^1.0.0",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.2.0",
