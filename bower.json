@@ -2,6 +2,7 @@
   "name": "brightspace-integration",
   "dependencies": {
     "1.x-hybrid-components": "https://github.com/BrightspaceHypermediaComponents/1.x-hybrid-components.git#ad4fc6a90082efa0c37774f4a2692636d68c2a54",
+    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "https://github.com/PolymerElements/app-localize-behavior.git#530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "https://github.com/BrightspaceUI/alert.git#9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "https://github.com/BrightspaceUI/button.git#25c592e0e5cd77e1b2c4e523750defe58a4c9ce6",
@@ -45,7 +46,7 @@
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay.git#8bb1fb9dd9ca2bc18f4940b938e29b25c0c9a184",
     "d2l-status-indicator": "https://github.com/BrightspaceUI/status-indicator.git#9fdcf802381b4d297618e825af1a788e0bc94578",
     "d2l-table": "https://github.com/BrightspaceUI/table.git#d46a79a5fb834e1431f45a930a7e8525ac988931",
-    "d2l-tabs": "https://github.com/BrightspaceUI/tabs.git#690d5eb1e7a965c4275e6d8c675b44442ea94219",
+    "d2l-tabs": "https://github.com/BrightspaceUI/tabs.git#b18c1f2c611453fb3985365df9519cc5e7348783",
     "d2l-telemetry-browser-client": "https://github.com/Brightspace/d2l-telemetry-browser-client.git#215ddfe1e94316bb27773a4f12d3aa47ef890b30",
     "d2l-text-input": "https://github.com/BrightspaceUI/text-input.git#9f20efd482b76680a185ed580193e59dfa60b835",
     "d2l-textarea": "https://github.com/BrightspaceUI/textarea.git#5d677b512c61e7ea8c81569400cdd4c724d5a0ee",
@@ -80,7 +81,6 @@
     "s-html": "https://github.com/Brightspace/s-html.git#a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "https://github.com/webcomponents/shadycss.git#b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
-    "Sortable": "https://github.com/Brightspace/Sortable.git#a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#8a2e40557b177e2cca0def2553f84c8269c8f93e"
@@ -88,6 +88,7 @@
   "private": true,
   "resolutions": {
     "1.x-hybrid-components": "ad4fc6a90082efa0c37774f4a2692636d68c2a54",
+    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "app-localize-behavior": "530cddb83e7c016d8687cb9d8ef5c200521e988b",
     "d2l-alert": "9ca979ba9d83b118bb96eeabd3fd257ef78c7cfb",
     "d2l-button": "25c592e0e5cd77e1b2c4e523750defe58a4c9ce6",
@@ -131,7 +132,7 @@
     "d2l-simple-overlay": "8bb1fb9dd9ca2bc18f4940b938e29b25c0c9a184",
     "d2l-status-indicator": "9fdcf802381b4d297618e825af1a788e0bc94578",
     "d2l-table": "d46a79a5fb834e1431f45a930a7e8525ac988931",
-    "d2l-tabs": "690d5eb1e7a965c4275e6d8c675b44442ea94219",
+    "d2l-tabs": "b18c1f2c611453fb3985365df9519cc5e7348783",
     "d2l-telemetry-browser-client": "215ddfe1e94316bb27773a4f12d3aa47ef890b30",
     "d2l-text-input": "9f20efd482b76680a185ed580193e59dfa60b835",
     "d2l-textarea": "5d677b512c61e7ea8c81569400cdd4c724d5a0ee",
@@ -166,15 +167,15 @@
     "s-html": "a7048b6a029b4cac69482cbc1160606e4de2b478",
     "shadycss": "b71741bfb593ea313d6095f7fc101778ec87202c",
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
-    "Sortable": "a8d96e457b2c3bc49adc7cc2db2088f75dd24fb0",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-08-29T18:26:00.679Z",
+    "lastUpdated": "2018-08-30T15:09:03.469Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.4",
+      "Sortable": "1.6.0-bs1",
       "app-localize-behavior": "2.0.2",
       "d2l-alert": "3.1.0",
       "d2l-button": "4.7.5",
@@ -218,7 +219,7 @@
       "d2l-simple-overlay": "2.2.0",
       "d2l-status-indicator": "2.0.0",
       "d2l-table": "1.7.1",
-      "d2l-tabs": "0.4.1",
+      "d2l-tabs": "0.4.2",
       "d2l-telemetry-browser-client": "0.4.0",
       "d2l-text-input": "0.5.0",
       "d2l-textarea": "0.6.2",
@@ -253,7 +254,6 @@
       "s-html": "1.2.1",
       "shadycss": "1.5.0",
       "siren-parser-import": "7.0.0",
-      "Sortable": "1.6.0-bs1",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
       "webcomponentsjs": "0.7.24"
