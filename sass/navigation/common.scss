@@ -21,6 +21,15 @@ $d2l-branding-navigation-light-foreground-color: #FFFFFF;
 
 $d2l-color-light-galena: rgba(124,134,149,0.18);
 
+.d2l-navigation-s-centerer { // remove once bottom nav bar is in d2l-navigation
+	margin: 0 auto;
+	max-width: 1230px;
+}
+
+.d2l-navigation-s-gutters { // remove once bottom nav bar is in d2l-navigation
+	@include d2l-page-padding();
+}
+
 a.d2l-navigation-s-link,
 a.d2l-navigation-s-link:link,
 a.d2l-navigation-s-link:visited {
