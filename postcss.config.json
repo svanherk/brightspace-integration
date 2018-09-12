@@ -1,8 +1,0 @@
-{
-	"use": ["autoprefixer"],
-	"input": "./build/bsi.css",
-	"dir": "./build/",
-	"autoprefixer": {
-		"browsers": "Last 3 versions, Firefox ESR, IE >= 11, Safari >= 9"
-	}
-}
