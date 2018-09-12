@@ -41,6 +41,7 @@ textarea.vui-input {
 	@include _vui-input-radio-label();
 }
 
+/* TODO: remove these when feature flag is removed */
 .vui-input-search-container {
 	@include _vui-input-search-container();
 }

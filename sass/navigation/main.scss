@@ -1,6 +1,14 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 @import '../common.scss';
 
+.d2l-navigation-s-main-no-links {
+	border-bottom: 1px solid $d2l-color-gypsum;
+}
+
+.d2l-navigation-s-has-branding .d2l-navigation-s-main-no-links {
+	border-bottom: 1px solid $d2l-color-light-galena;
+}
+
 .d2l-navigation-s-no-branding .d2l-navigation-s-main {
 	border-top: 1px solid $d2l-color-gypsum;
 	border-bottom: 1px solid $d2l-color-gypsum;
@@ -114,7 +122,8 @@
 	}
 }
 
-.d2l-navigation-s-no-branding {
+.d2l-navigation-s-no-branding,
+.d2l-navigation-s-linkarea-no-color {
 	.d2l-navigation-s-group:hover .d2l-navigation-s-group-text,
 	.d2l-navigation-s-group:focus .d2l-navigation-s-group-text,
 	.d2l-navigation-s-group:hover .d2l-navigation-s-group-wrapper d2l-icon,
@@ -136,10 +145,8 @@
 
 .d2l-navigation-s-edit-menu {
 	@include d2l-page-padding-right();
-	opacity: 0;
 	position: absolute;
 	right: 0;
-	transition: opacity 0.25s;
 }
 
 [dir="rtl"] .d2l-navigation-s-edit-menu {
@@ -153,10 +160,5 @@
 }
 
 .d2l-navigation-main-tb .d2l-navigation-s-edit-menu {
-	top: 12.5px;
-}
-
-.d2l-navigation-main-tb[main-tb-hover] .d2l-navigation-s-edit-menu,
-.d2l-navigation-main-tb[main-tb-focus] .d2l-navigation-s-edit-menu {
-	opacity: 1;
+	top: 8.5px;
 }
