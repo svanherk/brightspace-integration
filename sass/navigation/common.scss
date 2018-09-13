@@ -14,7 +14,6 @@ $d2l-navigation-bp-mobile-menu: 767px;
 $d2l-navigation-bp-title-compact: 615px;
 $d2l-navigation-bp-title-hidden: 488px;
 $d2l-navigation-bp-mobile-menu-compact: 380px;
-$d2l-navigation-bp-title: 740px;
 
 $d2l-branding-navigation-dark-foreground-color: #565A5C;
 $d2l-branding-navigation-light-foreground-color: #FFFFFF;
@@ -100,13 +99,5 @@ a.d2l-navigation-s-link:visited {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
-
-	img {
-		vertical-align: middle;
-	}
-	
-	.d2l-navigation-s-course-code {
-		text-transform: uppercase;
 	}
 }
