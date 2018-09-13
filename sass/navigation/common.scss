@@ -54,9 +54,9 @@ a.d2l-navigation-s-link:visited {
 	color: $d2l-branding-navigation-light-foreground-color;
 }
 
-.d2l-navigation-s-header-logo-area > a.d2l-navigation-s-link,
-.d2l-navigation-s-header-logo-area > a.d2l-navigation-s-link:link,
-.d2l-navigation-s-header-logo-area > a.d2l-navigation-s-link:visited {
+.d2l-navigation-s-header-logo-area a.d2l-navigation-s-link,
+.d2l-navigation-s-header-logo-area a.d2l-navigation-s-link:link,
+.d2l-navigation-s-header-logo-area a.d2l-navigation-s-link:visited {
 	color: $d2l-branding-navigation-dark-foreground-color;
 }
 
@@ -68,8 +68,8 @@ a.d2l-navigation-s-link:visited {
 
 .d2l-navigation-s-no-branding a.d2l-navigation-s-link:hover,
 .d2l-navigation-s-no-branding a.d2l-navigation-s-link:focus,
-.d2l-navigation-s-header-logo-area > a.d2l-navigation-s-link:hover,
-.d2l-navigation-s-header-logo-area > a.d2l-navigation-s-link:focus,
+.d2l-navigation-s-header-logo-area a.d2l-navigation-s-link:hover,
+.d2l-navigation-s-header-logo-area a.d2l-navigation-s-link:focus,
 .d2l-navigation-s-linkarea-no-color a.d2l-navigation-s-link:hover,
 .d2l-navigation-s-linkarea-no-color a.d2l-navigation-s-link:focus {
 	color: $d2l-color-celestine;
@@ -90,5 +90,23 @@ a.d2l-navigation-s-link:visited {
 @media (max-width: $d2l-navigation-bp-mobile-menu) {
 	.d2l-navigation-s-header-container {
 		height: $d2l-navigation-header-height-mobile;
+	}
+}
+
+.d2l-navigation-s-title-container {
+	overflow: auto;
+
+	.d2l-navigation-s-course-info {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	img {
+		vertical-align: middle;
+	}
+	
+	.d2l-navigation-s-course-code {
+		text-transform: uppercase;
 	}
 }
