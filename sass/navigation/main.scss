@@ -143,6 +143,10 @@
 	}
 }
 
+.d2l-navigation-s-gutters { // remove once bottom nav bar is in d2l-navigation
+	position: relative;
+}
+
 .d2l-navigation-s-edit-menu {
 	@include d2l-page-padding-right();
 	position: absolute;
