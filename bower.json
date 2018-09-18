@@ -87,7 +87,7 @@
     "siren-parser-import": "https://github.com/Brightspace/siren-parser-import.git#71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "https://github.com/wilddeer/stickyfill.git#3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "https://github.com/ericam/susy.git#68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#9de0f8438485eea4da07086d3237a0400ee30e91"
+    "webcomponentsjs": "https://github.com/webcomponents/webcomponentsjs.git#57ed75b1730f291772bafb134f00d4821cb1a768"
   },
   "private": true,
   "resolutions": {
@@ -177,7 +177,7 @@
     "siren-parser-import": "71c9045600f0a399b45bff09fd1dda93160e04db",
     "stickyfill": "3abc9a957c6673ac5e709e34c39b82ca0ecd5bf0",
     "susy": "68b421259112eb882d2d1103738bee3b703e6bf3",
-    "webcomponentsjs": "9de0f8438485eea4da07086d3237a0400ee30e91"
+    "webcomponentsjs": "57ed75b1730f291772bafb134f00d4821cb1a768"
   },
   "bowerLocker": {
     "lastUpdated": "2018-09-14T15:29:10.734Z",
@@ -268,7 +268,7 @@
       "siren-parser-import": "7.0.0",
       "stickyfill": "2.1.0",
       "susy": "2.2.14",
-      "webcomponentsjs": "1.2.6"
+      "webcomponentsjs": "1.2.7"
     }
   }
 }
