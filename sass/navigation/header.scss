@@ -50,7 +50,7 @@
 	}
 }
 
-.d2l-navigation-s-header-logo-area > .d2l-navigation-s-link {
+.d2l-navigation-s-header-logo-area .d2l-navigation-s-link {
 	display: block;
 	font-size: 1.5rem;
 	flex: 0 1 auto; /* IE10 defaults to 0 0 auto */
@@ -60,7 +60,7 @@
 	white-space: nowrap;
 }
 
-.d2l-navigation-s .d2l-navigation-s-header-logo-area > .d2l-navigation-s-link {
+.d2l-navigation-s .d2l-navigation-s-header-logo-area .d2l-navigation-s-link {
 	font-size: 1.25rem;
 	@media (max-width: $d2l-navigation-bp-username) {
  		font-size: 1.1rem;
@@ -71,6 +71,9 @@
 	@media (max-width: $d2l-navigation-bp-title-compact) {
  		font-size: 0.9rem;
  	}
+}
+
+.d2l-navigation-s .d2l-navigation-s-header-logo-area .d2l-navigation-s-title-container {
 	@media (max-width: $d2l-navigation-bp-separators) {
 		margin-left: $d2l-navigation-margin-compact;
 		[dir="rtl"] & {
