@@ -33,8 +33,8 @@
     "d2l-localize-behavior": "https://github.com/BrightspaceUI/d2l-localize-behavior.git#4513f0a4b40390573f82529509330e184d0fe0b2",
     "d2l-menu": "https://github.com/BrightspaceUI/menu.git#c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
-    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#d4234689949c6a8ee0c6fc223c4fd286fcfe04b0",
     "d2l-my-dashboards": "https://github.com/Brightspace/d2l-my-dashboards-ui.git#d5ea877b0ab08a9ddc17225500b217a72c6d4f8d",
+    "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#44ed910ce62ff0aebcaa1965b6d698d287ee474c",
     "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -122,8 +122,8 @@
     "d2l-localize-behavior": "4513f0a4b40390573f82529509330e184d0fe0b2",
     "d2l-menu": "c6258704b9ecb8d78e255ec2e1ecdba21f8c1654",
     "d2l-more-less": "7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
-    "d2l-my-courses": "d4234689949c6a8ee0c6fc223c4fd286fcfe04b0",
     "d2l-my-dashboards": "d5ea877b0ab08a9ddc17225500b217a72c6d4f8d",
+    "d2l-my-courses": "44ed910ce62ff0aebcaa1965b6d698d287ee474c",
     "d2l-navigation": "cc75f8dfbbde833dda4c3a1f55a547ae41822dbc",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -178,7 +178,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-09-24T14:01:48.574Z",
+    "lastUpdated": "2018-09-25T16:10:50.389Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.5",
       "Sortable": "1.6.0-bs1",
@@ -212,8 +212,8 @@
       "d2l-localize-behavior": "1.1.3",
       "d2l-menu": "1.1.0",
       "d2l-more-less": "4.3.1",
-      "d2l-my-courses": "5.7.16",
       "d2l-my-dashboards": "1.0.4",
+      "d2l-my-courses": "5.7.17",
       "d2l-navigation": "0.2.0",
       "d2l-offscreen": "3.0.3",
       "d2l-organization-hm-behavior": "2.0.3",
