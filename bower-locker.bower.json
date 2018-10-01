@@ -13,7 +13,7 @@
     "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
     "d2l-icons": "^5.1.0",
-    "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#^3.3.0",
+    "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#^3.3.1",
     "d2l-inputs": "BrightspaceUI/inputs#^1.0.2",
     "d2l-intl-import": "^1.0.0",
     "d2l-link": "^4.0.2",
