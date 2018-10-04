@@ -21,7 +21,7 @@
     "d2l-menu": "^1.1.0",
     "d2l-more-less": "^4.3.0",
     "d2l-navigation": "^0.4.0",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.7.20",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^5.7.22",
     "d2l-my-dashboards": "^1.0.6",
     "d2l-offscreen": "^3.0.3",
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.0.3",
