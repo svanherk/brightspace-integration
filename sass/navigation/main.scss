@@ -27,10 +27,12 @@
 		flex-wrap: wrap;
 	}
 }
- .d2l-navigation-s-main-wrapper[has-edit-menu] {
+
+.d2l-navigation-s-main-wrapper[has-edit-menu] {
 	margin-right: 45px;
 }
- [dir="rtl"] .d2l-navigation-s-main-wrapper[has-edit-menu] {
+
+[dir="rtl"] .d2l-navigation-s-main-wrapper[has-edit-menu] {
 	margin-left: 45px;
 	margin-right: 0;
 }
