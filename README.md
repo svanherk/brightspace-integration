@@ -61,7 +61,8 @@ To install a new dependency or update an existing one:
 3. Make changes to `bower.json` manually or via `bower install <component>`
 4. Update dependencies in `bower_components` via `bower update` or by removing the directory and doing a fresh `bower install`
 5. Lock `bower.json` again by running `bower-locker lock`
-6. Inspect the diff to ensure the changes match your expectations
+6. Run `npm run clean-bower-json` to normalize some oddities
+7. Inspect the diff to ensure the changes match your expectations
 
 [Read more in the `bower-locker` documentation...](https://github.com/infusionsoft/bower-locker)
 
