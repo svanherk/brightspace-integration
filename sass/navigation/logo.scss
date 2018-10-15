@@ -2,10 +2,14 @@
 @import '../../bower_components/d2l-colors/d2l-colors.scss';
 
 .d2l-navigation-s-logo {
-	align-items: center;
-	display: inline-flex;
+	display: table;
 	height: 100%;
 	position: relative;
+}
+
+.d2l-navigation-s-logo-wrapper {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .d2l-navigation-s-logo-wrapper > a {
