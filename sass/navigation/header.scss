@@ -10,10 +10,16 @@
 	}
 }
 
+.d2l-navigation-header-left {
+	margin: -7px; // Needed for the overflow of the logo button highlight to expand past the left slot boundaries
+	overflow: hidden; // Needed for long course names
+}
+
 .d2l-navigation-s-header-open-button-wrapper {
 	display: inline-block;
 	flex: 0 1 auto;
 	height: 100%;
+	padding: 0 7px;
 	@media (min-width: ($d2l-navigation-bp-mobile-menu + 1)) {
 		display: none;
 	}
@@ -24,7 +30,6 @@
 	display: flex;
 	flex: 0 1 auto;
 	height: 100%;
-	margin: -7px;
 	overflow: hidden;
 	padding: 0 7px;
 
