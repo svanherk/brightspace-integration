@@ -28,13 +28,16 @@
     "preserve": "npm run build",
     "serve": "http-server build --cors",
     "test": "npm run lint && npm run test:unit",
+    "test:ci": "npm run test && npm run test-bower-json-clean",
     "test:unit": "mocha",
     "uglify:css": "npm run uglify:css:bsi && npm run uglify:css:datagrid && npm run uglify:css:homepages",
     "uglify:css:bsi": "cleancss -s ./build/bsi.css -o ./build/bsi.min.css -c",
     "uglify:css:datagrid": "cleancss -s ./build/datagrid.css -o ./build/datagrid.min.css",
     "uglify:css:homepages": "cleancss -s ./build/homepages.css -o ./build/homepages.min.css",
     "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js",
-    "jsonpify-imports": "node jsonp-imports.js \"./build/**/*.html\""
+    "jsonpify-imports": "node jsonp-imports.js \"./build/**/*.html\"",
+    "clean-bower-json": "node clean-bower-json.js",
+    "test-bower-json-clean": "npm run clean-bower-json && git diff --quiet bower.json || (git checkout bower.json; >&2 echo bower.json unclean. Execute npm run clean-bower-json; exit 1)"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,7 @@
   "entrypoint": "web-components/index.html",
   "fragments": [
     "web-components/bsi.html",
+    "web-components/d2l-activity-alignments.html",
     "web-components/d2l-image-banner-overlay.html",
     "web-components/d2l-more-less.html",
     "web-components/d2l-my-courses.html",
@@ -15,7 +16,10 @@
   ],
   "sources": [],
   "extraDependencies": [
-    "bower_components/d2l-rubric/editor/images/**"
+    "bower_components/d2l-rubric/editor/images/**",
+    "bower_components/d2l-html-editor/skin-4.3.7/**",
+    "bower_components/d2l-html-editor/langs/**",
+    "bower_components/d2l-html-editor/d2l_lang_plugin/**"
   ],
   "builds": [
     {
