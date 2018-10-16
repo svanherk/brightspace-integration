@@ -35,7 +35,7 @@
     "d2l-more-less": "https://github.com/BrightspaceUI/more-less.git#7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
     "d2l-my-courses": "https://github.com/Brightspace/d2l-my-courses-ui.git#0a35178a7f18a01b3dfd07f47413a8f3d44b48d2",
     "d2l-my-dashboards": "https://github.com/Brightspace/d2l-my-dashboards-ui.git#10b91cbc5118a35675d764208263251573f845e7",
-    "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#2675c38f6b1229fcfec225b6da399e7161440a95",
+    "d2l-navigation": "https://github.com/BrightspaceUI/navigation.git#c04026b25cea335a0056ac82c408a0562516f0f4",
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#827ee03b9a7d3f4a7559a09a077ddf1e774233b5",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -122,7 +122,7 @@
     "d2l-more-less": "7fb6369c8792407c6a40aaec8ec47a847f8ef0bb",
     "d2l-my-courses": "0a35178a7f18a01b3dfd07f47413a8f3d44b48d2",
     "d2l-my-dashboards": "10b91cbc5118a35675d764208263251573f845e7",
-    "d2l-navigation": "2675c38f6b1229fcfec225b6da399e7161440a95",
+    "d2l-navigation": "c04026b25cea335a0056ac82c408a0562516f0f4",
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-opt-in-flyout-webcomponent": "827ee03b9a7d3f4a7559a09a077ddf1e774233b5",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
@@ -174,7 +174,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-10-15T17:46:16.351Z",
+    "lastUpdated": "2018-10-16T14:29:35.472Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.5",
       "app-localize-behavior": "2.0.2",
@@ -210,7 +210,7 @@
       "d2l-more-less": "4.3.1",
       "d2l-my-courses": "5.7.22",
       "d2l-my-dashboards": "1.0.6",
-      "d2l-navigation": "0.7.0",
+      "d2l-navigation": "0.8.1",
       "d2l-offscreen": "3.0.3",
       "d2l-opt-in-flyout-webcomponent": "1.1.0",
       "d2l-organization-hm-behavior": "2.0.3",
