@@ -123,9 +123,14 @@
 }
 
 @media (max-width: $d2l-navigation-bp-mobile-menu) {
-	.d2l-navigation-bottom-bar {
+	.d2l-navigation-bottom-bar,
+	.d2l-navigation-main-ib { // tweak once image based bottom nav bar is in d2l-navigation
 		display: none;
 	}
+}
+
+.d2l-navigation-s-gutters { // remove once image based bottom nav bar is in d2l-navigation
+	position: relative;
 }
 
 .d2l-navigation-s-edit-menu {
