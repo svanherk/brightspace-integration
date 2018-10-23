@@ -12,8 +12,15 @@
 }
 
 .d2l-navigation-s .d2l-navigation-main-ib {
-	border-top: 1px solid $d2l-color-gypsum;
 	border-bottom-style: none;
+}
+
+.d2l-navigation-s-no-branding .d2l-navigation-main-ib {
+	border-top: 1px solid $d2l-color-gypsum;
+}
+
+.d2l-navigation-s-has-branding .d2l-navigation-main-ib {
+	border-top: 1px solid $d2l-color-light-galena;
 }
 
 .d2l-navigation-main-ib-list {
