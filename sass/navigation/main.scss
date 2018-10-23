@@ -9,12 +9,15 @@
 	border-bottom: 1px solid $d2l-color-light-galena;
 }
 
-.d2l-navigation-s-no-branding .d2l-navigation-s-main {
+// remove this block (and m_daylightLinkAreaColorSwitch check in NavigationView.Renderer.cs ) in Nov 2018
+.d2l-navigation-s-no-branding .d2l-navigation-bottom-bar-container {
 	border-top: 1px solid $d2l-color-gypsum;
 	border-bottom: 1px solid $d2l-color-gypsum;
 }
 
-.d2l-navigation-s-has-branding .d2l-navigation-s-main {
+// remove this block (and m_daylightLinkAreaColorSwitch check in NavigationView.Renderer.cs ) in Nov 2018
+// add this style to the :host block in d2l-navigation-bottom-bar.html
+.d2l-navigation-s-has-branding .d2l-navigation-bottom-bar-container {
 	border-top: 1px solid $d2l-color-light-galena;
 	border-bottom: 1px solid $d2l-color-light-galena;
 }
@@ -132,18 +135,14 @@
 	}
 }
 
-.d2l-navigation-s-main-wrapper[data-more] .d2l-navigation-s-more {
-	margin-left: 0;
-	margin-right: 0;
-}
-
 @media (max-width: $d2l-navigation-bp-mobile-menu) {
-	.d2l-navigation-s-main {
+	.d2l-navigation-bottom-bar,
+	.d2l-navigation-main-ib { // tweak once image based bottom nav bar is in d2l-navigation
 		display: none;
 	}
 }
 
-.d2l-navigation-s-gutters { // remove once bottom nav bar is in d2l-navigation
+.d2l-navigation-s-gutters { // remove once image based bottom nav bar is in d2l-navigation
 	position: relative;
 }
 
@@ -151,6 +150,11 @@
 	@include d2l-page-padding-right();
 	position: absolute;
 	right: 0;
+}
+
+.d2l-navigation-s-main-wrapper[data-more] .d2l-navigation-s-more {
+	margin-left: 0;
+	margin-right: 0;
 }
 
 [dir="rtl"] .d2l-navigation-s-edit-menu {
@@ -163,6 +167,6 @@
 	right: auto;
 }
 
-.d2l-navigation-main-tb .d2l-navigation-s-edit-menu {
-	top: 8.5px;
+d2l-navigation-bottom-bar .d2l-navigation-s-edit-menu {
+	top: 9px;
 }
