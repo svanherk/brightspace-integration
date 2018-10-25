@@ -39,7 +39,7 @@
     "d2l-offscreen": "https://github.com/BrightspaceUI/offscreen.git#2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#827ee03b9a7d3f4a7559a09a077ddf1e774233b5",
     "d2l-organization-hm-behavior": "git://github.com/Brightspace/organization-hm-behavior.git#d1b764b90c349a20aa77c63978f960552882b1a5",
-    "d2l-organizations": "https://github.com/BrightspaceHypermediaComponents/organizations.git#f20b97f990e1d660c9ecaf8a2f569c4f77fae7da",
+    "d2l-organizations": "https://github.com/BrightspaceHypermediaComponents/organizations.git#02b1b92ba13940e8dc4b2fa88a358d7a98e33572",
     "d2l-polymer-behaviors": "https://github.com/Brightspace/d2l-polymer-behaviors-ui.git#725fc0fdf566cbf6fae7bdc9478a2437143bc697",
     "d2l-polymer-siren-behaviors": "https://github.com/Brightspace/polymer-siren-behaviors.git#ce1d78f5d01d8cd8316f15bb99df4510f2254dbb",
     "d2l-resize-observer-polyfill-import": "https://github.com/Brightspace/resize-observer-polyfill-import.git#8d14b5889431861f9910e2ca1f57c4773e525db1",
@@ -126,7 +126,7 @@
     "d2l-offscreen": "2c62edef92bb61ede35a93f2ff0660811b666d44",
     "d2l-opt-in-flyout-webcomponent": "827ee03b9a7d3f4a7559a09a077ddf1e774233b5",
     "d2l-organization-hm-behavior": "d1b764b90c349a20aa77c63978f960552882b1a5",
-    "d2l-organizations": "f20b97f990e1d660c9ecaf8a2f569c4f77fae7da",
+    "d2l-organizations": "02b1b92ba13940e8dc4b2fa88a358d7a98e33572",
     "d2l-polymer-behaviors": "725fc0fdf566cbf6fae7bdc9478a2437143bc697",
     "d2l-polymer-siren-behaviors": "ce1d78f5d01d8cd8316f15bb99df4510f2254dbb",
     "d2l-resize-observer-polyfill-import": "8d14b5889431861f9910e2ca1f57c4773e525db1",
@@ -174,7 +174,7 @@
     "webcomponentsjs": "8a2e40557b177e2cca0def2553f84c8269c8f93e"
   },
   "bowerLocker": {
-    "lastUpdated": "2018-10-23T20:48:03.410Z",
+    "lastUpdated": "2018-10-25T18:47:39.848Z",
     "lockedVersions": {
       "1.x-hybrid-components": "0.0.5",
       "app-localize-behavior": "2.0.2",
@@ -214,7 +214,7 @@
       "d2l-offscreen": "3.0.3",
       "d2l-opt-in-flyout-webcomponent": "1.1.0",
       "d2l-organization-hm-behavior": "2.0.3",
-      "d2l-organizations": "0.1.8-hybrid",
+      "d2l-organizations": "0.1.10-hybrid",
       "d2l-polymer-behaviors": "1.8.1",
       "d2l-polymer-siren-behaviors": "0.1.0",
       "d2l-resize-observer-polyfill-import": "1.5.1",
