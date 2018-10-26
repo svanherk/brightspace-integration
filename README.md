@@ -96,7 +96,7 @@ that updates the `daylight-polymer-1` line of [D2L.LP.Web.UI.Html.Bsi.config.jso
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 
-*If there are more than just your changes between the BSI version you are bumping from and the BSI version you are bumping to please add the owner of the previous changes to your PR, and coordinate with them to ensure that any Core LMS PRs corresponding to the BSI changes are accounted for. Thank you!*
+*If there are more than just your changes between the BSI version you are bumping from and the BSI version you are bumping to please add the owner of the those changes to your PR, and coordinate with them to ensure that any Core LMS PRs corresponding to the BSI changes are accounted for. Thank you!*
 
 ## Contributing
 Contributions are welcome, please submit a pull request!
