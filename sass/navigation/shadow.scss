@@ -1,4 +1,5 @@
-// TODO: remove once all non-navigation usages have been accounted for
+// TODO: remove once the linked Lessions FRA usage has been accounted for
+// http://search.dev.d2l/source/xref/Lms/le/content/D2L.LE.Content/Web/Desktop/Views/Lessons/LessonsFraWrapper.js
 // (either updated to point at d2l-navigation or using their own local copy of styling in Core)
 .d2l-navigation-s-shadow-drop-border {
 	background-color: rgba(0,0,0,0.02);
@@ -9,7 +10,8 @@
 	width: 100%;
 }
 
-// TODO: remove once all non-navigation usages have been accounted for
+// TODO: remove once the linked Lessions FRA usage has been accounted for
+// http://search.dev.d2l/source/xref/Lms/le/content/D2L.LE.Content/Web/Desktop/Views/Lessons/LessonsFraWrapper.js
 // (either updated to point at d2l-navigation or using their own local copy of styling in Core)
 .d2l-navigation-s-shadow-gradient {
 	background: linear-gradient(to bottom,  rgba(249,250,251,1) 0%,rgba(249,250,251,0) 100%);
