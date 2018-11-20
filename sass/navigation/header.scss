@@ -33,7 +33,7 @@
 	overflow: hidden;
 	padding: 0 7px;
 
-	d2l-navigation-header & {
+	d2l-navigation-header-main & {
 		@media (max-width: $d2l-navigation-bp-title-hidden) {
 			display: none;
 		}
