@@ -1,7 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.21",
+    "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.22",
     "d2l-alert": "^3.2.2",
     "d2l-button": "^4.8.0",
     "d2l-button-group": "^2.1.0",
@@ -29,7 +29,7 @@
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.1.0",
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#^0.1.14-hybrid",
     "d2l-polymer-behaviors": "^1.7.4",
-    "d2l-rubric": "Brightspace/d2l-rubric#^0.131.0",
+    "d2l-rubric": "Brightspace/d2l-rubric#^0.133.0",
     "d2l-save-status": "Brightspace/d2l-save-status#^1.3.0",
     "d2l-simple-overlay": "git://github.com/Brightspace/simple-overlay#^2.2.0",
     "d2l-scroll-spy": "^0.0.3",
@@ -43,7 +43,7 @@
     "jquery-vui-change-tracking": "^0.6.0",
     "polymer": "^1.11.3",
     "susy": "^2.2.12",
-    "d2l-users": "^1.1.0"
+    "d2l-users": "^1.1.1"
   },
   "private": true,
   "resolutions": {
