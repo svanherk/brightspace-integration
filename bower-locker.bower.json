@@ -1,7 +1,7 @@
 {
   "name": "brightspace-integration",
   "dependencies": {
-    "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.21",
+    "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.22",
     "d2l-alert": "^3.2.2",
     "d2l-button": "^4.8.0",
     "d2l-button-group": "^2.1.0",
@@ -43,7 +43,7 @@
     "jquery-vui-change-tracking": "^0.6.0",
     "polymer": "^1.11.3",
     "susy": "^2.2.12",
-    "d2l-users": "^1.1.0"
+    "d2l-users": "^1.1.1"
   },
   "private": true,
   "resolutions": {
