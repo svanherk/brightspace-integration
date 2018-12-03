@@ -4,7 +4,8 @@
 	height: 100%;
 }
 
-.d2l-navigation-s-course-menu .d2l-navigation-s-button-highlight {
+.d2l-navigation-s-course-menu .d2l-navigation-s-button-highlight,
+.d2l-navigation-s-course-menu d2l-navigation-button-notification-icon {
 	margin: 0 5px;
 	@media (max-width: $d2l-navigation-bp-separators) {
 		margin: 0 $d2l-navigation-margin-compact / 2;
