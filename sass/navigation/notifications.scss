@@ -28,19 +28,6 @@
 	d2l-dropdown-content {
 		line-height: 1.5rem;
 	}
-	.d2l-navigation-s-notification-indicator {
-		display: none;
-		position: absolute;
-		right: -4px;
-		top: calc(50% - 19px);
-		d2l-icon {
-			height: 14px;
-			width: 14px;
-		}
-	}
-	&[data-has-notifications] .d2l-navigation-s-notification-indicator {
-		display: inline-block;
-	}
 }
 
 .d2l-navigation-s-notifications-div {
