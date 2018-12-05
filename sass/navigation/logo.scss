@@ -7,15 +7,6 @@
 	position: relative;
 }
 
-.d2l-navigation-s-logo-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.d2l-navigation-s-logo-wrapper > a {
-	display: inline-block;
-}
-
 .d2l-navigation-s-logo img {
 	border: none; /* needed for IE10 */
 	max-height: 60px;
@@ -25,16 +16,6 @@
 .d2l-navigation-s-has-title .d2l-navigation-s-logo img {
 	max-height: $d2l-navigation-small-logo-height;
 	max-width: $d2l-navigation-small-logo-width;
-}
-
-.d2l-navigation-s-logo-link:hover, .d2l-navigation-s-logo-link:focus {
-	.d2l-navigation-s-highlight-bar {
-		display: block;
-	}
-}
-
-.d2l-navigation-s-logo-link:focus {
-	box-shadow: 0 0 3px 0 rgba( $d2l-color-celestine, 0.4 );
 }
 
 .d2l-navigation-s-no-login .d2l-navigation-s-logo {
