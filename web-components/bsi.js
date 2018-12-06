@@ -4,8 +4,6 @@ import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 
 import 'fastdom';
 
-import '../src/components/hello-world.js';
-
 window.D2L = window.D2L || {};
 window.D2L.FastDom = window.fastdom;
 
