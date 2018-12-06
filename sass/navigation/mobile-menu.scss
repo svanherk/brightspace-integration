@@ -1,4 +1,4 @@
-@import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import '../../node_modules/d2l-colors/d2l-colors.scss';
 @import 'common.scss';
 
 .d2l-navigation-s-mobile-menu[data-state="closed"] {
@@ -169,7 +169,7 @@
 	margin: -7px;
 
 	.d2l-navigation-s-logo-divider {
-		display: inline-block;		
+		display: inline-block;
 	}
 
 	&.d2l-navigation-s-header-no-home-icon .d2l-navigation-s-logo-divider {
