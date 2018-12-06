@@ -1,5 +1,5 @@
-import '../@polymer/polymer/polymer-legacy.js';
-import '../@polymer/iron-iconset-svg/iron-iconset-svg.js';
+import '@polymer/polymer/polymer-legacy.js';
+import '@polymer/iron-iconset-svg/iron-iconset-svg.js';
 const $_documentContainer = document.createElement('template');
 $_documentContainer.setAttribute('style', 'display: none;');
 
