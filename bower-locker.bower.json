@@ -2,7 +2,6 @@
   "name": "brightspace-integration",
   "dependencies": {
     "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.27",
-    "d2l-course-image": "Brightspace/course-image#^2.1.5",
     "d2l-fetch-auth": "Brightspace/d2l-fetch-auth#^0.9.0",
     "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
@@ -14,14 +13,9 @@
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.2.0",
     "d2l-rubric": "Brightspace/d2l-rubric#^0.154.0",
     "d2l-telemetry-browser-client": "Brightspace/d2l-telemetry-browser-client#^0.4.0",
-    "iron-iconset-svg": "git://github.com/dlockhart/iron-iconset-svg#fix-empty-iconset",
     "jquery-vui-change-tracking": "^0.6.0",
     "susy": "^2.2.12",
     "d2l-users": "^1.1.1"
   },
-  "private": true,
-  "resolutions": {
-    "iron-iconset-svg": "fix-empty-iconset",
-    "webcomponentsjs": "^0.7"
-  }
+  "private": true
 }

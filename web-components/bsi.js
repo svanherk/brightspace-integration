@@ -57,10 +57,7 @@ import 'd2l-menu/d2l-menu.js';
 import 'd2l-menu/d2l-menu-item-link.js';
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 import 'd2l-polymer-behaviors/d2l-gestures-swipe.js';
-/*
-currently broken: https://github.com/Brightspace/d2l-save-status/pull/13
 import 'd2l-save-status/d2l-save-status.js';
-*/
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import '@polymer/iron-icon/iron-icon.js';
 /*
