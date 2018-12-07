@@ -71,6 +71,7 @@
     "d2l-course-image": "Brightspace/course-image#semver:^3",
     "d2l-dropdown": "BrightspaceUI/dropdown#semver:^7",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
+    "d2l-fetch-auth": "^1.2.0",
     "d2l-icons": "BrightspaceUI/icons#semver:^6",
     "d2l-intl": "^2.0.0",
     "d2l-link": "BrightspaceUI/link#semver:^5",
