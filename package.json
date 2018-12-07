@@ -77,6 +77,7 @@
     "d2l-loading-spinner": "BrightspaceUI/loading-spinner#semver:^7",
     "d2l-menu": "BrightspaceUI/menu#semver:^2",
     "d2l-more-less": "BrightspaceUI/more-less#semver:^5",
+    "d2l-navigation": "BrightspaceUI/navigation#polymer-3-2018-12-04-151654",
     "d2l-offscreen": "BrightspaceUI/offscreen#semver:^4",
     "d2l-polymer-behaviors": "Brightspace/d2l-polymer-behaviors-ui#semver:^2",
     "d2l-save-status": "Brightspace/d2l-save-status#semver:^3",
