@@ -3,7 +3,6 @@
   "dependencies": {
     "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.26",
     "d2l-enrollments": "BrightspaceHypermediaComponents/enrollments#^0.3.24",
-    "d2l-fetch-auth": "Brightspace/d2l-fetch-auth#^0.9.0",
     "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
     "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#^3.3.2",
