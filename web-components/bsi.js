@@ -48,9 +48,7 @@ import 'd2l-dropdown/d2l-dropdown-context-menu.js';
 import 'd2l-dropdown/d2l-dropdown-menu.js';
 import 'd2l-dropdown/d2l-dropdown-more.js';
 import 'd2l-icons/d2l-icons.js';
-/*
-<link rel="import" href="../bower_components/d2l-inputs/d2l-input-search.html">
-*/
+import 'd2l-inputs/d2l-input-search.js';
 import 'd2l-loading-spinner/d2l-loading-spinner.js';
 import 'd2l-menu/d2l-menu.js';
 import 'd2l-menu/d2l-menu-item-link.js';
