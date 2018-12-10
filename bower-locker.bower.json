@@ -5,7 +5,6 @@
     "d2l-enrollments": "BrightspaceHypermediaComponents/enrollments#^0.3.24",
     "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
-    "d2l-inputs": "BrightspaceUI/inputs#^1.0.5",
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^6.0.7",
     "d2l-my-dashboards": "^1.0.6",
     "d2l-opt-in-flyout-webcomponent": "git://github.com/Brightspace/d2l-opt-in-flyout-webcomponent.git#^1.2.0",
