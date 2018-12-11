@@ -14,7 +14,7 @@ import './timing-debug.js';
 window.D2L = window.D2L || {};
 
 import FastDom from './d2l-fastdom.js';
-window.D2L.FastDom = FastDom
+window.D2L.FastDom = FastDom;
 
 import './timing-debug.js';
 
