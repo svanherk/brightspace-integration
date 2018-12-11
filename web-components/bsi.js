@@ -4,11 +4,6 @@ import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 
 import 'fastdom';
 
-window.D2L = window.D2L || {};
-window.D2L.FastDom = window.fastdom;
-
-import '../js/timing-debug.js';
-
 import d2lIntl from 'd2l-intl';
 window.d2lIntl = d2lIntl;
 
@@ -72,3 +67,4 @@ import 'd2l-navigation/d2l-navigation-separator.js';
 <link rel="import" href="../bower_components/d2l-users/all-imports.html">
 */
 import './navigation-icons.js';
+console.log('end script');
