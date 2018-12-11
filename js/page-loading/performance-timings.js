@@ -58,16 +58,7 @@
 		addEventListener('load', pageLoaded);
 	}
 
-	// polyfill in use
-	if (window.WebComponents) {
-		addEventListener('WebComponentsReady', wcReady);
-	} else {
-		if (document.readyState === 'interactive' || document.readyState === 'complete') {
-			wcReady();
-		} else {
-			addEventListener('DOMContentLoaded', wcReady);
-		}
-	}
+	addEventListener('WebComponentsReady', wcReady);
 
 	if ('PerformanceObserver' in window) {
 		var observer = new PerformanceObserver(function(observerList) {
