@@ -98,7 +98,7 @@
     "imagemin": "^5.3.1",
     "imagemin-optipng": "^5.2.1",
     "mocha": "^3.2.0",
-    "node-sass": "^4.11.3",
+    "node-sass": "^4.11.0",
     "polymer-cli": "^1.8.0",
     "postcss-cli": "^6.0.0",
     "regenerator-runtime": "^0.12.1",
