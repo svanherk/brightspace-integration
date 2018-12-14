@@ -67,4 +67,7 @@ import 'd2l-navigation/d2l-navigation-separator.js';
 <link rel="import" href="../bower_components/d2l-users/all-imports.html">
 */
 import './navigation-icons.js';
-console.log('end script');
+window.d2lWCLoaded = true;
+if (window.D2L.WebComponentsLoaded !== undefined) {
+	window.D2L.WebComponentsLoaded();
+}
