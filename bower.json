@@ -109,7 +109,7 @@
     "d2l-fetch-simple-cache": "https://github.com/Brightspace/d2l-fetch-simple-cache.git#a7e1b7ae02962639ffcf4af222af540203f35b59",
     "d2l-fetch-siren-entity-behavior": "https://github.com/Brightspace/d2l-fetch-siren-entity-behavior.git#a5cf7958165ca9f5f16bdda9e200b4a071ea66f5",
     "d2l-hierarchical-view": "https://github.com/BrightspaceUI/hierarchical-view.git#c0952ac31024c6098e25bc0fc61be79a048539f1",
-    "d2l-hm-constants-behavior": "git://github.com/Brightspace/d2l-hm-constants-behavior.git#0a64e279952d3e4adaaa5ac514cb6434cba34da6",
+    "d2l-hm-constants-behavior": "https://github.com/Brightspace/d2l-hm-constants-behavior.git#0a64e279952d3e4adaaa5ac514cb6434cba34da6",
     "d2l-html-editor": "https://github.com/Brightspace/d2l-html-editor.git#58fe82e3b5f608faeed8e4c900382b1798696ef7",
     "d2l-icons": "https://github.com/BrightspaceUI/icons.git#33f4172a17d9e567a650022b22d512671499b79d",
     "d2l-image-banner-overlay": "https://github.com/Brightspace/d2l-image-banner-overlay.git#9583dc9d0244cac492d5ccd32ef4e96cf8addfb5",
