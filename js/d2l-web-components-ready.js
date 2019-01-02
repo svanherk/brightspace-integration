@@ -8,41 +8,19 @@ function check() {
 	}
 }
 
-function dcl() {
-	window.removeEventListener('DOMContentLoaded', dcl);
-	webComponentsReady = true;
-	check();
-}
-
-function wcr() {
-	window.removeEventListener('WebComponentsReady', wcr);
-	webComponentsReady = true;
-	check();
-}
-
 module.exports = {
 	WebComponentsLoaded: function() {
 		d2lComponentsLoaded = true;
 		check();
 	},
+	WCRDispatched: function() {
+		webComponentsReady = true;
+		check();
+	},
 	WebComponentsReady: new Promise(function(resolve) {
 		ready = resolve;
 	}),
-	init: function() {
-		if (window.WebComponents && !window.WebComponents.ready) {
-			window.addEventListener('WebComponentsReady', wcr);
-		} else {
-			if (document.readyState === 'interactive' || document.readyState === 'complete') {
-				webComponentsReady = true;
-				check();
-			} else {
-				window.addEventListener('DOMContentLoaded', dcl);
-			}
-		}
-	},
 	reset: function() {
-		window.removeEventListener('WebComponentsReady', wcr);
-		window.removeEventListener('DOMContentLoaded', dcl);
 		d2lComponentsLoaded = false;
 		webComponentsReady = false;
 		this.WebComponentsReady = new Promise(function(resolve) {
