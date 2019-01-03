@@ -1,5 +1,3 @@
-/*
-<link rel="import" href="../bower_components/d2l-opt-in-flyout-webcomponent/d2l-opt-in-flyout.html">
-<link rel="import" href="../bower_components/d2l-opt-in-flyout-webcomponent/d2l-opt-out-flyout.html">
-<link rel="import" href="../bower_components/d2l-opt-in-flyout-webcomponent/d2l-opt-out-reason.html">
-*/
+import 'd2l-opt-in-flyout-webcomponent/d2l-opt-in-flyout.js';
+import 'd2l-opt-in-flyout-webcomponent/d2l-opt-out-flyout.js';
+import 'd2l-opt-in-flyout-webcomponent/d2l-opt-out-reason.js';
