@@ -53,6 +53,7 @@ import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import '@polymer/iron-icon/iron-icon.js';
 import 'd2l-navigation/d2l-navigation.js';
+import 'd2l-navigation/d2l-navigation-immersive.js';
 import 'd2l-navigation/d2l-navigation-band.js';
 import 'd2l-navigation/d2l-navigation-button.js';
 import 'd2l-navigation/d2l-navigation-button-close.js';
@@ -63,7 +64,7 @@ import 'd2l-navigation/d2l-navigation-link.js';
 import 'd2l-navigation/d2l-navigation-link-back.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
-import 'd2l-activities/components/d2l-evaluation-hub/d2l-evaluation-hub.js'
+import 'd2l-activities/components/d2l-evaluation-hub/d2l-evaluation-hub.js';
 /*
 <link rel="import" href="../bower_components/d2l-users/all-imports.html">
 */
