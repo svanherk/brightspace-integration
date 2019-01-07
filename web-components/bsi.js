@@ -63,7 +63,7 @@ import 'd2l-navigation/d2l-navigation-link.js';
 import 'd2l-navigation/d2l-navigation-link-back.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
-import 'd2l-activities/components/d2l-evaluation-hub-activities-list/d2l-evaluation-hub-activities-list.js'
+import 'd2l-activities/components/d2l-evaluation-hub/d2l-evaluation-hub.js'
 /*
 <link rel="import" href="../bower_components/d2l-users/all-imports.html">
 */
