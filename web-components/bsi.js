@@ -10,6 +10,7 @@ window.d2lIntl = d2lIntl;
 import { d2lfetch } from '../node_modules/d2l-fetch/src/index.js';
 import { fetchAuth } from 'd2l-fetch-auth';
 import { fetchDedupe } from 'd2l-fetch-dedupe';
+import { fetchSimpleCache } from 'd2l-fetch-simple-cache';
 
 d2lfetch.use({
 	name: 'auth',
@@ -19,16 +20,9 @@ d2lfetch.use({
 	}
 });
 d2lfetch.use({name: 'dedupe', fn: fetchDedupe});
+d2lfetch.use({name: 'simple-cache', fn: fetchSimpleCache});
 window.d2lfetch = d2lfetch;
 
-// from bsi.html
-/*
-<link rel="import" href="../bower_components/d2l-fetch-simple-cache/d2l-fetch-simple-cache.html">
-
-<script>
-	window.d2lfetch.use({name: 'simpleCache', fn: window.d2lfetch.simpleCache});
-</script>
-*/
 import 'd2l-alert/d2l-alert.js';
 import 'd2l-alert/d2l-alert-toast.js';
 import 'd2l-link/d2l-link.js';
