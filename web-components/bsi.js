@@ -9,6 +9,7 @@ window.d2lIntl = d2lIntl;
 
 import { d2lfetch } from '../node_modules/d2l-fetch/src/index.js';
 import { fetchAuth } from 'd2l-fetch-auth';
+import { fetchDedupe } from 'd2l-fetch-dedupe';
 
 d2lfetch.use({
 	name: 'auth',
@@ -17,15 +18,14 @@ d2lfetch.use({
 		enableTokenCache: true
 	}
 });
+d2lfetch.use({name: 'dedupe', fn: fetchDedupe});
 window.d2lfetch = d2lfetch;
 
 // from bsi.html
 /*
-<link rel="import" href="../bower_components/d2l-fetch-dedupe/d2l-fetch-dedupe.html">
 <link rel="import" href="../bower_components/d2l-fetch-simple-cache/d2l-fetch-simple-cache.html">
 
 <script>
-	window.d2lfetch.use({name: 'dedupe', fn: window.d2lfetch.dedupe});
 	window.d2lfetch.use({name: 'simpleCache', fn: window.d2lfetch.simpleCache});
 </script>
 */

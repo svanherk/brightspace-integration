@@ -2,7 +2,6 @@
   "name": "brightspace-integration",
   "dependencies": {
     "d2l-activity-alignments": "Brightspace/d2l-activity-alignments#^0.0.27",
-    "d2l-fetch-dedupe": "Brightspace/d2l-fetch-dedupe#^0.13.0",
     "d2l-fetch-simple-cache": "Brightspace/d2l-fetch-simple-cache#^0.6.0",
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#^6.0.9",
     "d2l-my-dashboards": "^1.0.6",
