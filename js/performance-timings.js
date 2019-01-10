@@ -1,6 +1,6 @@
-/* eslint strict: "off" */
+import webComponentsReady from './d2l-web-components-ready.js';
+
 (function() {
-	'use strict';
 
 	if (!window.performance
 		|| !window.performance.mark
@@ -58,7 +58,7 @@
 		addEventListener('load', pageLoaded);
 	}
 
-	addEventListener('WebComponentsReady', wcReady);
+	webComponentsReady.WebComponentsReady.then(wcReady);
 
 	if ('PerformanceObserver' in window) {
 		var observer = new PerformanceObserver(function(observerList) {

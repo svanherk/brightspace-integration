@@ -1,3 +1,5 @@
+import FastDom from './d2l-fastdom.js';
+
 window.addEventListener('d2l-performance-measure', function addTiming(e) {
 
 	var res = /(\?|&)timingdebug=(1|0)/gi.exec(location.search);
@@ -25,7 +27,7 @@ window.addEventListener('d2l-performance-measure', function addTiming(e) {
 		return;
 	}
 
-	fastdom.mutate(function() {
+	FastDom.mutate(function() {
 
 		var timingNode = document.createElement('div');
 		var value = (e.detail.value.entryType === 'paint') ? e.detail.value.startTime : e.detail.value.duration;
