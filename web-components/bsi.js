@@ -1,5 +1,3 @@
-import '../js/page-loading/performance-timings.js';
-
 import 'whatwg-fetch'; // Required for d2l-fetch + IE11
 
 import 'fastdom';
