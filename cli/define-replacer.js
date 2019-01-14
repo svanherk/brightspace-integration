@@ -8,11 +8,11 @@
  * instances with "define2" to avoid this conflict.
  *
  * Cases:
- * "window.define ", "window.define.", "window.define)" in esm-amd-loader.js
+ * "window.define=", "window.define.", "window.define)" in esm-amd-loader.js
  * " define)define(" in shared_bundle_1.js from FastDom
  * "define(" at the start of each bundle file
  */
-const regex = /((\sdefine\)define\()|(window\.define\s)|(window\.define\.)|(window\.define\))|^(define\())/g;
+const regex = /((\sdefine\)define\()|(window\.define=)|(window\.define\.)|(window\.define\))|^(define\())/g;
 
 module.exports = function(data) {
 	return data.replace(regex, (match) => {
