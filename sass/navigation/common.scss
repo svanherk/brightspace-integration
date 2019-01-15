@@ -36,13 +36,15 @@ a.d2l-navigation-s-link:visited {
 
 .d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link,
 .d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:link,
-.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:visited {
+.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:visited,
+.d2l-branding-navigation-dark-foreground-color div.d2l-navigation-s-item > span {
 	color: $d2l-branding-navigation-dark-foreground-color;
 }
 
 .d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link,
 .d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link:link,
-.d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link:visited {
+.d2l-branding-navigation-light-foreground-color a.d2l-navigation-s-link:visited,
+.d2l-branding-navigation-light-foreground-color div.d2l-navigation-s-item > span {
 	color: $d2l-branding-navigation-light-foreground-color;
 }
 
