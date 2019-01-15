@@ -5,7 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const bowerJsonPath = path.join(__dirname, 'bower.json');
+const bowerJsonPath = path.join(__dirname, '..', 'bower.json');
 
 fs.readFile(bowerJsonPath, { encoding: 'utf8' }, function(err, jsonString) {
 	if (err) {

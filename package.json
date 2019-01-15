@@ -19,7 +19,7 @@
     "build:icons": "cpy --parents --cwd=bower_components/d2l-icons \"images/**/*.*\" ../../build",
     "build:navicons": "cpy \"nav-icons/*.*\" build/images/nav-icons",
     "build:rename-define": "node ./cli/rename-define.js \"./build/**/*.js\"",
-    "build:email-icons": "node build-email-icons.js",
+    "build:email-icons": "node ./cli/build-email-icons.js",
     "build:wc": "polymer build",
     "postbuild": "npm run build:rename-define",
     "postinstall": "bower install",
@@ -30,7 +30,8 @@
     "preserve": "npm run build",
     "serve": "http-server build --cors",
     "test": "npm run lint && npm run test:unit",
-    "test:ci": "npm run test && npm run test-bower-json-clean && npm run test:package-lock",
+    "test:bower-json-clean": "npm run clean-bower-json && git diff --quiet bower.json || (git checkout bower.json; >&2 echo bower.json unclean. Execute npm run clean-bower-json; exit 1)",
+    "test:ci": "npm run test && npm run test:bower-json-clean && npm run test:package-lock",
     "test:package-lock": "node test-package-lock.js",
     "test:unit": "mocha --require @babel/register",
     "uglify:css": "npm run uglify:css:bsi && npm run uglify:css:datagrid && npm run uglify:css:homepages",
@@ -38,8 +39,7 @@
     "uglify:css:datagrid": "cleancss -s ./build/datagrid.css -o ./build/datagrid.min.css",
     "uglify:css:homepages": "cleancss -s ./build/homepages.css -o ./build/homepages.min.css",
     "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js",
-    "clean-bower-json": "node clean-bower-json.js",
-    "test-bower-json-clean": "npm run clean-bower-json && git diff --quiet bower.json || (git checkout bower.json; >&2 echo bower.json unclean. Execute npm run clean-bower-json; exit 1)"
+    "clean-bower-json": "node ./cli/clean-bower-json.js"
   },
   "repository": {
     "type": "git",
