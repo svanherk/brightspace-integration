@@ -16,7 +16,7 @@
     "build:sass:datagrid": "node-sass --output-style expanded ./sass/datagrid/datagrid.scss ./build/datagrid.css",
     "build:sass:homepages": "node-sass --output-style expanded ./sass/homepages/homepages.scss ./build/homepages.css",
     "postbuild:sass": "npm run autoprefix && npm run uglify:css",
-    "build:icons": "cpy --parents --cwd=bower_components/d2l-icons \"images/**/*.*\" ../../build",
+    "build:icons": "cpy --parents --cwd=node_modules/d2l-icons \"images/**/*.*\" ../../build",
     "build:navicons": "cpy \"nav-icons/*.*\" build/images/nav-icons",
     "build:rename-define": "node ./cli/rename-define.js \"./build/**/*.js\"",
     "build:email-icons": "node ./cli/build-email-icons.js",
