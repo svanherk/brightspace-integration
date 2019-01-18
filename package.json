@@ -28,16 +28,14 @@
     "preserve": "npm run build",
     "serve": "http-server build --cors",
     "test": "npm run lint && npm run test:unit",
-    "test:bower-json-clean": "npm run clean-bower-json && git diff --quiet bower.json || (git checkout bower.json; >&2 echo bower.json unclean. Execute npm run clean-bower-json; exit 1)",
-    "test:ci": "npm run test && npm run test:bower-json-clean && npm run test:package-lock",
+    "test:ci": "npm run test && npm run test:package-lock",
     "test:package-lock": "node test-package-lock.js",
     "test:unit": "mocha --require @babel/register",
     "uglify:css": "npm run uglify:css:bsi && npm run uglify:css:datagrid && npm run uglify:css:homepages",
     "uglify:css:bsi": "cleancss -s ./build/bsi.css -o ./build/bsi.min.css -c",
     "uglify:css:datagrid": "cleancss -s ./build/datagrid.css -o ./build/datagrid.min.css",
     "uglify:css:homepages": "cleancss -s ./build/homepages.css -o ./build/homepages.min.css",
-    "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js",
-    "clean-bower-json": "node ./cli/clean-bower-json.js"
+    "uglify:js": "uglifyjs ./build/bsi.js --compress --mangle --source-map \"content='build/bsi.js.map',url='bsi.min.js.map'\" -o ./build/bsi.min.js"
   },
   "repository": {
     "type": "git",
@@ -63,8 +61,6 @@
     "@webcomponents/webcomponentsjs": "^2.0.4",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^10.0.1",
-    "bower": "^1.8.4",
-    "bower-locker": "^1.0.7",
     "chai": "^4.2.0",
     "clean-css": "^3.4.19",
     "cpy-cli": "^1.0.1",
