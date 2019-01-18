@@ -1,3 +1,1 @@
-/*
-<link rel="import" href="../bower_components/d2l-rubric/editor/d2l-rubric-editor.html">
-*/
+import 'd2l-rubric/editor/d2l-rubric-editor.js';
