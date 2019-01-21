@@ -21,7 +21,7 @@
     "node_modules/d2l-html-editor/skin-4.3.7/**",
     "node_modules/d2l-html-editor/langs/**",
     "node_modules/d2l-html-editor/d2l_lang_plugin/**",
-    "node_modules/d2l-html-editor/**/*"
+    "node_modules/d2l-html-editor/**/*.css"
   ],
   "lint": {
     "rules": [
