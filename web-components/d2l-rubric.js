@@ -1,1 +1,1 @@
-//import 'd2l-rubric/d2l-rubric.js';
+import 'd2l-rubric/d2l-rubric.js';
