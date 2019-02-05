@@ -2,18 +2,20 @@
 @import 'common.scss';
 
 /**
- * DE32805: we need to apply button styles to button.d2l-button as in Edge,
+ * DE32805: we need to re-apply this to button.d2l-button as in Edge,
  * the shady CSS polyfill reuses the "d2l-button" CSS class, causing
- * a collision.
+ * a collision and forcing buttons to "width: 100%".
  * GitHub issue tracking this: https://github.com/webcomponents/shadycss/issues/238
  */
-.d2l-button,
 button.d2l-button {
+	width: auto;
+}
+
+.d2l-button {
 	@include d2l-button();
 	margin-right: $d2l-button-spacing;
 }
-[dir='rtl'] .d2l-button,
-[dir='rtl'] button.d2l-button {
+[dir='rtl'] .d2l-button {
 	margin-left: $d2l-button-spacing;
 	margin-right: 0;
 }
