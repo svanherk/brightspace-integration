@@ -1,19 +1,6 @@
-@import '../../node_modules/d2l-colors/d2l-colors.scss';
-
 .d2l-navigation-s-logo {
 	height: 100%;
 	position: relative;
-}
-
-.d2l-navigation-s-logo img {
-	border: none; /* needed for IE10 */
-	max-height: 60px;
-	max-width: 260px;
-}
-
-.d2l-navigation-s-has-title .d2l-navigation-s-logo img {
-	max-height: $d2l-navigation-small-logo-height;
-	max-width: $d2l-navigation-small-logo-width;
 }
 
 .d2l-navigation-s-no-login .d2l-navigation-s-logo {

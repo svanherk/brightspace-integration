@@ -179,13 +179,6 @@
 		font-size: 1rem;
 	}
 
-	.d2l-navigation-s-logo {
-		img {
-			max-height: $d2l-navigation-small-logo-height;
-			max-width: $d2l-navigation-small-logo-width;
-		}
-	}
-
 	@media (max-width: $d2l-navigation-bp-mobile-menu) {
 		.d2l-navigation-s-title-divider {
 			d2l-icon {
