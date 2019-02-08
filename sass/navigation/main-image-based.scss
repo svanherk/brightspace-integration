@@ -15,10 +15,6 @@
 	border-bottom-style: none;
 }
 
-.d2l-navigation-s-no-branding .d2l-navigation-main-ib {
-	border-top: 1px solid $d2l-color-gypsum;
-}
-
 .d2l-navigation-s-has-branding .d2l-navigation-main-ib {
 	border-top: 1px solid $d2l-color-light-galena;
 }
@@ -268,12 +264,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	display: inline-block;
 }
 
-.d2l-navigation-s-no-branding
-.d2l-navigation-main-ib-tray[opened] > .d2l-navigation-main-ib-pully-container > .d2l-navigation-main-ib-bottom-cap {
-	border-top-color: $d2l-color-gypsum;
-}
-
-.d2l-navigation-s-no-branding,
 .d2l-navigation-s-linkarea-no-color {
 	.d2l-navigation-main-ib-bottom-cap {
 		border-bottom-color: $d2l-color-light-galena;
@@ -393,10 +383,6 @@ div.d2l-navigation-ib-item-icon-group-icon {
 
 .d2l-branding-navigation-light-foreground-color .d2l-navigation-main-ib-pully-icon > d2l-icon {
 	color: $d2l-branding-navigation-light-foreground-color;
-}
-
-.d2l-navigation-s-no-branding .d2l-navigation-main-ib-pully > d2l-icon {
-	color: $d2l-color-celestine;
 }
 
 .d2l-navigation-main-ib-tray[closing] .d2l-navigation-main-ib-pully[shown] .d2l-navigation-main-ib-pully-icon > d2l-icon {
