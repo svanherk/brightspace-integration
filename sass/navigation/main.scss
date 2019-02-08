@@ -2,17 +2,6 @@
 @import '../common.scss';
 
 .d2l-navigation-s-main-no-links {
-	border-bottom: 1px solid $d2l-color-gypsum;
-}
-
-.d2l-navigation-s-has-branding .d2l-navigation-s-main-no-links {
-	border-bottom: 1px solid $d2l-color-light-galena;
-}
-
-// remove this block (and m_daylightLinkAreaColorSwitch check in NavigationView.Renderer.cs ) in Nov 2018
-// add this style to the :host block in d2l-navigation-main-footer.html
-.d2l-navigation-s-has-branding .d2l-navigation-main-footer-container {
-	border-top: 1px solid $d2l-color-light-galena;
 	border-bottom: 1px solid $d2l-color-light-galena;
 }
 
@@ -129,7 +118,7 @@
 }
 
 @media (max-width: $d2l-navigation-bp-mobile-menu) {
-	.d2l-navigation-main-footer-container,
+	d2l-navigation-main-footer,
 	.d2l-navigation-main-ib { // tweak once image based bottom nav bar is in d2l-navigation
 		display: none;
 	}

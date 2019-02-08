@@ -150,7 +150,7 @@
 	}
 }
 
-.d2l-navigation-s-has-branding .d2l-navigation-s-mobile-menu-title-bp {
+.d2l-navigation-s-mobile-menu-title-bp {
 	border-top: 1px solid $d2l-color-light-galena;
 	border-bottom: 1px solid $d2l-color-light-galena;
 }
@@ -191,14 +191,14 @@
 	}
 }
 
-.d2l-branding-navigation-dark-foreground-color.d2l-navigation-s-has-branding {
+.d2l-branding-navigation-dark-foreground-color {
 	.d2l-navigation-s-mobile-menu-title-bp,
 	.d2l-navigation-s-mobile-menu-title-bp .d2l-navigation-s-course-info {
 		color: $d2l-branding-navigation-dark-foreground-color;
 	}
 }
 
-.d2l-branding-navigation-light-foreground-color.d2l-navigation-s-has-branding {
+.d2l-branding-navigation-light-foreground-color {
 	.d2l-navigation-s-mobile-menu-title-bp,
 	.d2l-navigation-s-mobile-menu-title-bp .d2l-navigation-s-course-info {
 		color: $d2l-branding-navigation-light-foreground-color;
