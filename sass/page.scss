@@ -61,6 +61,11 @@ body[unresolved] {
 	padding-bottom: 10px;
 }
 
+.d2l-page-dashboard,
+#d2l_body.d2l-page-dashboard  {
+	background-color: $d2l-color-regolith;
+}
+
 .d2l-page-header {
 	margin-bottom: 1.5rem;
 }
