@@ -1,5 +1,7 @@
-<link rel="import" href="../bower_components/d2l-table/d2l-table.html">
-<custom-style>
+import 'd2l-table/d2l-table.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<custom-style>
 	<style is="custom-style" include="d2l-table-style">
 		.d2l-dialog-body d2l-table-wrapper {
 			--d2l-scroll-wrapper-action-offset: -10px;
@@ -11,4 +13,6 @@
 			vertical-align: middle;
 		}
 	</style>
-</custom-style>
+</custom-style>`;
+
+document.head.appendChild($_documentContainer.content);
