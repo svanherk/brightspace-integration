@@ -38,6 +38,7 @@ export default {
 	},
 	__wcr: webComponentsReady,
 	clear: function(id) {
+		if (id === undefined) return;
 		var fastDomId = id;
 		if (idMap[id] !== undefined) {
 			if (idMap[id].id === 'pending') {
