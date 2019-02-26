@@ -1,10 +1,11 @@
 import './polyfills.js';
 import webComponentsReady from './d2l-web-components-ready.js';
 import FastDom from './d2l-fastdom.js';
+import FastDomPromised from '../node_modules/fastdom/extensions/fastdom-promised.js';
 import './timing-debug.js';
 import './performance-timings.js';
-import '../bower_components/jquery-vui-change-tracking/changeTracker.js';
-import '../bower_components/jquery-vui-change-tracking/changeTracking.js';
+import '../node_modules/jquery-vui-change-tracking/changeTracker.js';
+import '../node_modules/jquery-vui-change-tracking/changeTracking.js';
 
 window.D2L = window.D2L || {};
 
@@ -19,3 +20,6 @@ if (window.d2lWCRDispatched) {
 }
 
 window.D2L.FastDom = FastDom;
+window.D2L.fastdom = FastDomPromised;
+window.D2L.fastdom.fastdom = FastDom;
+window.D2L.fastdom.initialize();

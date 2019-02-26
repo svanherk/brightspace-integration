@@ -1,4 +1,4 @@
-@import '../../bower_components/d2l-colors/d2l-colors.scss';
+@import '../../node_modules/d2l-colors/d2l-colors.scss';
 
 .d2l-navigation-s-mobile-menu[data-state="closed"] {
 	display: none;
@@ -192,15 +192,13 @@
 }
 
 .d2l-branding-navigation-dark-foreground-color {
-	.d2l-navigation-s-mobile-menu-title-bp,
-	.d2l-navigation-s-mobile-menu-title-bp .d2l-navigation-s-course-info {
+	.d2l-navigation-s-mobile-menu-title-bp  {
 		color: $d2l-branding-navigation-dark-foreground-color;
 	}
 }
 
 .d2l-branding-navigation-light-foreground-color {
-	.d2l-navigation-s-mobile-menu-title-bp,
-	.d2l-navigation-s-mobile-menu-title-bp .d2l-navigation-s-course-info {
+	.d2l-navigation-s-mobile-menu-title-bp {
 		color: $d2l-branding-navigation-light-foreground-color;
 	}
 }

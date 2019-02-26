@@ -44,29 +44,14 @@ To point your Brightspace instance at the local integration project:
 
 1. Go to your `{instance}/config/Infrastructure` directory
 2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
-3. Change the `daylight-polymer-<version>` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
+3. Change the `polymer-<version>` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
 4. Restart IIS
 
 The config file will get overwritten during the build.
 
-## NPM and Bower Dependency Locking
+## NPM Dependency Locking
 
-We use lock files to lock both our NPM and Bower dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
-
-### Bower Locking
-
-To install a new dependency or update an existing one:
-1. If you haven't already, install `bower-locker` globally using `npm install -g bower-locker`
-2. Unlock `bower.json` by running `bower-locker unlock`
-3. Make changes to `bower.json` manually or via `bower install <component>`
-4. Update dependencies in `bower_components` via `bower update` or by removing the directory and doing a fresh `bower install`
-5. Lock `bower.json` again by running `bower-locker lock`
-6. Run `npm run clean-bower-json` to normalize some oddities
-7. Inspect the diff to ensure the changes match your expectations
-
-[Read more in the `bower-locker` documentation...](https://github.com/infusionsoft/bower-locker)
-
-### NPM Locking
+We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
 
 Any command that would normally add or update `package.json` will also update `package-lock.json` -- `npm install`, `npm update` etc. Just be cognizant of the changes you're making.
 
@@ -74,14 +59,13 @@ Any command that would normally add or update `package.json` will also update `p
 
 ## Web Components
 
-This project serves as an integration point for our web components and we are using [Polymer CLI's](https://www.polymer-project.org/2.0/toolbox/build-for-production) `build` command to manage common dependencies between components and generate web component bundles.
+This project serves as an integration point for our web components and we are using [Polymer CLI's](https://polymer-library.polymer-project.org/3.0/docs/apps/build-for-production) `build` command to manage common dependencies between components and generate web component bundles.
 
 To integrate a new web component into BSI, perform the following steps:
 
-1. Unlock `bower.json` by following the instructions above for `bower-locker`
-2. Reference your component as a bower dependency using the path to the repository plus a version tag (i.e. `bower install --save https://github.com/Brightspace/my-component.git#1.0.0`)
-3. Add an HTML file (i.e. `d2l-my-component.html`) to the `web-components` directory that references the new bower component. (i.e. `../bower_components/my-component/my-component.html`)
-4. Reference the new html file from the fragments list in  `polymer.json`
+1. Reference your component as an NPM dependency using the path to the repository plus a semver tag (e.g. `"d2l-navigation": "BrightspaceUI/navigation#semver:^3"`). **Do not include minor or patch versions.**
+2. Add a JavaScript file (i.e. `d2l-my-component.js`) to the `web-components` directory that imports the new web component. (i.e. `../node_modules/my-component/my-component.js`)
+3. Reference the new JavaScript file from the fragments list in `polymer.json`
 
 ## Publishing
 
@@ -91,8 +75,8 @@ The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 
 ## Updating LP to reference the new version of BSI
 
-Once you've drafted a new release of BSI, you'll need to update LP to reference your version. Create a PR in LP
-that updates the `daylight-polymer-1` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
+Once you've drafted a new release of BSI, you'll need to update LP to reference your version. Create a pull request in LP
+that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 

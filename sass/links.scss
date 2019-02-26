@@ -1,5 +1,5 @@
-@import '../bower_components/d2l-colors/d2l-colors.scss';
-@import '../bower_components/d2l-link/d2l-link.scss';
+@import '../node_modules/d2l-colors/d2l-colors.scss';
+@import '../node_modules/d2l-link/d2l-link.scss';
 
 .d2l-link {
 	@include d2l-link();
