@@ -6,7 +6,17 @@ const fs = require('fs');
 const path = require('path');
 
 const packageLockPath = path.join(__dirname, 'package-lock.json');
-const packages = ['d2l-hypermedia-constants'];
+const packages = [
+	'd2l-fetch',
+	'd2l-fetch-auth',
+	'd2l-fetch-dedupe',
+	'd2l-fetch-simple-cache',
+	'd2l-hypermedia-constants',
+	'd2l-intl',
+	'd2l-organization-hm-behavior',
+	'd2l-polymer-siren-behaviors',
+	'd2l-telemetry-browser-client'
+];
 
 function validate(json, depth, parentKey) {
 	depth++;
