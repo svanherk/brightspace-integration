@@ -6,17 +6,31 @@ const fs = require('fs');
 const path = require('path');
 
 const packageLockPath = path.join(__dirname, 'package-lock.json');
+const packages = [
+	'd2l-fetch',
+	'd2l-fetch-auth',
+	'd2l-fetch-dedupe',
+	'd2l-fetch-simple-cache',
+	'd2l-hypermedia-constants',
+	'd2l-intl',
+	'd2l-organization-hm-behavior',
+	'd2l-polymer-siren-behaviors',
+	'd2l-telemetry-browser-client'
+];
 
-function validate(json, depth) {
+function validate(json, depth, parentKey) {
 	depth++;
 	for (const key in json) {
-		if (key.substr(0, 4) === 'd2l-' && depth > 1) {
-			console.error(`D2L sub-dependency detected: "${key}". All "d2l-*" web component dependencies must be at root level to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.`);
-			process.exitCode = 1;
+		if (depth > 1) {
+			const isPolymer = json[key].requires !== undefined && json[key].requires['@polymer/polymer'] !== undefined;
+			if (isPolymer || packages.indexOf(key) > -1) {
+				console.error(`Polymer sub-dependency detected "${key}" in "${parentKey}". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.`);
+				process.exitCode = 1;
+			}
 		}
 		const subDeps = json[key].dependencies;
 		if (subDeps !== undefined) {
-			validate(subDeps, depth);
+			validate(subDeps, depth, key);
 		}
 	}
 }
@@ -30,6 +44,6 @@ fs.readFile(packageLockPath, { encoding: 'utf8' }, function(err, jsonString) {
 	}
 
 	const json = JSON.parse(jsonString);
-	validate(json.dependencies, 0);
+	validate(json.dependencies, 0, '');
 
 });
