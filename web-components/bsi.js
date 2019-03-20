@@ -56,7 +56,7 @@ import 'd2l-navigation/d2l-navigation-link.js';
 import 'd2l-navigation/d2l-navigation-link-back.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
-import 'd2l-activities/components/d2l-evaluation-hub/d2l-evaluation-hub.js';
+import 'd2l-activities/components/d2l-quick-eval/d2l-quick-eval.js';
 import 'd2l-users/components/d2l-profile-image.js';
 
 import './navigation-icons.js';
