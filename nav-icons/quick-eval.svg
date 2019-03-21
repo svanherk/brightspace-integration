@@ -3,7 +3,7 @@
     <style>.cls-1{isolation:isolate;}.cls-2{fill:#2dc1d7;}.cls-10,.cls-3,.cls-7{fill:#fff;}.cls-3{opacity:0.4;mix-blend-mode:lighten;}.cls-4{fill:#9ac866;}.cls-12,.cls-4,.cls-8{stroke:#575b5d;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}.cls-5{fill:#fded59;}.cls-10,.cls-6{opacity:0.5;}.cls-8{fill:none;}.cls-9{fill:#ec7139;}.cls-11{fill:#add8a6;}.cls-12{fill:#fabf2e;}.cls-13{fill:#575b5d;}</style>
   </defs>
   <g class="cls-1">
-    <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_2">
       <g id="Stroke">
         <rect class="cls-2" x="1" y="0.519" width="46" height="58"/>
         <rect class="cls-3" x="44" y="0.519" width="3" height="58"/>
