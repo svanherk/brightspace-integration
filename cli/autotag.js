@@ -44,14 +44,22 @@ async function tryGetActiveDevelopmentRelease() {
 	const nowISO = now.toISOString();
 
 	// query to find release in active development
-	const releases = await rallyApi.query({
-		type: 'release',
-		limit: 1,
-		fetch: ['Name'],
-		query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
-	});
+	let releases;
+	try {
+		releases = await rallyApi.query({
+			type: 'release',
+			limit: 1,
+			fetch: ['Name'],
+			query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
+		});
+	} catch (e) {
+		console.error(chalk.red(e));
+		process.exitCode = 1;
+		return null;
+	}
 	if (releases.TotalResultCount !== 1) {
 		console.error(chalk.red('    Error: Unable to query for active development release in Rally.'));
+		process.exitCode = 1;
 		return null;
 	}
 
@@ -59,6 +67,7 @@ async function tryGetActiveDevelopmentRelease() {
 	const match = rallyVersionChecker.exec(activeReleaseName);
 	if (!match) {
 		console.error(chalk.red(`    Error: Invalid Rally release name "${activeReleaseName}".`));
+		process.exitCode = 1;
 		return null;
 	}
 
@@ -75,7 +84,7 @@ async function tryGetActiveDevelopmentRelease() {
 
 }
 
-async function findMaxVersion(release) {
+async function tryFindMaxVersion(release) {
 
 	const releaseRe = new RegExp('^v' + release.replace('.', '\\.') + '-([0-9]+)$');
 
@@ -84,10 +93,17 @@ async function findMaxVersion(release) {
 		'repo': repo,
 		'per_page': 100
 	});
-	const releases = await gh.paginate(
-		options,
-		response => response.data.map(release => release.tag_name)
-	);
+	let releases;
+	try {
+		releases = await gh.paginate(
+			options,
+			response => response.data.map(release => release.tag_name)
+		);
+	} catch (e) {
+		console.error(chalk.red(e));
+		process.exitCode = 1;
+		return null;
+	}
 
 	let maxVersion = 0;
 	for (let i = 0; i < releases.length; i++) {
@@ -107,13 +123,18 @@ async function findMaxVersion(release) {
 
 async function createRelease(newTag) {
 	console.log(chalk.green(`  Creating release "${newTag}..."`));
-	await gh.repos.createRelease({
-		'owner': owner,
-		'repo': repo,
-		'tag_name': newTag,
-		'name': newTag,
-		'target_commitish': '5d9512d1db135d29ae3ce5a73e8942c07da28a0c'
-	});
+	try {
+		await gh.repos.createRelease({
+			'owner': owner,
+			'repo': repo,
+			'tag_name': newTag,
+			'name': newTag,
+			'target_commitish': '5d9512d1db135d29ae3ce5a73e8942c07da28a0c'
+		});
+	} catch (e) {
+		console.error(chalk.red(e));
+		process.exitCode = 1;
+	}
 }
 
 async function main() {
@@ -158,9 +179,13 @@ async function main() {
 		release = branchName;
 	}
 
-	let maxVersion = await findMaxVersion(release);
-	const newTag = `v${release}-${++maxVersion}`;
+	let maxVersion = await tryFindMaxVersion(release);
+	if (maxVersion === null) {
+		console.log('  Aborting auto-tag.');
+		return;
+	}
 
+	const newTag = `v${release}-${++maxVersion}`;
 	createRelease(newTag);
 
 }
