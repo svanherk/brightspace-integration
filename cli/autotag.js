@@ -9,8 +9,7 @@ const chalk = require('chalk'),
 //  https://github.com/octokit/rest.js
 //  https://octokit.github.io/rest.js/
 const gh = new Octokit({
-	auth: `token ${process.env.GITHUB_TOKEN}`,
-	log: console
+	auth: `token ${process.env.GITHUB_TOKEN}`
 });
 
 const owner = 'Brightspace';
@@ -125,14 +124,13 @@ async function tryFindMaxVersion(release) {
 async function createRelease(newTag) {
 	console.log(chalk.green(`  Creating release "${newTag}..."`));
 	try {
-		const release = await gh.repos.createRelease({
+		await gh.repos.createRelease({
 			'owner': owner,
 			'repo': repo,
 			'tag_name': newTag,
 			'name': newTag,
 			'target_commitish': process.env.TRAVIS_COMMIT
 		});
-		console.log('release', release);
 	} catch (e) {
 		console.error(chalk.red(e));
 		process.exitCode = 1;
