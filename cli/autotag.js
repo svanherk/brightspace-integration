@@ -9,7 +9,8 @@ const chalk = require('chalk'),
 //  https://github.com/octokit/rest.js
 //  https://octokit.github.io/rest.js/
 const gh = new Octokit({
-	auth: `token ${process.env.GITHUB_TOKEN}`
+	auth: `token ${process.env.GITHUB_TOKEN}`,
+	log: console
 });
 
 const owner = 'dlockhart';
@@ -131,7 +132,7 @@ async function createRelease(newTag) {
 			'name': newTag,
 			'target_commitish': process.env.TRAVIS_COMMIT
 		});
-		console.log(release);
+		console.log('release', release);
 	} catch (e) {
 		console.error(chalk.red(e));
 		process.exitCode = 1;
