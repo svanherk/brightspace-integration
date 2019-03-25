@@ -116,7 +116,7 @@ async function tryFindMaxVersion(release) {
 		}
 	}
 
-	console.log(`  Maximum existing build for release "${release}" is "${maxVersion}"."`);
+	console.log(`  Maximum existing build for release "${release}" is "${maxVersion}".`);
 	return maxVersion;
 
 }
@@ -124,13 +124,14 @@ async function tryFindMaxVersion(release) {
 async function createRelease(newTag) {
 	console.log(chalk.green(`  Creating release "${newTag}..."`));
 	try {
-		await gh.repos.createRelease({
+		const release = await gh.repos.createRelease({
 			'owner': owner,
 			'repo': repo,
 			'tag_name': newTag,
 			'name': newTag,
-			'target_commitish': '5d9512d1db135d29ae3ce5a73e8942c07da28a0c'
+			'target_commitish': process.env.TRAVIS_COMMIT
 		});
+		console.log(release);
 	} catch (e) {
 		console.error(chalk.red(e));
 		process.exitCode = 1;
@@ -153,11 +154,11 @@ async function main() {
 		return;
 	}
 
-	/*const isFork = (process.env.TRAVIS_SECURE_ENV_VARS === 'false');
+	const isFork = (process.env.TRAVIS_SECURE_ENV_VARS === 'false');
 	if (isFork) {
 		console.log('  Cannot publish from forks, aborting auto-tag.');
 		return;
-	}*/
+	}
 
 	const branchName = process.env.TRAVIS_BRANCH;
 	const isMaster = (branchName === 'master');
