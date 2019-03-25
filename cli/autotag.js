@@ -9,7 +9,7 @@ const chalk = require('chalk'),
 //  https://github.com/octokit/rest.js
 //  https://octokit.github.io/rest.js/
 const gh = new Octokit({
-	auth: process.env.GITHUB_TOKEN
+	auth: `token ${process.env.GITHUB_TOKEN}`
 });
 
 const owner = 'dlockhart';
