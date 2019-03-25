@@ -13,7 +13,7 @@ const gh = new Octokit({
 	log: console
 });
 
-const owner = 'dlockhart';
+const owner = 'Brightspace';
 const repo = 'brightspace-integration';
 const versionChecker = /^20\.[0-9]{2}\.(1|2|3|4|5|6|7|8|9|10|11|12)$/;
 const rallyVersionChecker = /^(20\.[0-9]{2}\.)([0-9]{2})$/;
