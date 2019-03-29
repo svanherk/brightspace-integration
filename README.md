@@ -49,6 +49,10 @@ To point your Brightspace instance at the local integration project:
 
 The config file will get overwritten during the build.
 
+## Want a slightly faster build?
+
+When we bundle our web components, we produce an ES6 bundle for browsers who support it, and an ES5 transpiled bundle for IE11. If you don't care about IE11, you can exclude that part of the build by running `npm run build-no-es5` or `npm run serve-no-es5`.
+
 ## NPM Dependency Locking
 
 We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
