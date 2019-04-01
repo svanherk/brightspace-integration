@@ -33,6 +33,7 @@ async function tryGetActiveDevelopmentRelease() {
 			}
 		}
 	});
+	console.log('rallyApi', rallyApi);
 
 	// Add 12 hours to the current time to account for branching occurring at
 	// noon on the last day of the release. After branching occurs, we consider
@@ -42,6 +43,7 @@ async function tryGetActiveDevelopmentRelease() {
 
 	// format: 2019-03-16T03:59:59.000Z
 	const nowISO = now.toISOString();
+	console.log('nowISO', nowISO);
 
 	// query to find release in active development
 	let releases;
@@ -52,6 +54,7 @@ async function tryGetActiveDevelopmentRelease() {
 			fetch: ['Name'],
 			query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
 		});
+		console.log('releases', releases);
 	} catch (e) {
 		console.error(chalk.red(e));
 		process.exitCode = 1;
@@ -72,6 +75,7 @@ async function tryGetActiveDevelopmentRelease() {
 	}
 
 	// strip off leading "0" from month part of the release
+	console.log('match', match, match.length);
 	let monthPart = match[2];
 	if (monthPart.startsWith('0')) {
 		monthPart = monthPart.substring(1);
