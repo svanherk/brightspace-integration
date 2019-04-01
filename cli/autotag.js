@@ -165,7 +165,7 @@ async function main() {
 	let release;
 	if (isMaster) {
 		console.log('  Master branch detected.');
-		release = tryGetActiveDevelopmentRelease();
+		release = await tryGetActiveDevelopmentRelease();
 		if (release === null) {
 			console.log('  Aborting auto-tag.');
 			return;
