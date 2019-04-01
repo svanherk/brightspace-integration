@@ -44,10 +44,10 @@ To point your Brightspace instance at the local integration project:
 
 1. Go to your `{instance}/config/Infrastructure` directory
 2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
-3. Change the `polymer-<version>` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
+3. Change the `polymer-3` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
 4. Restart IIS
 
-The config file will get overwritten during the build.
+The config file will get overwritten during an LMS build.
 
 ## Want a slightly faster build?
 
@@ -71,15 +71,19 @@ To integrate a new web component into BSI, perform the following steps:
 2. Add a JavaScript file (i.e. `d2l-my-component.js`) to the `web-components` directory that imports the new web component. (i.e. `../node_modules/my-component/my-component.js`)
 3. Reference the new JavaScript file from the fragments list in `polymer.json`
 
-## Publishing
+## Tagging & Publishing
 
-The project assets (`build` directory) will be automatically published to the Brightspace CDN by its [Travis CI job](https://travis-ci.org/Brightspace/brightspace-integration) after each successful build of a tagged commit.
+When a pull request is merged to `master`, a version tag corresponding with the current active development release of Brightspace will be automatically applied by CI. A build number will be incremented for each build.
+
+When a pull request is merged to a branch whose name matches our versioning scheme (e.g. `20.19.5`), a version tag for that release will be automatically applied.
+
+For each tag, the project assets (contents of the `build` directory) will be automatically published to the Brightspace CDN by its [Travis CI job](https://travis-ci.org/Brightspace/brightspace-integration).
 
 The publish location will be: `https://s.brightspace.com/lib/bsi/{version}/`
 
 ## Updating LP to reference the new version of BSI
 
-Once you've drafted a new release of BSI, you'll need to update LP to reference your version. Create a pull request in LP
+Once a new release of BSI has been automatically published to the CDN, you'll need to update LP to reference your version. Create a pull request in LP
 that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
