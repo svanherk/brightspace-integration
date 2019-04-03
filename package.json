@@ -139,7 +139,8 @@
   },
   "greenkeeper": {
     "ignore": [
-      "@polymer/polymer"
+      "@polymer/polymer",
+      "susy"
     ]
   }
 }
