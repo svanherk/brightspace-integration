@@ -21,7 +21,8 @@ const skipReleaseFlag = '[skip release]';
 
 async function tryGetActiveDevelopmentRelease() {
 
-	console.log('  Fetching active development release from Rally...');
+	console.log('Fetching active development release from Rally...');
+	console.group();
 
 	//  https://github.com/RallyTools/rally-node/wiki/User-Guide
 	const rallyApi = rally({
@@ -63,13 +64,15 @@ async function tryGetActiveDevelopmentRelease() {
 		return null;
 	}
 	if (releases.TotalResultCount === 0) {
-		console.error(chalk.red('    Error: Unable to query for active development release in Rally.'));
+		console.error(chalk.red('Error: Unable to query for active development release in Rally.'));
+		console.groupEnd();
 		process.exitCode = 1;
 		return null;
 	}
 
-	// If 2 releases are returned, it's the day of the switchover.
-	// - if it's before noon EST, we use the first release
+	// 2 releases can be returned as there's overlap between the active
+	// release's end date (ReleaseDate) and the next release's ReleaseStartDate
+	// (last call date).
 	let release = releases.Results[0];
 	console.log(`Found ${releases.TotalResultCount} candidate release(s).`);
 	if (releases.TotalResultCount === 2) {
@@ -89,7 +92,8 @@ async function tryGetActiveDevelopmentRelease() {
 
 	const match = rallyVersionChecker.exec(activeReleaseName);
 	if (!match) {
-		console.error(chalk.red(`    Error: Invalid Rally release name "${activeReleaseName}".`));
+		console.error(chalk.red(`Error: Invalid Rally release name "${activeReleaseName}".`));
+		console.groupEnd();
 		process.exitCode = 1;
 		return null;
 	}
@@ -101,7 +105,8 @@ async function tryGetActiveDevelopmentRelease() {
 	}
 	activeReleaseName = match[1] + monthPart;
 
-	console.log(chalk.green(`    Success! Active development release is: "${activeReleaseName}"`));
+	console.log(chalk.green(`Success! Active development release is: "${activeReleaseName}"`));
+	console.groupEnd();
 
 	return activeReleaseName;
 
@@ -139,13 +144,13 @@ async function tryFindMaxVersion(release) {
 		}
 	}
 
-	console.log(`  Maximum existing build for release "${release}" is "${maxVersion}".`);
+	console.log(`Maximum existing build for release "${release}" is "${maxVersion}".`);
 	return maxVersion;
 
 }
 
 async function createRelease(newTag) {
-	console.log(chalk.green(`  Creating release "${newTag}..."`));
+	console.log(chalk.green(`Creating release "${newTag}..."`));
 	try {
 		await gh.repos.createRelease({
 			'owner': owner,
@@ -163,28 +168,33 @@ async function createRelease(newTag) {
 async function main() {
 
 	console.log('Attempting to automatically tag BSI release...');
+	console.group();
 
 	const skipRelease = (process.env.TRAVIS_COMMIT_MESSAGE.toLowerCase().indexOf(skipReleaseFlag) > -1);
 	if (skipRelease) {
-		console.log(`  "${skipReleaseFlag}" present in commit message, aborting auto-tag.`);
+		console.log(`"${skipReleaseFlag}" present in commit message, aborting auto-tag.`);
+		console.groupEnd();
 		return;
 	}
 
 	const isTaggedCommit = (process.env.TRAVIS_TAG !== '');
 	if (isTaggedCommit) {
-		console.log('  Tagged commit, aborting auto-tag.');
+		console.log('Tagged commit, aborting auto-tag.');
+		console.groupEnd();
 		return;
 	}
 
 	const isPullRequest = (process.env.TRAVIS_PULL_REQUEST !== 'false');
 	if (isPullRequest) {
-		console.log('  Pull request, aborting auto-tag.');
+		console.log('Pull request, aborting auto-tag.');
+		console.groupEnd();
 		return;
 	}
 
 	const isFork = (process.env.TRAVIS_SECURE_ENV_VARS === 'false');
 	if (isFork) {
-		console.log('  Cannot publish from forks, aborting auto-tag.');
+		console.log('Cannot publish from forks, aborting auto-tag.');
+		console.groupEnd();
 		return;
 	}
 
@@ -193,16 +203,18 @@ async function main() {
 
 	let release;
 	if (isMaster) {
-		console.log('  Master branch detected.');
+		console.log('Master branch detected.');
 		release = await tryGetActiveDevelopmentRelease();
 		if (release === null) {
-			console.log('  Aborting auto-tag.');
+			console.log('Aborting auto-tag.');
+			console.groupEnd();
 			return;
 		}
 	} else {
-		console.log(`  Branch detected: "${branchName}".`);
+		console.log(`Branch detected: "${branchName}".`);
 		if (!versionChecker.test(branchName)) {
-			console.log(`  Branch name "${branchName}" not a valid version, aborting auto-tag.`);
+			console.log(`Branch name "${branchName}" not a valid version, aborting auto-tag.`);
+			console.groupEnd();
 			return;
 		}
 		release = branchName;
@@ -210,12 +222,14 @@ async function main() {
 
 	let maxVersion = await tryFindMaxVersion(release);
 	if (maxVersion === null) {
-		console.log('  Aborting auto-tag.');
+		console.log('Aborting auto-tag.');
+		console.groupEnd();
 		return;
 	}
 
 	const newTag = `v${release}-${++maxVersion}`;
 	createRelease(newTag);
+	console.groupEnd();
 
 }
 
