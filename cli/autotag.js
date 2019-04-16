@@ -4,7 +4,8 @@
 
 const chalk = require('chalk'),
 	Octokit = require('@octokit/rest'),
-	rally = require('rally');
+	rally = require('rally'),
+	time = require('time');
 
 //  https://github.com/octokit/rest.js
 //  https://octokit.github.io/rest.js/
@@ -35,14 +36,16 @@ async function tryGetActiveDevelopmentRelease() {
 		}
 	});
 
-	// Add 12 hours to the current time to account for branching occurring at
-	// noon on the last day of the release. After branching occurs, we consider
-	// it to be the following release.
-	const now = new Date();
-	now.setHours(now.getHours() + 12);
+	const nowUtc = new time.Date();
+	const nowEst = new time.Date();
+	nowEst.setTimezone('America/Toronto');
+
+	// Rally queries don't seem to support hours, so we zero them out.
+	// Otherwise Rally won't return release on the last day of the release.
+	nowUtc.setHours(0, 0, 0, 0);
 
 	// format: 2019-03-16T03:59:59.000Z
-	const nowISO = now.toISOString();
+	const nowISO = nowUtc.toISOString();
 
 	// query to find release in active development
 	let releases;
@@ -50,7 +53,7 @@ async function tryGetActiveDevelopmentRelease() {
 		releases = await rallyApi.query({
 			type: 'release',
 			limit: 10,
-			fetch: ['Name'],
+			fetch: ['Name', 'ReleaseDate'],
 			order: 'ReleaseDate ASC',
 			query: rally.util.query.where('ReleaseStartDate', '<=', nowISO).and('ReleaseDate', '>', nowISO).and('Project.Name', '=', 'D2L')
 		});
@@ -65,7 +68,25 @@ async function tryGetActiveDevelopmentRelease() {
 		return null;
 	}
 
-	let activeReleaseName = releases.Results[0].Name;
+	// If 2 releases are returned, it's the day of the switchover.
+	// - if it's before noon EST, we use the first release
+	let release = releases.Results[0];
+	console.log(`Found ${releases.TotalResultCount} candidate release(s).`);
+	if (releases.TotalResultCount === 2) {
+		const releaseDate = new time.Date(releases.Results[0].ReleaseDate);
+		releaseDate.setTimezone('America/Toronto');
+		if (releaseDate.getFullYear() === nowEst.getFullYear() && releaseDate.getMonth() === nowEst.getMonth() && releaseDate.getDay() === nowEst.getDay()) {
+			if (nowEst.getHours() >= 12) {
+				console.log('Last day of release and after noon EST (branch time), using next release.');
+				release = releases.Results[1];
+			} else {
+				console.log('Last day of release and before noon EST (branch time), using current release.');
+			}
+		}
+	}
+
+	let activeReleaseName = release.Name;
+
 	const match = rallyVersionChecker.exec(activeReleaseName);
 	if (!match) {
 		console.error(chalk.red(`    Error: Invalid Rally release name "${activeReleaseName}".`));
