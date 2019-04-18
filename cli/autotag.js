@@ -5,7 +5,7 @@
 const chalk = require('chalk'),
 	Octokit = require('@octokit/rest'),
 	rally = require('rally'),
-	time = require('time');
+	moment = require('moment-timezone');
 
 //  https://github.com/octokit/rest.js
 //  https://octokit.github.io/rest.js/
@@ -37,13 +37,12 @@ async function tryGetActiveDevelopmentRelease() {
 		}
 	});
 
-	const nowUtc = new time.Date();
-	const nowEst = new time.Date();
-	nowEst.setTimezone('America/Toronto');
+	const nowUtc = moment.utc();
+	const nowEst = moment.utc().tz('America/Toronto');
 
 	// Rally queries don't seem to support hours, so we zero them out.
 	// Otherwise Rally won't return release on the last day of the release.
-	nowUtc.setHours(0, 0, 0, 0);
+	nowUtc.startOf('day');
 
 	// format: 2019-03-16T03:59:59.000Z
 	const nowISO = nowUtc.toISOString();
@@ -76,8 +75,7 @@ async function tryGetActiveDevelopmentRelease() {
 	let release = releases.Results[0];
 	console.log(`Found ${releases.TotalResultCount} candidate release(s).`);
 	if (releases.TotalResultCount === 2) {
-		const releaseDate = new time.Date(releases.Results[0].ReleaseDate);
-		releaseDate.setTimezone('America/Toronto');
+		const releaseDate = moment.utc(releases.Results[0].ReleaseDate).tz('America/Toronto');
 		if (releaseDate.getFullYear() === nowEst.getFullYear() && releaseDate.getMonth() === nowEst.getMonth() && releaseDate.getDay() === nowEst.getDay()) {
 			if (nowEst.getHours() >= 12) {
 				console.log('Last day of release and after noon EST (branch time), using next release.');

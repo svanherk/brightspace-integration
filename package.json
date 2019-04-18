@@ -120,6 +120,7 @@
     "imagemin-optipng": "^6.0.0",
     "jquery-vui-change-tracking": "Brightspace/jquery-valence-ui-change-tracking#semver:^1",
     "mocha": "^6.0.2",
+    "moment-timezone": "^0.5.25",
     "node-sass": "^4.11.0",
     "polymer-cli": "^1.9.8",
     "postcss-cli": "^6.0.0",
@@ -134,7 +135,6 @@
     "sinon-chai": "^3.3.0",
     "susy": "^2.2.14",
     "svg2png": "^4.1.1",
-    "time": "^0.12.0",
     "uglify-js": "^3.4.7",
     "whatwg-fetch": "^3.0.0"
   }
