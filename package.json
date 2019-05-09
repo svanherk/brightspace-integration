@@ -100,7 +100,7 @@
     "d2l-outcomes-level-of-achievements": "Brightspace/outcomes-level-of-achievement-ui.git#semver:^2",
     "d2l-polymer-behaviors": "Brightspace/d2l-polymer-behaviors-ui#semver:^2",
     "d2l-resize-aware": "BrightspaceUI/resize-aware.git#semver:^1",
-    "d2l-rubric": "Brightspace/d2l-rubric#semver:^3",
+    "d2l-rubric": "Brightspace/d2l-rubric#d34428f0e15481c93cac0d5eab187358ad8777c9",
     "d2l-save-status": "Brightspace/d2l-save-status#semver:^3",
     "d2l-scroll-spy": "BrightspaceUI/scroll-spy#semver:^1",
     "d2l-sequence-viewer": "Brightspace/d2l-sequence-viewer#semver:^1",
