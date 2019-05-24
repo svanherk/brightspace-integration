@@ -54,7 +54,7 @@
 	background-color: $d2l-color-gypsum;
 }
 .bsi-button-menu:not(.vui-disabled):not(.bsi-button-menu-primary):focus {
-	@include _d2l-button-focus-plus-border();
+	@include _d2l-button-focus();
 }
 
 .bsi-button-menu.vui-disabled {
