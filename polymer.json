@@ -4,6 +4,9 @@
   "fragments": [
     "web-components/bsi.js",
     "web-components/d2l-activity-alignments.js",
+    "web-components/d2l-enrollments-collection-widget.js",
+    "web-components/d2l-enrollments-summary-view.js",
+    "web-components/d2l-activity-alignments.js",
     "web-components/d2l-image-banner-overlay.js",
     "web-components/d2l-more-less.js",
     "web-components/d2l-my-courses.js",
