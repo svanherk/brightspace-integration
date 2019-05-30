@@ -52,8 +52,8 @@
 
 .d2l-navigation-ib-item-link {
 	background-color: transparent;
-	border-radius: 0.6rem;
-	border: 2px solid transparent;
+	border-radius: 0.7rem;
+	border: none;
 	box-sizing: border-box;
 	display: inline-block;
 	height: 6.05rem;
@@ -79,7 +79,8 @@
 }
 
 .d2l-navigation-ib-item-link:focus {
-	border-color: $d2l-color-celestine;
+	background-color: $d2l-color-gypsum;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--d2l-color-celestine);
 }
 
 .d2l-navigation-ib-item-icon,
@@ -102,11 +103,11 @@
 }
 
 .d2l-navigation-ib-item-custom-icon {
-	border-radius: 0.6rem;
+	border-radius: 0.7rem;
 }
 
 .d2l-navigation-ib-item-icon-group {
-	border-radius: 0.6rem;
+	border-radius: 0.7rem;
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
