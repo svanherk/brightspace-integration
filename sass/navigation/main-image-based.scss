@@ -53,7 +53,7 @@
 .d2l-navigation-ib-item-link {
 	background-color: transparent;
 	border-radius: 0.4rem;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	box-sizing: border-box;
 	display: inline-block;
 	height: 6.05rem;
@@ -74,18 +74,12 @@
 	padding-bottom: 0.5rem;
 }
 
-.d2l-navigation-ib-item-link:focus,
 .d2l-navigation-ib-item-link:hover {
-	background-color: rgba(0,111,191,0.05);
-}
-
-.d2l-navigation-ib-item-link:hover {
-	border-color: rgba(0, 111, 191, 0.2);
+	background-color: $d2l-color-gypsum;
 }
 
 .d2l-navigation-ib-item-link:focus {
-	border-color: rgba(0, 111, 191, 0.4);
-	box-shadow: 0 0 0 4px rgba(0, 111, 191, 0.3);
+	border-color: $d2l-color-celestine;
 }
 
 .d2l-navigation-ib-item-icon,
@@ -198,7 +192,7 @@ div.d2l-navigation-ib-item-icon-group-icon {
 }
 
 .d2l-navigation-ib-item-link:hover .d2l-navigation-ib-item-link-text {
-	color: $d2l-color-celestine;
+	color: $d2l-color-celestine-minus-1;
 	text-decoration: underline;
 }
 
