@@ -267,13 +267,13 @@ div.d2l-navigation-ib-item-icon-group-icon {
 	.d2l-navigation-main-ib-pully[shown]:focus,
 	.d2l-navigation-main-ib-pully[shown]:hover {
 		background-color: rgba(0,111,191,0.05);
-		border-color: rgba(0, 111, 191, 0.2);
+		border-color: $d2l-color-celestine;
 	}
 
 	.d2l-navigation-main-ib-pully[shown]:focus .d2l-navigation-main-ib-pully-icon,
 	.d2l-navigation-main-ib-pully[shown]:hover .d2l-navigation-main-ib-pully-icon {
 		background-color: rgba(0,111,191,0.05);
-		border-color: rgba(0, 111, 191, 0.2);
+		border-color: $d2l-color-celestine;
 	}
 }
 
