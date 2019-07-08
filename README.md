@@ -59,6 +59,22 @@ We use a `package-lock.json` file to lock our NPM dependencies. This ensures we 
 
 Any command that would normally add or update `package.json` will also update `package-lock.json` -- `npm install`, `npm update` etc. Just be cognizant of the changes you're making.
 
+### `package-lock.json` Refresh
+
+Current versions of npm (6.8-6.10) do not always flatten package-lock.json with an `npm i`.  You may end up with many test errors like:
+
+```
+Polymer sub-dependency detected "d2l-organizations" in "d2l-activities". All Polymer dependencies must be at root level of "package-lock.json" to avoid duplicate registrations. Check that the version ranges in "package.json" do not contain anything beyond the major version.
+```
+
+If you've ensured that you aren't importing multiple versions, try the following:
+1) Windows: `ri ./node_modules -Recurse -Force` or *nix: `rm -rf ./node_modules`
+2) `rm package-lock.json`
+3) `npm i`
+
+This sequence will fully refresh your package-lock.json.
+
+
 [Read more in the `package-lock` documentation...](https://docs.npmjs.com/files/package-locks)
 
 ## Web Components
@@ -86,7 +102,7 @@ To skip automatic tagging and releasing, include the text `[skip release]` in yo
 ## Updating LP to reference the new version of BSI
 
 Once a new release of BSI has been automatically published to the CDN, you'll need to update LP to reference your version. Create a pull request in LP
-that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lp/browse/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
+that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 
