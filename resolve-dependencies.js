@@ -15,6 +15,7 @@ const path = require('path');
 
 const packageLockPath = path.join(__dirname, 'package-lock.json');
 const packages = [
+	{ name: 'd2l-colors', from: 'github:BrightspaceUI/colors#lit-element'},
 	{ name: 'd2l-button', from: 'github:BrightspaceUI/button#lit-element'},
 	{ name: 'd2l-icons', from: 'github:BrightspaceUI/icons#lit-element'},
 	{ name: 'd2l-more-less', from: 'github:BrightspaceUI/more-less#lit-element'}

@@ -79,7 +79,7 @@
     "d2l-alert": "BrightspaceUI/alert#semver:^4",
     "d2l-button": "BrightspaceUI/button#lit-element",
     "d2l-button-group": "BrightspaceUI/button-group#semver:^3",
-    "d2l-colors": "BrightspaceUI/colors#semver:^4",
+    "d2l-colors": "BrightspaceUI/colors#lit-element",
     "d2l-dropdown": "BrightspaceUI/dropdown#semver:^7",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
     "d2l-fetch-auth": "^1.2.0",
