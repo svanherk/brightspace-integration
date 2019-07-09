@@ -32,7 +32,6 @@ window.D2L.Telemetry = {
         if (endpoint === null) {
            throw new Error('Unable to create telemetry client, missing endpoint.');
         }
-        //const endpoint = 'https://prd.telemetryservice.brightspace.com/api/events/';
         const client = new telemetry.Client({endpoint: endpoint});
         return client;
     }
