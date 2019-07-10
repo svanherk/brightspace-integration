@@ -22,19 +22,19 @@ d2lfetch.use({name: 'simple-cache', fn: fetchSimpleCache});
 window.d2lfetch = d2lfetch;
 
 window.D2L.Telemetry = {
-    Load: async function() {
-        const telemetry = await import('../node_modules/d2l-telemetry-browser-client/src/index.js');
-        return telemetry.default;
-    },
-    CreateClient: async function() {
-        const telemetry = await D2L.Telemetry.Load();
-        const endpoint = document.documentElement.getAttribute('data-telemetry-endpoint');
-        if (endpoint === null) {
-           throw new Error('Unable to create telemetry client, missing endpoint.');
-        }
-        const client = new telemetry.Client({endpoint: endpoint});
-        return client;
-    }
+	Load: async function() {
+		const telemetry = await import('../node_modules/d2l-telemetry-browser-client/src/index.js');
+		return telemetry.default;
+	},
+	CreateClient: async function() {
+		const telemetry = await D2L.Telemetry.Load();
+		const endpoint = document.documentElement.getAttribute('data-telemetry-endpoint');
+		if (endpoint === null) {
+		   throw new Error('Unable to create telemetry client, missing endpoint.');
+		}
+		const client = new telemetry.Client({endpoint: endpoint});
+		return client;
+	}
 };
 
 import '@polymer/iron-icon/iron-icon.js';
