@@ -72,10 +72,10 @@
 
 	@include _dropdown_button-helper(
 			$color: $d2l-color-ferrite,
-			$background: $d2l-color-woolonardo,
-			$borderColor: $d2l-color-titanius,
+			$background: $d2l-color-sylvite,
+			$borderColor: $d2l-color-mica,
 			$hoverBackground: $d2l-color-gypsum,
-			$hoverBorderColor: $d2l-color-titanius
+			$hoverBorderColor: $d2l-color-mica
 		);
 
 }
@@ -83,11 +83,11 @@
 @mixin _button-primary() {
 
 	@include _dropdown_button-helper(
-			$color: $d2l-color-white,
+			$color: #ffffff,
 			$background: $d2l-color-celestine,
-			$borderColor: $d2l-color-celestuba,
-			$hoverBackground: $d2l-color-celestuba,
-			$hoverBorderColor: $d2l-color-celestuba
+			$borderColor: $d2l-color-celestine-minus-1,
+			$hoverBackground: $d2l-color-celestine-minus-1,
+			$hoverBorderColor: $d2l-color-celestine-minus-1
 		);
 
 }
