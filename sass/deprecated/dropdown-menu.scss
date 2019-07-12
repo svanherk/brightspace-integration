@@ -1,7 +1,7 @@
-@import '../../node_modules/d2l-colors/d2l-colors.scss';
+@import '../../node_modules/@brightspace-ui/core/components/colors/colors.scss';
 
 $vui-dropdown-menu-offset: 0.5rem !default;
-$vui-dropdown-menu-item-separator-color: $d2l-color-pressicus !default;
+$vui-dropdown-menu-item-separator-color: $d2l-color-corundum !default;
 $vui-dropdown-menu-item-separator-width: 1px !default;
 
 $vui-dropdown-menu-animation-vertical-offset: 0.5rem !default;
@@ -29,7 +29,7 @@ $vui-dropdown-menu-animation-timing: ease !default;
 
 @mixin _vui-dropdown-menu() {
 
-	background-color: $d2l-color-white;
+	background-color: #ffffff;
 	border-radius: 0.4rem;
 	box-shadow: 0 2px 12px 0 rgba(86, 90, 92, .2);
 	min-width: 10rem;
@@ -77,10 +77,10 @@ $vui-dropdown-menu-animation-timing: ease !default;
 
 @mixin _vui-dropdown-menu-item-focus() {
 
-	background-color: $d2l-color-celestine-light-1;
+	background-color: $d2l-color-celestine-plus-2;
 
 	&, &:last-child {
-		border: 1px solid $d2l-color-celestine-light-2;
+		border: 1px solid $d2l-color-celestine-plus-1;
 	}
 
 	& + li,

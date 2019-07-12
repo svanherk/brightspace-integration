@@ -1,4 +1,4 @@
-@import '../../node_modules/d2l-colors/d2l-colors.scss';
+@import '../../node_modules/@brightspace-ui/core/components/colors/colors.scss';
 
 @keyframes vui-bubble-animation-show {
 	0% { top: 0.75rem; opacity: 0; }
@@ -22,7 +22,7 @@
 	background-color: $d2l-color-ferrite;
 	border: 1px solid transparent;
 	border-radius: 0.3rem;
-	color: $d2l-color-white;
+	color: #ffffff;
 	font-family: inherit;
 	font-size: 0.7rem;
 	font-weight: 400;
