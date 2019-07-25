@@ -37,7 +37,6 @@ window.D2L.Telemetry = {
 	}
 };
 
-import '@polymer/iron-icon/iron-icon.js';
 import 'd2l-activities/components/d2l-quick-eval/d2l-quick-eval.js';
 import 'd2l-alert/d2l-alert-toast.js';
 import 'd2l-alert/d2l-alert.js';
