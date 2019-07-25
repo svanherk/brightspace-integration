@@ -64,6 +64,7 @@ import 'd2l-navigation/d2l-navigation-button-notification-icon.js';
 import 'd2l-navigation/d2l-navigation-button.js';
 import 'd2l-navigation/d2l-navigation-immersive.js';
 import 'd2l-navigation/components/d2l-navigation-iterator/d2l-navigation-iterator.js';
+import 'd2l-navigation/components/d2l-navigation-iterator/d2l-navigation-link-iterator.js';
 import 'd2l-navigation/d2l-navigation-link-back.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-link.js';
