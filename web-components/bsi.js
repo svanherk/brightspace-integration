@@ -79,7 +79,6 @@ import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import 'd2l-users/components/d2l-profile-image.js';
 
-import './navigation-icons.js';
 window.d2lWCLoaded = true;
 if (window.D2L.WebComponentsLoaded !== undefined) {
 	window.D2L.WebComponentsLoaded();
