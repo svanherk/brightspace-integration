@@ -79,8 +79,6 @@ import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import 'd2l-users/components/d2l-profile-image.js';
 
-import './navigation-icons.js';
-
 /*
  * DE35087 - This was added by Polymer to handle ghost clicks in mobile browsers, but it has negative effects when using VoiceOver on iOS.
  * Events were being incorrectly canceled, mostly affecting selecting radio buttons but other user actions as well.
