@@ -37,6 +37,7 @@ window.D2L.Telemetry = {
 	}
 };
 
+import '@d2l/switch/d2l-switch.js';
 import 'd2l-activities/components/d2l-quick-eval/d2l-quick-eval.js';
 import 'd2l-alert/d2l-alert-toast.js';
 import 'd2l-alert/d2l-alert.js';
