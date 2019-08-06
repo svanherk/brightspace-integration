@@ -15,7 +15,8 @@ const packages = [
 	'd2l-intl',
 	'd2l-organization-hm-behavior',
 	'd2l-polymer-siren-behaviors',
-	'd2l-telemetry-browser-client'
+	'd2l-telemetry-browser-client',
+	'@brightspace-ui/core'
 ];
 
 function validate(json, depth, parentKey) {
