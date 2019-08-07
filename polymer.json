@@ -7,7 +7,6 @@
     "web-components/d2l-enrollment-collection-widget.js",
     "web-components/d2l-enrollment-summary-view.js",
     "web-components/d2l-image-banner-overlay.js",
-    "web-components/d2l-more-less.js",
     "web-components/d2l-my-courses.js",
     "web-components/d2l-my-dashboards.js",
     "web-components/d2l-opt-in-flyout-webcomponent.js",

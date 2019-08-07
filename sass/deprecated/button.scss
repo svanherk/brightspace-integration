@@ -1,4 +1,73 @@
 @import '../../node_modules/@brightspace-ui/core/components/colors/colors.scss';
+@import '../../node_modules/@brightspace-ui/core/components/typography/typography.scss';
+@import '../common.scss';
+
+@mixin _d2l-button-clear-focus() {
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, 0);
+}
+
+@mixin _d2l-button-focus() {
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #006fbf;
+}
+
+@mixin _d2l-button-shared() {
+	border-radius: 0.3rem;
+	border-style: solid;
+	border-width: 1px;
+	box-sizing: border-box;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0;
+	min-height: -webkit-calc(2rem + 2px);
+	min-height: calc(2rem + 2px);
+	outline: none;
+	text-align: center;
+	transition: box-shadow 0.2s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: auto;
+}
+
+@mixin _d2l-button() {
+	@include _d2l-button-shared();
+	@include _d2l-button-clear-focus();
+	font-family: inherit;
+	padding: 0.5rem 1.5rem;
+	@include d2l-label-text();
+	&::-moz-focus-inner {
+		border: 0;
+	}
+	&, &[disabled]:hover, &[disabled]:focus, &[active][disabled] {
+		background-color: $d2l-color-regolith;
+		border-color: $d2l-color-mica;
+		color: $d2l-color-ferrite;
+	}
+	&:hover, &:focus, &[active], &.d2l-button-hover, &.d2l-button-focus {
+		background-color: $d2l-color-gypsum;
+	}
+	&:focus, &.d2l-button-focus {
+		@include _d2l-button-focus();
+	}
+	&[disabled] {
+		opacity: 0.5;
+		cursor: default;
+	}
+	&[primary], &[primary][disabled]:hover, &[primary][disabled]:focus,  &[primary][active][disabled] {
+		background-color: $d2l-color-celestine;
+		border-color: $d2l-color-celestine-minus-1;
+		color: #ffffff;
+	}
+	&[primary]:hover, &[primary].d2l-button-hover, &[primary]:focus, &[primary].d2l-button-focus, &[primary][active] {
+		background-color: $d2l-color-celestine-minus-1;
+	}
+	&[primary]:focus, &[primary].d2l-button-focus {
+		@include _d2l-button-focus();
+	}
+}
 
 /* these are still referenced by a few FRAs, button-filter-groups, iterator */
 
@@ -67,6 +136,49 @@
 		background-color: $hoverBackground;
 	}
 
+}
+
+/**
+ * DE32805: we need to re-apply this to button.d2l-button as in Edge,
+ * the shady CSS polyfill reuses the "d2l-button" CSS class, causing
+ * a collision and forcing buttons to "width: 100%".
+ * GitHub issue tracking this: https://github.com/webcomponents/shadycss/issues/238
+ */
+button.d2l-button {
+	margin-right: $d2l-button-spacing;
+	width: auto;
+}
+[dir='rtl'] button.d2l-button {
+	margin-left: $d2l-button-spacing;
+	margin-right: 0;
+}
+
+.d2l-button {
+	@include _d2l-button();
+}
+
+.d2l-button-spacing {
+	margin-right: $d2l-button-spacing;
+}
+[dir='rtl'] .d2l-button-spacing {
+	margin-left: $d2l-button-spacing;
+	margin-right: 0;
+}
+
+.d2l-button.d2l-htmleditor-component-toggle {
+	margin-right: 0;
+}
+[dir='rtl'] .d2l-button.d2l-htmleditor-component-toggle {
+	margin-left: 0;
+}
+
+.dlay_r > .d2l-button {
+	margin-left: $d2l-button-spacing;
+	margin-right: 0;
+}
+[dir='rtl'] .dlay_r > .d2l-button {
+	margin-right: $d2l-button-spacing;
+	margin-left: 0;
 }
 
 .vui-button {

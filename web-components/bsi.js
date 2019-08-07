@@ -37,14 +37,16 @@ window.D2L.Telemetry = {
 	}
 };
 
+import '@brightspace-ui/core/components/button/button-icon.js';
+import '@brightspace-ui/core/components/button/button-subtle.js';
+import '@brightspace-ui/core/components/button/floating-buttons.js';
+import '@brightspace-ui/core/components/icons/icon.js';
+import '@brightspace-ui/core/components/more-less/more-less.js';
 import 'd2l-activities/components/d2l-quick-eval/d2l-quick-eval.js';
 import 'd2l-alert/d2l-alert-toast.js';
 import 'd2l-alert/d2l-alert.js';
 import 'd2l-button-group/d2l-action-button-group.js';
 import 'd2l-button-group/d2l-button-group.js';
-import 'd2l-button/d2l-button-icon.js';
-import 'd2l-button/d2l-button-subtle.js';
-import 'd2l-button/d2l-floating-buttons.js';
 import 'd2l-dropdown/d2l-dropdown-button-subtle.js';
 import 'd2l-dropdown/d2l-dropdown-button.js';
 import 'd2l-dropdown/d2l-dropdown-content.js';
@@ -52,7 +54,6 @@ import 'd2l-dropdown/d2l-dropdown-context-menu.js';
 import 'd2l-dropdown/d2l-dropdown-menu.js';
 import 'd2l-dropdown/d2l-dropdown-more.js';
 import 'd2l-dropdown/d2l-dropdown.js';
-import 'd2l-icons/d2l-icons.js';
 import 'd2l-inputs/d2l-input-search.js';
 import 'd2l-link/d2l-link.js';
 import 'd2l-loading-spinner/d2l-loading-spinner.js';
