@@ -60,6 +60,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "@brightspace-ui/core": "^1",
+    "@d2l/switch": "Brightspace/d2l-switch.git#semver:^3",
     "@octokit/rest": "^16.19.0",
     "@polymer/esm-amd-loader": "^1.0.3",
     "@polymer/lit-element": "^0.6.1",
