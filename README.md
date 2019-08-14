@@ -49,6 +49,19 @@ To point your Brightspace instance at the local integration project:
 
 The config file will get overwritten during an LMS build.
 
+### Running locally with a local web component
+
+A common use case for running a local BSI is to test out a web component you're also working on locally. That way you can avoid releasing the component and pulling the new release into BSI until you're ready.
+
+To link your local BSI with a local web component, follow these steps:
+1. Ensure that your component has a valid `package.json` with a `name` entry
+2. Ensure that BSI is already pulling in your component in its `package.json` as a dependency
+3. In the component's directory, run `npm link`
+4. In BSI, run `npm link <component-name>`, where `<component-name>` matches the entry in `package.json`
+5. In BSI, run `rm -rf ./node_modules/<component-name>/node_modules`. This ensures that when `polymer build` is run, it does not end up with nested copies of components. **Caveat**: if your component is pulling in a new dependency that isn't already in BSI, this won't work. In this case, you can try deleting everything _except_ that new dependency, or installing that new dependency from BSI directly, without saving that to BSI's `package.json`.
+
+Then follow the instructions in the previous section to serve BSI and point your local intance at it.
+
 ## Want a slightly faster build?
 
 When we bundle our web components, we produce an ES6 bundle for browsers who support it, and an ES5 transpiled bundle for IE11. If you don't care about IE11, you can exclude that part of the build by running `npm run build-no-es5` or `npm run serve-no-es5`.
