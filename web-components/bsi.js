@@ -43,6 +43,7 @@ import '@brightspace-ui/core/components/button/floating-buttons.js';
 import '@brightspace-ui/core/components/icons/icon.js';
 import '@brightspace-ui/core/components/more-less/more-less.js';
 import 'd2l-activities/components/d2l-quick-eval/d2l-quick-eval.js';
+import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
 import '@d2l/switch/d2l-switch.js';
 import 'd2l-alert/d2l-alert-toast.js';
 import 'd2l-alert/d2l-alert.js';
