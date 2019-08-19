@@ -90,7 +90,7 @@
     "d2l-menu": "BrightspaceUI/menu#semver:^2",
     "d2l-my-courses": "Brightspace/d2l-my-courses-ui#semver:^11",
     "d2l-my-dashboards": "github:Brightspace/d2l-my-dashboards-ui#semver:^3",
-    "d2l-navigation": "BrightspaceUI/navigation#semver:^3",
+    "d2l-navigation": "BrightspaceUI/navigation#semver:^4",
     "d2l-offscreen": "BrightspaceUI/offscreen#semver:^4",
     "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#semver:^2",
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#semver:^5",
