@@ -90,6 +90,16 @@ import 'd2l-users/components/d2l-profile-image.js';
 import { setCancelSyntheticClickEvents  } from '@polymer/polymer/lib/utils/settings.js';
 setCancelSyntheticClickEvents(false);
 
+import {clearDismissible, setDismissible} from '../node_modules/@brightspace-ui/core/helpers/dismissible.js';
+window.D2L.Dismissible = {
+	Clear: function(id) {
+		clearDismissible(id);
+	},
+	Set: function(cb) {
+		return setDismissible(cb);
+	}
+};
+
 window.d2lWCLoaded = true;
 if (window.D2L.WebComponentsLoaded !== undefined) {
 	window.D2L.WebComponentsLoaded();
