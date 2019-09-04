@@ -18,7 +18,9 @@
     "web-components/d2l-rubric-editor.js",
     "web-components/d2l-outcomes-level-of-achievements.js",
     "web-components/d2l-outcomes-user-progress.js",
-    "web-components/d2l-program-outcomes-picker.js"
+    "web-components/d2l-program-outcomes-picker.js",
+    "web-components/d2l-tabs.js",
+    "web-components/d2l-tab-panel.js"
   ],
   "extraDependencies": [
     "node_modules/d2l-rubric/editor/images/**",
