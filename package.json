@@ -30,7 +30,7 @@
     "lint:js": "eslint *.js web-components/*.js js/** rollup/** test/** cli/**",
     "publish:autotag": "node ./cli/autotag.js",
     "publish:cdn": "frau-publisher -m lib -t bsi -f \"./build/**/*\" -k AKIAIZGPQIRSA2WEJEDA --secretvar CDN_SECRET --versionvar TRAVIS_TAG",
-    "preserve1": "npm run build",
+    "preserve": "npm run build",
     "serve": "http-server build --cors",
     "preserve-no-es5": "npm run build-no-es5",
     "serve-no-es5": "http-server build --cors",
