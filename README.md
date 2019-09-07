@@ -78,7 +78,7 @@ Follow the instructions above for pointing your Brightspace instance at the loca
 In addition to adding your local BSI endpoint to the `polymer-3` config, add a new property `"import-style": "esm"`.
 This instructs the LMS to reference web components using standard `import` script tags rather than using `amd` style defines.
 
-Now you should be able to load modify a local web component file, refresh the browser and immediately see your changes without doing a new build.
+Now you should be able to modify a local web component file, refresh the browser and immediately see your changes without doing a new build.
 
 ### Known Limitations of the unbundled build
 
