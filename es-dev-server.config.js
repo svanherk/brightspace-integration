@@ -25,7 +25,6 @@ module.exports = {
 			} else {
 				url = '/build' + context.url;
 			}
-			// console.log('rewriting', context.url, 'to: ', url);
 			context.url = url;
 
 			return next();
