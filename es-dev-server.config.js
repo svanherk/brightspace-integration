@@ -1,4 +1,6 @@
 
+'use strict';
+
 const cors = require('@koa/cors');
 
 /*
