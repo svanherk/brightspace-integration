@@ -129,7 +129,7 @@ Contributions are welcome, please submit a pull request!
 This repository is configured with [EditorConfig](http://editorconfig.org) rules and
 contributions should make use of them.
 
-[ci-url]: https://travis-ci.org/Brightspace/brightspace-integration
-[ci-image]: https://img.shields.io/travis/Brightspace/brightspace-integration.svg
+[ci-url]: https://travis-ci.com/Brightspace/brightspace-integration
+[ci-image]: https://travis-ci.com/Brightspace/brightspace-integration.svg?branch=master
 [dependencies-url]: https://david-dm.org/Brightspace/brightspace-integration
 [dependencies-image]: https://img.shields.io/david/Brightspace/brightspace-integration.svg
