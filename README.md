@@ -68,6 +68,8 @@ There is experimental support for running an unbundled BSI to improve the local 
 
 The unbundled workflow uses the `@open-wc/es-dev-server` to serve the web components and the other BSI static assets.
 
+**es-dev-server requires node v10 or higher**
+
 To use this workflow first do a regular BSI build to build the static assets.
 
 ```shell
@@ -78,7 +80,21 @@ Follow the instructions above for pointing your Brightspace instance at the loca
 In addition to adding your local BSI endpoint to the `polymer-3` config, add a new property `"import-style": "esm"`.
 This instructs the LMS to reference web components using standard `import` script tags rather than using `amd` style defines.
 
+Now start the `es-dev-server` by running
+
+```shell
+npm start
+```
+
+This will run a server to start serving the static assets from the `build` folder and the web components from the source folders.
+
 Now you should be able to modify a local web component file, refresh the browser and immediately see your changes without doing a new build.
+
+The `es-dev-server` configuration can be tweaked by updating `es-dev-server.config.js`.
+
+See the following for more options:
+
+[es-dev-server configuration](https://open-wc.org/developing/es-dev-server.html#node-version)
 
 ### Known Limitations of the unbundled build
 
