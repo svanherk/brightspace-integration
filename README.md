@@ -30,7 +30,7 @@ Trouble | Shooting
 **build:icons fails:** ```cannot copy from `...'images\**\*.*'` to `...'images\**\*.*'`: cannot read from `...'images\**\*.*'`: ENOENT: no such file or directory, open '...'images\**\*.*''``` | remove single quotes from `package.json`.`scripts`.`build:icons`
 **npm i fails:** ```error: [cli.main]   Promise rejection: Error: Failed to execute "git ls-remote --tags --heads https://github.com/Polymer/polymer.git", exit code of #128 fatal: Unable to find remote helper for 'https'``` | Run `git config --global url."https://".insteadOf git://` in command prompt
 
-## Running Locally
+## Running Locally - Bundled Production Build
 
 To test against a local Brightspace environment, first start serving the compiled assets:
 
@@ -61,6 +61,32 @@ To link your local BSI with a local web component, follow these steps:
 5. In BSI, run `rm -rf ./node_modules/<component-name>/node_modules`. This ensures that when `polymer build` is run, it does not end up with nested copies of components. **Caveat**: if your component is pulling in a new dependency that isn't already in BSI, this won't work. In this case, you can try deleting everything _except_ that new dependency, or installing that new dependency from BSI directly, without saving that to BSI's `package.json`.
 
 Then follow the instructions in the previous section to serve BSI and point your local intance at it.
+
+## Running Locally - Unbundled build
+
+There is experimental support for running an unbundled BSI to improve the local developer workflow. The primary objective is to be able to modify local web components and see the changes in the local LMS without needing to keep re-running BSI's npm run build.
+
+The unbundled workflow uses the `@open-wc/es-dev-server` to serve the web components and the other BSI static assets.
+
+To use this workflow first do a regular BSI build to build the static assets.
+
+```shell
+npm run build
+```
+
+Follow the instructions above for pointing your Brightspace instance at the local integration project.
+In addition to adding your local BSI endpoint to the `polymer-3` config, add a new property `"import-style": "esm"`.
+This instructs the LMS to reference web components using standard `import` script tags rather than using `amd` style defines.
+
+Now you should be able to modify a local web component file, refresh the browser and immediately see your changes without doing a new build.
+
+### Known Limitations of the unbundled build
+
+The build uses `es-dev-server` 'modern' comptability mode to transpile the Javascript on the fly using babel. However, it doesn't currently have any support for other transformations or polyfills that are supported by `es-dev-server` because we are not using `es-dev-server` to generate the index.html file. So it should work for the evergreen browsers but won't work for IE11, and if you are using dynamic imports, they will not work on Edge < 17.
+
+If the unbundled build proves to be useful we may put more effort into adding support for other features.
+
+The unbundled build also uses a customized `.browserslistrc-es-dev-server` because the standard BSI `.browserslistrc` file includes IE11 which causes `es-dev-server` to throw an error as it assumes you will use it's legacy compatibility support for IE11.
 
 ## Want a slightly faster build?
 

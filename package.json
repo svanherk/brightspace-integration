@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "autoprefix": "postcss ./build/bsi.css -o ./build/bsi.css -u autoprefixer",
+    "start": "cross-env BROWSERSLIST_CONFIG=./.browserslistrc-es-dev-server es-dev-server --compatibility modern --node-resolve --watch",
     "build": "npm run build:wc && npm run build:common",
     "build-no-es5": "npm run build:wc-no-es5 && npm run build:common",
     "build:common": "npm run build:js && npm run build:sass && npm run build:icons && npm run build:navicons && npm run build:email-icons && npm run build:babelHelpers && npm run build:esm-amd-loader && npm run build:regenerator-runtime",
@@ -61,6 +62,7 @@
     "@babel/register": "^7.0.0",
     "@brightspace-ui/core": "^1",
     "@d2l/switch": "Brightspace/d2l-switch.git#semver:^3",
+    "@koa/cors": "^3.0.0",
     "@octokit/rest": "^16.19.0",
     "@polymer/esm-amd-loader": "^1.0.3",
     "@polymer/lit-element": "^0.6.1",
@@ -107,6 +109,7 @@
     "d2l-table": "BrightspaceUI/table#semver:^2",
     "d2l-tabs": "BrightspaceUI/tabs#semver:^1",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
+    "es-dev-server": "^1.17.2",
     "eslint": "^5.16.0",
     "eslint-config-brightspace": "^0.5.2",
     "eslint-plugin-html": "^5.0.3",
