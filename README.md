@@ -40,7 +40,13 @@ npm run serve
 
 This will run a web server on port `8080` pointing at the `build` directory. You'll need to manually rebuild if any of the assets change.
 
-To point your Brightspace instance at the local integration project:
+To point your Brightspace instance at the local integration project, there are two options:
+
+Option 1:
+
+In the Config Variable browser of your local instance, set the value of `d2l.System.BsiEndpointOverride` to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`.
+
+Option 2:
 
 1. Go to your `{instance}/config/Infrastructure` directory
 2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
@@ -156,12 +162,16 @@ To skip automatic tagging and releasing, include the text `[skip release]` in yo
 
 ## Updating LP to reference the new version of BSI
 
-Once a new release of BSI has been automatically published to the CDN, you'll need to update LP to reference your version. Create a pull request in LP
-that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
+A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%20BSI/) checks for new BSI versions every 10 minutes and automatically updates LP to reference your version. Although it merges the change to LP quickly, it also triggers a CI for easy tracking in case there is a problem with the assets published to the CDN. In case of failures you will receive an email from Jenkins (and a message will be sent to the `#build-triage` Slack channel), so that you can investigate and complete the process manually if needed.
 
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 
-*If there are more than just your changes between the BSI version you are bumping from and the BSI version you are bumping to please add the owner of the those changes to your PR, and coordinate with them to ensure that any Core LMS PRs corresponding to the BSI changes are accounted for. Thank you!*
+Note that this is only done on LMS `master`. For hotfixes or updates to branches you'll need to update LP manually by creating a pull request on the appropriate branch in LP
+that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
+
+*If you have other dependent Core Lms changes, please make sure you merge those lms changes before bumping BSI.*
+
+Note that for testing purposes you can use the `d2l.System.BsiEndpointOverride` config variable to override the BSI endpoint on a test instance, so you don't need to wait for a quad site with the above LP updates to test your BSI changes,assuming they are not dependent on other LMS changes as well.
 
 ## Contributing
 Contributions are welcome, please submit a pull request!
