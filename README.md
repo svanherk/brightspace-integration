@@ -129,6 +129,8 @@ that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https:
 
 *If you have other dependent Core Lms changes, please make sure you merge those lms changes before bumping BSI.*
 
+Note that for testing purposes you can use the `d2l.System.BsiEndpointOverride` config variable to override the BSI endpoint on a test instance, so you don't need to wait for a quad site with the above LP updates to test your BSI changes,assuming they are not dependent on other LMS changes as well.
+
 ## Contributing
 Contributions are welcome, please submit a pull request!
 
