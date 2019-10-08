@@ -119,8 +119,13 @@
 
 @media (max-width: $d2l-navigation-bp-mobile-menu) {
 	d2l-navigation-main-footer,
+	d2l-organization-consortium-tabs,
 	.d2l-navigation-main-ib { // tweak once image based bottom nav bar is in d2l-navigation
 		display: none;
+	}
+
+	.d2l-navigation-s-mobile-menu d2l-organization-consortium-tabs {
+		display: block;
 	}
 }
 
