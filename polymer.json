@@ -27,6 +27,7 @@
   ],
   "extraDependencies": [
     "node_modules/d2l-activities/components/d2l-activity-editor/**/lang/*.json",
+    "node_modules/d2l-organizations/components/d2l-organization-availability-set/lang/*.json",
     "node_modules/d2l-rubric/editor/images/**",
     "node_modules/d2l-html-editor/skin-4.3.7/**",
     "node_modules/d2l-html-editor/langs/**",
