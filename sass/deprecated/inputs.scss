@@ -1,7 +1,6 @@
 @import 'input-helpers.scss';
 @import 'input-checkbox.scss';
 @import 'input-radio.scss';
-@import 'input-select.scss';
 @import 'input-text.scss';
 @import 'input-textarea.scss';
 
@@ -22,10 +21,6 @@
 
 .vui-input[type="radio"] {
 	@include _vui-input-radio();
-}
-
-select.vui-input {
-	@include _vui-input-select();
 }
 
 textarea.vui-input {

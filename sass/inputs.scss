@@ -1,0 +1,5 @@
+@import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
+
+.d2l-select {
+	@include d2l-input-select();
+}
