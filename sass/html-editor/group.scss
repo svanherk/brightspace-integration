@@ -3,11 +3,7 @@
 
 .d2l-htmleditor-group {
 
-	border: 1px solid #D3D3D3;
-	border-radius: $vui-htmleditor-border-radius;
-	box-shadow: 0 1px 1px 0 #EFEFEF;
 	display: inline-block;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#EEEEEE',GradientType=0 ); /* IE6-9 */
 	line-height: 1em;
 	margin-right: 0.3rem;
 
@@ -24,11 +20,25 @@
 	}
 
 	.d2l-htmleditor-toolbar-item {
-		.d2l-select {
-			border-radius: 0;
+		.d2l-select,
+		.d2l-select:hover:disabled {
+			border-color: #D3D3D3;
 		}
+		.d2l-select:hover, .d2l-select:focus {
+			border-color: $d2l-color-celestine;
+		}
+	}
+
+}
+
+.d2l-htmleditor-group-bordered {
+
+	border: 1px solid #D3D3D3;
+	border-radius: $vui-htmleditor-border-radius;
+	box-shadow: 0 1px 1px 0 #EFEFEF;
+
+	.d2l-htmleditor-toolbar-item {
 		&:first-child {
-			.d2l-select,
 			.d2l-htmleditor-button,
 			.d2l-menuflyout-opener {
 				border-top-left-radius: $vui-htmleditor-border-radius;
@@ -36,7 +46,6 @@
 			}
 		}
 		&:last-child {
-			.d2l-select,
 			.d2l-htmleditor-button {
 				border-top-right-radius: $vui-htmleditor-border-radius;
 				border-bottom-right-radius: $vui-htmleditor-border-radius;
@@ -49,7 +58,6 @@
 		}
 	}
 	[dir="rtl"] & .d2l-htmleditor-toolbar-item:first-child {
-		.d2l-select,
 		.d2l-htmleditor-button,
 		.d2l-menuflyout-opener   {
 			border-top-left-radius: 0;
@@ -59,7 +67,6 @@
 		}
 	}
 	[dir="rtl"] & .d2l-htmleditor-toolbar-item:last-child {
-		.d2l-select,
 		.d2l-htmleditor-button,
 		.d2l-menuflyout-opener {
 			border-top-right-radius: 0;
