@@ -1,5 +1,6 @@
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
 
-.d2l-select {
+.d2l-select,
+select.vui-input /* needed for some UMD FRAs */ {
 	@include d2l-input-select();
 }
