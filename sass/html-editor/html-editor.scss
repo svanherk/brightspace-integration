@@ -7,7 +7,7 @@
 @import 'menu.scss';
 
 .d2l-htmleditor {
-	border: 1px solid #CCC;
+	border: 1px solid $d2l-color-galena;
 	border-radius: $vui-htmleditor-border-radius;
 	background-color: #FFF;
 }
@@ -46,24 +46,6 @@
 
 	.d2l-select-container {
 		margin: 0;
-		border: 0;
-		border-radius: 0;
-		padding: 0;
-	}
-
-	.d2l-select,
-	.d2l-select:hover,
-	.d2l-select:focus {
-		border: 0;
-		font-size: 0.7rem;
-		font-weight: normal;
-		padding: 0.4rem calc(1rem + 42px) 0.4rem 0.7rem;
-	}
-	[dir="rtl"] & .d2l-select,
-	[dir="rtl"] & .d2l-select:hover,
-	[dir="rtl"] & .d2l-select:focus {
-		padding-left: calc(1rem + 42px);
-		padding-right: 0.7rem;
 	}
 
 }
