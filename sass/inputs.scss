@@ -1,3 +1,4 @@
+@import '../node_modules/@brightspace-ui/core/components/inputs/input-checkbox.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-radio.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
 @import '../node_modules/@brightspace-ui/core/components/typography/typography.scss';
@@ -7,23 +8,29 @@ select.vui-input /* needed for some UMD FRAs */ {
 	@include d2l-input-select();
 }
 
+.d2l-checkbox,
+.vui-input[type="checkbox"] /* needed for some UMD FRAs */ {
+	@include d2l-input-checkbox();
+}
+
 .d2l-radio,
 .vui-input[type="radio"] /* needed for some UMD FRAs */ {
 	@include d2l-input-radio();
 }
 
+.d2l-checkbox-container,
 .d2l-radio-inline {
 	display: inline-block;
 	padding-left: 1.7rem;
-	padding-right: 0;
 	vertical-align: middle;
+	& > input[type="checkbox"],
 	& > input[type="radio"] {
 		margin-right: 0.5rem;
 		margin-left: -1.7rem;
 	}
 	[dir="rtl"] & {
 		padding-right: 1.7rem;
-		padding-left: 0;
+		& > input[type="checkbox"],
 		& > input[type="radio"] {
 			margin-left: 0.5rem;
 			margin-right: -1.7rem;
@@ -33,6 +40,13 @@ select.vui-input /* needed for some UMD FRAs */ {
 		margin-bottom: 0.5rem;
 	}
 	@include d2l-body-compact();
+}
+.d2l-checkbox-container {
+	padding-right: 6px;
+	[dir="rtl"] & {
+		padding-right: 1.7rem;
+		padding-left: 6px;
+	}
 }
 
 .d2l-checkbox-container + .d2l-checkbox-container,

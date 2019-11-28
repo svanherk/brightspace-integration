@@ -1,5 +1,4 @@
 @import 'input-helpers.scss';
-@import 'input-checkbox.scss';
 @import 'input-text.scss';
 @import 'input-textarea.scss';
 
@@ -14,17 +13,6 @@
 	@include _vui-input-text();
 }
 
-.vui-input[type="checkbox"] {
-	@include _vui-input-checkbox();
-}
-
 textarea.vui-input {
 	@include _vui-input-textarea();
-}
-
-.d2l-checkbox-container {
-	@include _vui-input-checkbox-radio-label(
-		"checkbox",
-		6px
-	);
 }
