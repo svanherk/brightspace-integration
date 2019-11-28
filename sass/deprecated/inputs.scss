@@ -1,6 +1,5 @@
 @import 'input-helpers.scss';
 @import 'input-checkbox.scss';
-@import 'input-radio.scss';
 @import 'input-text.scss';
 @import 'input-textarea.scss';
 
@@ -19,10 +18,6 @@
 	@include _vui-input-checkbox();
 }
 
-.vui-input[type="radio"] {
-	@include _vui-input-radio();
-}
-
 textarea.vui-input {
 	@include _vui-input-textarea();
 }
@@ -32,24 +27,4 @@ textarea.vui-input {
 		"checkbox",
 		6px
 	);
-}
-.d2l-radio-inline {
-	@include _vui-input-checkbox-radio-label("radio");
-}
-
-.d2l-checkbox-container + .d2l-checkbox-container,
-.d2l-radio-inline + .d2l-radio-inline {
-	margin-left: 10px;
-}
-[dir='rtl'] .d2l-checkbox-container + .d2l-checkbox-container,
-[dir='rtl'] .d2l-radio-inline + .d2l-radio-inline {
-	margin-left: 0;
-	margin-right: 10px;
-}
-
-.d2l-checkbox-container.d2l-checkbox-disabled,
-.d2l-radio-inline.d2l-radio-disabled,
-.d_rdo_d {
-	color: #A0A0A0;
-	cursor: default;
 }
