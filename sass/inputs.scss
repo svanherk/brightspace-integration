@@ -1,7 +1,16 @@
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-checkbox.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-radio.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/input-text.scss';
 @import '../node_modules/@brightspace-ui/core/components/typography/typography.scss';
+
+.d2l-edit,
+.vui-input[type="email"] /* needed for some UMD FRAs */,
+.vui-input[type="password"] /* needed for some UMD FRAs */,
+.vui-input[type="text"] /* needed for some UMD FRAs */,
+.vui-input[type="url"] /* needed for some UMD FRAs */ {
+	@include d2l-input-text();
+}
 
 .d2l-select,
 select.vui-input /* needed for some UMD FRAs */ {
