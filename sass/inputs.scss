@@ -2,6 +2,7 @@
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-radio.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
 @import '../node_modules/@brightspace-ui/core/components/inputs/input-text.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/input-textarea.scss';
 @import '../node_modules/@brightspace-ui/core/components/typography/typography.scss';
 
 .d2l-edit,
@@ -10,6 +11,11 @@
 .vui-input[type="text"] /* needed for some UMD FRAs */,
 .vui-input[type="url"] /* needed for some UMD FRAs */ {
 	@include d2l-input-text();
+}
+
+.d2l-longedit,
+textarea.vui-input /* needed for some UMD FRAs */{
+	@include d2l-input-textarea();
 }
 
 .d2l-select,

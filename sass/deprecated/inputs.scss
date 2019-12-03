@@ -1,6 +1,0 @@
-@import 'input-helpers.scss';
-@import 'input-textarea.scss';
-
-textarea.vui-input {
-	@include _vui-input-textarea();
-}
