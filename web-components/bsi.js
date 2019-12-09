@@ -89,6 +89,9 @@ import 'd2l-users/components/d2l-profile-image.js';
 import { setCancelSyntheticClickEvents  } from '@polymer/polymer/lib/utils/settings.js';
 setCancelSyntheticClickEvents(false);
 
+import {announce} from '../node_modules/@brightspace-ui/core/helpers/announce.js';
+window.D2L.Announce = announce;
+
 import {clearDismissible, setDismissible} from '../node_modules/@brightspace-ui/core/helpers/dismissible.js';
 window.D2L.Dismissible = {
 	Clear: function(id) {
