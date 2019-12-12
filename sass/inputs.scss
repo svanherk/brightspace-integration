@@ -1,8 +1,9 @@
-@import '../node_modules/@brightspace-ui/core/components/inputs/input-checkbox.scss';
-@import '../node_modules/@brightspace-ui/core/components/inputs/input-radio.scss';
-@import '../node_modules/@brightspace-ui/core/components/inputs/input-select.scss';
-@import '../node_modules/@brightspace-ui/core/components/inputs/input-text.scss';
-@import '../node_modules/@brightspace-ui/core/components/inputs/input-textarea.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/checkbox.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/label.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/radio.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/select.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/text.scss';
+@import '../node_modules/@brightspace-ui/core/components/inputs/sass/textarea.scss';
 @import '../node_modules/@brightspace-ui/core/components/typography/typography.scss';
 
 .d2l-edit,
@@ -78,4 +79,14 @@ select.vui-input /* needed for some UMD FRAs */ {
 .d2l-radio-disabled {
 	color: #A4A6A7; /* ferrite at 50% opacity on white */
 	cursor: default;
+}
+
+.d2l-label,
+.vui-label /* needed for some UMD FRAs */ {
+	@include d2l-input-label();
+}
+
+.d2l-label-required,
+.vui-required /* needed for some UMD FRAs */ {
+	@include d2l-input-label-required();
 }
