@@ -65,7 +65,7 @@ $dialog-resize: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.
 	to   { transform: translateY(100%); }
 }
 
-.d2l-dialog {
+.d2l-dialog-mvc.d2l-dialog {
 	left: 100px;
 	height: 300px;
 	overflow: hidden;
@@ -108,14 +108,14 @@ $dialog-resize: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.
 	padding: 1.5rem;
 }
 
-.d2l-dialog-inline {
+.d2l-dialog-mvc.d2l-dialog-inline {
 	max-height: 70vh;
 	max-width: 60vw;
 	width: auto;
 }
 
 .ddial_o2,
-.d2l-dialog-inner {
+.d2l-dialog-mvc .d2l-dialog-inner {
 	background-color: $dialog-background-color;
 	border: 1px solid $d2l-color-mica;
 	border-radius: 0.4rem;
@@ -157,13 +157,14 @@ $dialog-resize: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.
 	right: -10000px;
 }
 
-.d2l-dialog-footer {
-	position: relative;
-}
-
 .d2l-dialog-footer-container {
 	bottom:0;
 	width:100%;
+}
+
+.ddial_o .d2l-dialog-footer,
+.d2l-dialog-mvc .d2l-dialog-footer {
+	position: relative;
 }
 
 .d2l-dialog-resize {
@@ -304,7 +305,7 @@ html.d2l-dialog-open, html.d2l-dialog-open body {
 	}
 
 	.ddial_o,
-	.d2l-dialog {
+	.d2l-dialog-mvc.d2l-dialog {
 		width: 100% !important;
 		height: 100% !important;
 		left: auto !important;
@@ -323,7 +324,7 @@ html.d2l-dialog-open, html.d2l-dialog-open body {
 	}
 
 	.ddial_o2,
-	.d2l-dialog-inner {
+	.d2l-dialog-mvc .d2l-dialog-inner {
 		border-radius: 0 !important;
 		width: 100% !important;
 		height: 100% !important;
