@@ -4,12 +4,13 @@ import os
 import json
 import argparse
 
-PATH_TO_LMS = os.path.join("C", "D2L", "instances")
+# Constants
+PATH_TO_LMS = os.path.join("C:\\", "D2L", "instances")
 RELATIVE_PATH_CONFIG = os.path.join("config", "Infrastructure", "D2L.LP.Web.UI.Html.Bsi.config.json")
 DEFAULT_LMS_INSTANCE = "lsone"
 
 READ = "r"
-WRITE_PLUS = "w+"
+WRITE = "w"
 
 NAME = "name"
 PACKAGE = "package.json"
@@ -37,7 +38,7 @@ class Unbundler:
         parser.add_argument(
             "--bsi-path",
             help = "The path to your BSI repo.",
-            default=os.path.curdir
+            default=os.path.dirname(os.path.abspath(__file__))
         )
         
         parser.add_argument(
@@ -51,7 +52,19 @@ class Unbundler:
             help="The name of the LMS instance you are interested in unbundling.",
             default=DEFAULT_LMS_INSTANCE
         )
+
+        parser.add_argument(
+            "-d",
+            "--dry",
+            help="Outputs the sequence of commands that will be run, without running them.",
+            default=False,
+            action='store_true'
+        )
+
         args = parser.parse_args()
+
+        # Are we doing a dry run?
+        self.dry_run = args.dry
 
         # Set the path to the repos, the component name and LMS path
         self.bsi_repo_dir = args.bsi_path
@@ -62,35 +75,40 @@ class Unbundler:
             self.component_name = json.load(data_file)[NAME]
         
         # Get the path to the LMS
-        self.path_to_lms = PATH_TO_LMS + args.instance_name
+        self.path_to_lms = os.path.join(PATH_TO_LMS, args.instance_name)
 
     # Modifies the config file for the desired LMS.
     def modify_config_file(self):
-        with open(os.path.join(self.path_to_lms, RELATIVE_PATH_CONFIG), WRITE_PLUS) as data_file:
-            data = {}
+        if not self.dry_run:
+            with open(os.path.join(self.path_to_lms, RELATIVE_PATH_CONFIG), WRITE) as data_file:
+                data = {}
 
-            data[POLYMER] = LOCALHOST
-            data[IMPORT_STYLE] = IMPORT_STYLE_ESM
+                data[POLYMER] = LOCALHOST
+                data[IMPORT_STYLE] = IMPORT_STYLE_ESM
 
-            json.dump(data, data_file)
+                json.dump(data, data_file)
+        self.print_cmd("Updated LMS Config")
+        
 
     # Run the given command
-    def colour_print(self, command):
-        print(f'{bcolors.OKBLUE}{command}{bcolors.ENDC}')
+    def print_cmd(self, command):
+        print("[COMMAND] " + command)
 
     # Removes a directory given the path to the directory
     def remove_dir(self, path):
-        self.colour_print("rm -rf " + path)
-        os.system("rmdir " + path + " /S /Q")
+        self.print_cmd("rm -rf " + path)
+        if not self.dry_run:
+            os.system("rmdir " + path + " /S /Q")
 
     # Run a command and print it
     def run_command(self, command):
-        self.colour_print(command)
-        os.system(command)
+        self.print_cmd(command)
+        if not self.dry_run:
+            os.system(command)
 
     # Change directory and print it
     def change_dir(self, path):
-        self.colour_print("cd " + path)
+        self.print_cmd("cd " + path)
         os.chdir(path)
 
     # Main routine
@@ -102,7 +120,7 @@ class Unbundler:
 
         # Delete .npmrc
         try:
-            self.colour_print("rm .npmrc")
+            self.print_cmd("rm .npmrc")
             os.remove(".npmrc")
         except:
             pass
