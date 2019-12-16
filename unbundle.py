@@ -1,13 +1,22 @@
 #!/usr/bin/python3
 
 import os
-import argparse
 import json
-import shutil
-import stat
+import argparse
 
-PATH_TO_LMS = "C:/D2L/instances/"
-RELATIVE_PATH_CONFIG = "/config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json"
+PATH_TO_LMS = os.path.join("C", "D2L", "instances")
+RELATIVE_PATH_CONFIG = os.path.join("config", "Infrastructure", "D2L.LP.Web.UI.Html.Bsi.config.json")
+DEFAULT_LMS_INSTANCE = "lsone"
+
+READ = "r"
+WRITE_PLUS = "w+"
+
+NAME = "name"
+PACKAGE = "package.json"
+POLYMER = "polymer-3"
+IMPORT_STYLE = "import_style"
+IMPORT_STYLE_ESM = "esm"
+LOCALHOST = "http://localhost:8080/"
 
 # Colours
 class bcolors:
@@ -20,116 +29,116 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-# Parse the command line arguments
-def get_params():
-    parser = argparse.ArgumentParser()
+class Unbundler:
+    # Parse the command line arguments
+    def get_params(self):
+        parser = argparse.ArgumentParser()
 
-    parser.add_argument(
-        "--bsi-path",
-        help = "The path to your BSI repo.",
-        default="./"
-    )
-    
-    parser.add_argument(
-        "--component-path",
-        help="The path to the BSI component you are interested in unbundling.",
-        required=True
-    )
-
-    parser.add_argument(
-        "--instance-name",
-        help="The name of the LMS instance you are interested in unbundling.",
-        default="lsone"
-    )
-    args = parser.parse_args()
-
-    # Set the path to the repos, the component name and LMS path
-    args.bsi_repo_dir = args.bsi_path
-    args.component_repo_dir = args.component_path
-
-    # Get the component package name
-    with open(args.component_repo_dir + "/package.json", "r") as data_file:
-       args.component_name = json.load(data_file)["name"]
-    
-    # Get the path to the LMS
-    args.path_to_lms = PATH_TO_LMS + args.instance_name
-
-    return args
-
-# Modifies the config file for the desired LMS.
-def modify_config_file(args):
-    with open(args.path_to_lms + RELATIVE_PATH_CONFIG, "w+") as data_file:
-        data = {}
-        data["polymer-3"] = "http://localhost:8080/"
-        data["import-style"] = "esm"
-        json.dump(data, data_file)
-
-# Run the given command
-def colour_print(command):
-    print(f'{bcolors.OKBLUE}{command}{bcolors.ENDC}')
-
-def remove_dir(path):
-    os.system(f"rmdir {path} /S /Q")
-
+        parser.add_argument(
+            "--bsi-path",
+            help = "The path to your BSI repo.",
+            default=os.path.curdir
+        )
         
-# Main routine
-def main():
-    args = get_params()
+        parser.add_argument(
+            "--component-path",
+            help="The path to the BSI component you are interested in unbundling.",
+            required=True
+        )
 
-    # Go to BSI
-    colour_print("cd " + args.bsi_repo_dir)
-    os.chdir(args.bsi_repo_dir)
+        parser.add_argument(
+            "--instance-name",
+            help="The name of the LMS instance you are interested in unbundling.",
+            default=DEFAULT_LMS_INSTANCE
+        )
+        args = parser.parse_args()
 
-    # Delete .npmrc
-    try:
-        colour_print("rm .npmrc")
-        os.remove(".npmrc")
-    except:
-        pass
+        # Set the path to the repos, the component name and LMS path
+        self.bsi_repo_dir = args.bsi_path
+        self.component_repo_dir = args.component_path
 
-    # Delete node_modules
-    colour_print("rm -rf ./node_modules")
-    remove_dir("node_modules")
+        # Get the component package name
+        with open(os.path.join(self.component_repo_dir, PACKAGE), READ) as data_file:
+            self.component_name = json.load(data_file)[NAME]
+        
+        # Get the path to the LMS
+        self.path_to_lms = PATH_TO_LMS + args.instance_name
 
-    # Install BSI
-    colour_print("npm i")
-    os.system("npm i")
+    # Modifies the config file for the desired LMS.
+    def modify_config_file(self):
+        with open(os.path.join(self.path_to_lms, RELATIVE_PATH_CONFIG), WRITE_PLUS) as data_file:
+            data = {}
 
-    # Run BSI build
-    colour_print("npm run build")
-    os.system("npm run build")
+            data[POLYMER] = LOCALHOST
+            data[IMPORT_STYLE] = IMPORT_STYLE_ESM
 
-    # Go into component repo
-    colour_print("cd " + args.component_repo_dir)
-    os.chdir(args.component_repo_dir)
+            json.dump(data, data_file)
 
-    # Run npm link in component
-    colour_print("npm link")
-    os.system("npm link")
+    # Run the given command
+    def colour_print(self, command):
+        print(f'{bcolors.OKBLUE}{command}{bcolors.ENDC}')
 
-    # Go back to BSI
-    colour_print("cd " + args.bsi_repo_dir)
-    os.chdir(args.bsi_repo_dir)
+    # Removes a directory given the path to the directory
+    def remove_dir(self, path):
+        self.colour_print("rm -rf " + path)
+        os.system("rmdir " + path + " /S /Q")
 
-    # npm link component
-    colour_print("npm link " + args.component_name)
-    os.system("npm link " + args.component_name)
+    # Run a command and print it
+    def run_command(self, command):
+        self.colour_print(command)
+        os.system(command)
 
-    # Delete component in node_modules
-    colour_print("rm -rf " + "node_modules/" + args.component_name + "/node_modules")
-    remove_dir("node_modulesnode_modules\\" + args.component_name + "\\node_modules\\")
-    
-    # Modify BSI config file
-    modify_config_file(args)
+    # Change directory and print it
+    def change_dir(self, path):
+        self.colour_print("cd " + path)
+        os.chdir(path)
 
-    # Restart iis
-    colour_print("iisreset")
-    os.system("iisreset")
+    # Main routine
+    def main(self):
+        self.get_params()
 
-    # npm start
-    colour_print("npm start")
-    os.system("npm start")
+        # Go to BSI
+        self.change_dir(self.bsi_repo_dir)
+
+        # Delete .npmrc
+        try:
+            self.colour_print("rm .npmrc")
+            os.remove(".npmrc")
+        except:
+            pass
+
+        # Delete node_modules
+        self.remove_dir("node_modules")
+
+        # Install BSI
+        self.run_command("npm i")
+
+        # Run BSI build
+        self.run_command("npm run command")
+
+        # Go into component repo
+        self.change_dir(self.component_repo_dir)
+
+        # Run npm link in component
+        self.run_command("npm link")
+
+        # Go back to BSI
+        self.change_dir(self.bsi_repo_dir)
+
+        # npm link component
+        self.run_command("npm link " + self.component_name)
+
+        # Delete component in node_modules
+        self.remove_dir(os.path.join("node_modules", self.component_name, "node_modules"))
+
+        # Modify BSI config file
+        self.modify_config_file()
+
+        # Restart iis
+        self.run_command("iisreset")
+
 
 # Main method
 if __name__ == "__main__":
-    main()
+    unbundler = Unbundler()
+    unbundler.main()
