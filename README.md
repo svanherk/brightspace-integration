@@ -99,14 +99,14 @@ Running the script with only the `--component-path` argument makes some assumpti
 
 | Flag name            | Flag purpose                                                                                                                                                                     |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --bsi-path           | Optional: This is the full-path to your BSI repo. If not passed, the script assumes the location of the script as the BSI repo.                                                  |
-| --component-path     | Required: This is the full-path to the component you want to unbundle.                                                                                                           |
-| --instance-path      | Optional: This is the full-path to your LMS instances. If not passed, defaults to `C:\D2L\instances`.                                                                            |
-| --web-server-path    | Optional: This is the path of your BSI node web server. If not passed, defaults to `http://localhost:8080`.                                                                      |
-| --instance-name      | Optional: This is the name of the LMS instance to unbundle. If not passed, defaults to `lsone`.                                                                                  |
-| -d/--dry             | Optional: This only outputs the commands that will be run and does not actually run them.                                                                                        |
-| -fe/--front-end-only | Optional: This flag only unbundles the front-end components (useful if your LMS is on a different 'machine'). Cannot be used in combination with the `-be\--back-end-only` flag. |
-| -be/--back-end-only  | Optional: This flag only unbundles the back-end components (useful if your BSI is on a different 'machine'). Cannot be used in combination with the `-fe\--front-end-only` flag. |
+| `--bsi-path`           | Optional: This is the full-path to your BSI repo. If not passed, the script assumes the location of the script as the BSI repo.                                                  |
+| `--component-path`     | Required: This is the full-path to the component you want to unbundle.                                                                                                           |
+| `--instance-path`      | Optional: This is the full-path to your LMS instances. If not passed, defaults to `C:\D2L\instances`.                                                                            |
+| `--web-server-path`    | Optional: This is the path of your BSI node web server. If not passed, defaults to `http://localhost:8080`.                                                                      |
+| `--instance-name`      | Optional: This is the name of the LMS instance to unbundle. If not passed, defaults to `lsone`.                                                                                  |
+| `-d`/`--dry`             | Optional: This only outputs the commands that will be run and does not actually run them.                                                                                        |
+| `-fe`/`--front-end-only` | Optional: This flag only unbundles the front-end components (useful if your LMS is on a different 'machine'). Cannot be used in combination with the `-be\--back-end-only` flag. |
+| `-be`/`--back-end-only`  | Optional: This flag only unbundles the back-end components (useful if your BSI is on a different 'machine'). Cannot be used in combination with the `-fe\--front-end-only` flag. |
 
 ### Manual Unbundling Instructions
 
