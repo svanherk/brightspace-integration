@@ -19,16 +19,6 @@ IMPORT_STYLE = "import_style"
 IMPORT_STYLE_ESM = "esm"
 LOCALHOST = "http://localhost:8080/"
 
-# Colours
-class bcolors:
-    HEADER = '\033[95m'
-    OKBLUE = '\033[94m'
-    OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
-    FAIL = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 class Unbundler:
     # Parse the command line arguments
@@ -79,6 +69,7 @@ class Unbundler:
 
     # Modifies the config file for the desired LMS.
     def modify_config_file(self):
+        self.print_cmd("Update LMS Config: " + RELATIVE_PATH_CONFIG)        
         if not self.dry_run:
             with open(os.path.join(self.path_to_lms, RELATIVE_PATH_CONFIG), WRITE) as data_file:
                 data = {}
@@ -87,8 +78,6 @@ class Unbundler:
                 data[IMPORT_STYLE] = IMPORT_STYLE_ESM
 
                 json.dump(data, data_file)
-        self.print_cmd("Updated LMS Config")
-        
 
     # Run the given command
     def print_cmd(self, command):
@@ -154,6 +143,8 @@ class Unbundler:
 
         # Restart iis
         self.run_command("iisreset")
+
+        print("Done! All you need to do now is run `npm start` in your BSI directory and visit your LMS.")
 
 
 # Main method
