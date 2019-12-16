@@ -15,7 +15,7 @@ WRITE = "w"
 NAME = "name"
 PACKAGE = "package.json"
 POLYMER = "polymer-3"
-IMPORT_STYLE = "import_style"
+IMPORT_STYLE = "import-style"
 IMPORT_STYLE_ESM = "esm"
 LOCALHOST = "http://localhost:8080/"
 
