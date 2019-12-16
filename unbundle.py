@@ -132,7 +132,7 @@ class Unbundler:
         self.run_command("npm i")
 
         # Run BSI build
-        self.run_command("npm run command")
+        self.run_command("npm run build")
 
         # Go into component repo
         self.change_dir(self.component_repo_dir)
