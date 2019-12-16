@@ -90,7 +90,7 @@ python unbundle.py --component-path="<path of component to unbundle>"
 
 For example, if I wanted to unbundle my Activities repo, the command could look like this.
 ```shell
-python3 unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities"
+python unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities"
 ```
 
 #### Advanced Script Usage
