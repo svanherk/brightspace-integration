@@ -211,7 +211,7 @@ class Unbundler:
             self.run_command("iisreset")
 
         if not self.dry_run:
-            print("Done! All you need to do now is run `npm start` in your BSI directory and visit your LMS: {}.".format(self.web_server_path))
+            print("Done! All you need to do now is run `npm start` in your BSI directory and visit your LMS.")
             
         end_time = time.time()
         print()

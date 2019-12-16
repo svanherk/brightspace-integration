@@ -78,9 +78,14 @@ The unbundled workflow uses the `@open-wc/es-dev-server` to serve the web compon
 
 You can unbundle your build using the `unbundle.py` script located at the root of the repository.
 
-Make sure you have Python 3.X installed, if not, you can install it using chocolatey.
+Make sure you have Python 3.X installed, if not, you can install it using chocolatey (for Windows).
 ```shell
 choco install python3
+```
+
+Installing Python for Mac users using Homebrew:
+```
+brew install python
 ```
 
 Once you have Python installed, running the script is simple. To unbundle your BSI all you need to do is run the following command.
