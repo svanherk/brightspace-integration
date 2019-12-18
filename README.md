@@ -76,14 +76,14 @@ The unbundled workflow uses the `@open-wc/es-dev-server` to serve the web compon
 
 ### Using the Script to Unbundle your build
 
-You can unbundle your build using the `unbundle.py` script located at the root of the repository.
+You can unbundle your build using the `unbundle.py` script located in the `unbundle-script` folder.
 
 Make sure you have Python 3.X installed, if not, you can install it using chocolatey (for Windows).
 ```shell
 choco install python3
 ```
 
-Installing Python for Mac users using Homebrew:
+Installing Python on Mac using Homebrew:
 ```
 brew install python
 ```
@@ -113,6 +113,23 @@ Running the script with only the `--component-path` argument makes some assumpti
 | `-fe`/`--front-end-only` | Optional: This flag only unbundles the front-end components (useful if your LMS is on a different 'machine'). Cannot be used in combination with the `-be\--back-end-only` flag. |
 | `-be`/`--back-end-only`  | Optional: This flag only unbundles the back-end components (useful if your BSI is on a different 'machine'). Cannot be used in combination with the `-fe\--front-end-only` flag. |
 
+Examples:
+
+Using a custom BSI path and a custom LMS instance name.
+```shell
+python unbundle-script/unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities" --bsi-path="C:\Users\d2l-employee\Developer\bsi" --instance-name="lstwo"
+```
+
+Dry-running the list of commands that will be run for a custom BSI path and a custom LMS instance path.
+```shell
+python unbundle-script/unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities" --bsi-path="C:\Users\d2l-employee\Developer\bsi" --instance-path="C:\Users\d2l-employee\instances" --dry
+```
+
+Only executing the front-end unbundling procedure.
+```shell
+python unbundle-script/unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities" --front-end-only
+```
+
 #### Running Unit Tests for the Unbundle Script
 
 You can run the Unit Tests for the Unbundle Script using this command.
@@ -120,7 +137,6 @@ You can run the Unit Tests for the Unbundle Script using this command.
 ```shell
 python unbundle-script/unbundle-tests.py
 ```
-
 
 ### Manual Unbundling Instructions
 
