@@ -72,5 +72,6 @@ class TestUnbundler(unittest.TestCase):
         if not os.path.exists(TEST_DIRECTORY_TO_REMOVE):
             os.mkdir(TEST_DIRECTORY_TO_REMOVE)
 
+
 if __name__ == '__main__':
     unittest.main()

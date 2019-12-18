@@ -60,6 +60,11 @@ class Unbundler:
         self.test = test
 
         if not self.test:
+            # Check that the BSI path and the component path are actually node modules
+            if not self.is_node_module(bsi_path) or not self.is_node_module(component_path):
+                print("[ERROR] The given paths are not valid node modules!", file=sys.stderr)
+                exit(ERROR_CODE)
+
             # Get the component package name
             with open(os.path.join(self.component_repo_dir, PACKAGE), READ) as data_file:
                 self.component_name = json.load(data_file)[NAME]
@@ -116,6 +121,11 @@ class Unbundler:
             return ctypes.windll.shell32.IsUserAnAdmin()
         except:
             return False
+
+    # Check if the given paths are actually node modules
+    @staticmethod
+    def is_node_module(path):
+        return os.path.exists(os.path.join(path, PACKAGE))
 
     # Perform the unbundling process
     def unbundle(self):
