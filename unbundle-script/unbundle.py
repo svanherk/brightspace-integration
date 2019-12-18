@@ -61,7 +61,7 @@ class Unbundler:
 
         if not self.test:
             # Check that the BSI path and the component path are actually node modules
-            if not self.is_node_module(bsi_path) or not self.is_node_module(component_path):
+            if (not self.is_node_module(bsi_path) or not self.is_node_module(component_path)) and not self.back_end_only:
                 print("[ERROR] The given paths are not valid node modules!", file=sys.stderr)
                 exit(ERROR_CODE)
 
