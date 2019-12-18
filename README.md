@@ -90,12 +90,12 @@ brew install python
 
 Once you have Python installed, running the script is simple. To unbundle your BSI all you need to do is run the following command.
 ```shell
-python unbundle.py --component-path="<path of component to unbundle>"
+python unbundle-script/unbundle.py --component-path="<path of component to unbundle>"
 ```
 
 For example, if I wanted to unbundle my Activities repo, the command could look like this.
 ```shell
-python unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities"
+python unbundle-script/unbundle.py --component-path="C:\Users\d2l-employee\Developer\activities"
 ```
 
 #### Advanced Script Usage
@@ -112,6 +112,15 @@ Running the script with only the `--component-path` argument makes some assumpti
 | `-d`/`--dry`             | Optional: This only outputs the commands that will be run and does not actually run them.                                                                                        |
 | `-fe`/`--front-end-only` | Optional: This flag only unbundles the front-end components (useful if your LMS is on a different 'machine'). Cannot be used in combination with the `-be\--back-end-only` flag. |
 | `-be`/`--back-end-only`  | Optional: This flag only unbundles the back-end components (useful if your BSI is on a different 'machine'). Cannot be used in combination with the `-fe\--front-end-only` flag. |
+
+#### Running Unit Tests for the Unbundle Script
+
+You can run the Unit Tests for the Unbundle Script using this command.
+
+```shell
+python unbundle-script/unbundle-tests.py
+```
+
 
 ### Manual Unbundling Instructions
 

@@ -6,19 +6,10 @@ import time
 import json
 import ctypes
 import shutil
-import unittest
 import argparse
+import subprocess
 
 # Constants
-DEFAULT_LMS_INSTANCE = "lsone"
-TEST_INSTANCE_NAME = "unbundle-test"
-PATH_TO_LMS = os.path.join("C:\\", "D2L", "instances")
-CURRENT_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-TEST_INSTANCE_LOCATION = os.path.join(CURRENT_SCRIPT_DIR, "test")
-TEST_DIRECTORY_TO_REMOVE = os.path.join(TEST_INSTANCE_LOCATION, TEST_INSTANCE_NAME, "sample-dir")
-TEST_DIRECTORY_TO_NAVIGATE = os.path.join(TEST_INSTANCE_LOCATION, TEST_INSTANCE_NAME, "sample-dir2")
-RELATIVE_PATH_CONFIG = os.path.join("config", "Infrastructure", "D2L.LP.Web.UI.Html.Bsi.config.json")
-
 READ = "r"
 WRITE = "w"
 
@@ -31,67 +22,10 @@ IMPORT_STYLE_ESM = "esm"
 IMPORT_STYLE = "import-style"
 LOCALHOST = "http://localhost:8080/"
 
-
-class TestUnbundler(unittest.TestCase):
-
-    def test_modify_config_file(self):
-        test_unbundler = Unbundler(
-            bsi_path=CURRENT_SCRIPT_DIR,
-            component_path="",
-            instance_path=TEST_INSTANCE_LOCATION,
-            web_server_path="",
-            instance_name=TEST_INSTANCE_NAME,
-            test=True
-        )        
-        test_unbundler.modify_config_file()
-
-        expected_data = {
-            POLYMER: "",
-            IMPORT_STYLE: IMPORT_STYLE_ESM
-        }
-
-        actual_data = {}
-        with open(os.path.join(TEST_INSTANCE_LOCATION, TEST_INSTANCE_NAME, RELATIVE_PATH_CONFIG), READ) as data_file:
-            actual_data = json.load(data_file)
-
-        self.assertEqual(expected_data, actual_data)
-
-    def test_remove_dir(self):
-        # Check that the sample directory is there
-        self.assertTrue(os.path.exists(TEST_DIRECTORY_TO_REMOVE))
-
-        test_unbundler = Unbundler(
-            bsi_path=CURRENT_SCRIPT_DIR,
-            component_path="",
-            instance_path=TEST_INSTANCE_LOCATION,
-            web_server_path="",
-            instance_name=TEST_INSTANCE_NAME,
-            test=True
-        )        
-
-        # Remove it and check that it is gone
-        test_unbundler.remove_dir(TEST_DIRECTORY_TO_REMOVE)
-        self.assertFalse(os.path.exists(TEST_DIRECTORY_TO_REMOVE))        
-
-        # Restore the directory for the next test case
-        os.mkdir(TEST_DIRECTORY_TO_REMOVE)
-
-    def test_change_dir(self):
-        # Check that the sample directory is there
-        self.assertTrue(os.path.exists(TEST_DIRECTORY_TO_NAVIGATE))
-
-        test_unbundler = Unbundler(
-            bsi_path=CURRENT_SCRIPT_DIR,
-            component_path="",
-            instance_path=TEST_INSTANCE_LOCATION,
-            web_server_path="",
-            instance_name=TEST_INSTANCE_NAME,
-            test=True
-        )
-
-        # Check that navigating to the directory worked
-        test_unbundler.change_dir(TEST_DIRECTORY_TO_NAVIGATE)
-        self.assertEqual(os.getcwd(), TEST_DIRECTORY_TO_NAVIGATE)      
+DEFAULT_LMS_INSTANCE = "lsone"
+PATH_TO_LMS = os.path.join("C:\\", "D2L", "instances")
+CURRENT_BSI_DIRECTORY = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+RELATIVE_PATH_CONFIG = os.path.join("config", "Infrastructure", "D2L.LP.Web.UI.Html.Bsi.config.json")
 
 
 class Unbundler:
@@ -123,7 +57,9 @@ class Unbundler:
         self.path_to_lms = instance_path
         self.web_server_path = web_server_path
 
-        if not test:
+        self.test = test
+
+        if not self.test:
             # Get the component package name
             with open(os.path.join(self.component_repo_dir, PACKAGE), READ) as data_file:
                 self.component_name = json.load(data_file)[NAME]
@@ -160,9 +96,12 @@ class Unbundler:
 
     # Run a command and print it
     def run_command(self, command):
-        self.print_cmd(command)
-        if not self.dry_run:
-            os.system(command)
+            self.print_cmd(command)
+            if not self.dry_run:
+                if not self.test:
+                    os.system(command)
+                else:
+                    return subprocess.check_output(command, shell=True)
 
     # Change directory and print it
     def change_dir(self, path):
@@ -256,7 +195,7 @@ def get_params():
     parser.add_argument(
         "--bsi-path",
         help="The path to your BSI repo, the default is the directory of this script.",
-        default=CURRENT_SCRIPT_DIR
+        default=CURRENT_BSI_DIRECTORY
     )
     
     parser.add_argument(

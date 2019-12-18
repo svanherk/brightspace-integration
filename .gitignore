@@ -3,6 +3,5 @@ build/
 node_modules/
 .idea/
 *.log
-test/unbundle-test/config/Infrastructure/
 __pycache__/
 .vscode/
