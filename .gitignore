@@ -3,3 +3,5 @@ build/
 node_modules/
 .idea/
 *.log
+__pycache__/
+.vscode/
