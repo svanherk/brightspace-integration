@@ -61,7 +61,7 @@
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "@brightspace-ui/core": "^1",
-    "@brightspace-ui/intl": "Brightspace/intl#v3",
+    "@brightspace-ui/intl": "^3",
     "@d2l/switch": "Brightspace/d2l-switch.git#semver:^3",
     "@koa/cors": "^3.0.0",
     "@octokit/rest": "^16.19.0",
