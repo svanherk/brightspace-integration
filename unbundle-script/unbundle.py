@@ -197,6 +197,7 @@ def get_params():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
+        "-cp",
         "--component-path",
         help="The path to the BSI component you are interested in unbundling.",
         required=True
