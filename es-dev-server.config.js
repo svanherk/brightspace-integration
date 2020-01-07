@@ -30,4 +30,19 @@ module.exports = {
 			return next();
 		}
 	],
+	nodeResolve: {
+		mainFields: ['jsnext:main', 'browser', 'module', 'main'],
+		// set default to false because es-dev-server always
+		// runs in the browser
+		preferBuiltins: true,
+		// will overwrite es-dev-server's fileExtensions option
+		extensions: ['.mjs', '.js'],
+		// will overwrite es-dev-server's dedupe option
+		dedupe: ['lit-html'],
+		customResolveOptions: {
+			// will overwrite es-dev-server's moduleDirs option
+			moduleDirectory: ['node_modules'],
+			preserveSymlinks: true,
+		},
+	}
 };
