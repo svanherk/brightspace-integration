@@ -86,6 +86,7 @@ import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 import 'd2l-polymer-behaviors/d2l-gestures-swipe.js';
 import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
+import 'd2l-tooltip/d2l-tooltip.js';
 import 'd2l-users/components/d2l-profile-image.js';
 
 /*
