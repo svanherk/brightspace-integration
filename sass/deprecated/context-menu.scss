@@ -48,12 +48,10 @@
 	border-top: 1px solid transparent;
 }
 
-.dcm.dcm_handle.bsi-button-menu,
 .d2l-contextmenu-ph-anchor {
 	@include _vui-dropdown-context-menu();
 }
-.dcm.dcm_handle.bsi-button-menu,
-.dcm.bsi-button-menu,
+
 .d2l-contextmenu-ph {
 	margin-left: 0.25rem;
 	margin-right: 0.25rem;
