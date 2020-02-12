@@ -110,6 +110,7 @@
     "d2l-tabs": "BrightspaceUI/tabs#semver:^1",
     "d2l-tooltip": "BrightspaceUI/tooltip#semver:^3",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
+    "@brightspace-ui-labs/user-feedback": "^1",
     "es-dev-server": "^1.17.2",
     "eslint": "^5.16.0",
     "eslint-config-brightspace": "^0.5.2",
