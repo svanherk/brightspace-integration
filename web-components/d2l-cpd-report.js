@@ -1,1 +1,1 @@
-import 'd2l-cpd/src/components/cpd-record-report';
+import 'd2l-cpd/src/components/cpd-record-report.js';
