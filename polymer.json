@@ -42,7 +42,8 @@
     "node_modules/d2l-html-editor/langs/**",
     "node_modules/d2l-html-editor/d2l_lang_plugin/**",
     "node_modules/d2l-html-editor/**/*.css",
-    "node_modules/d2l-cpd/locales/**.json"
+    "node_modules/d2l-cpd/locales/**.json",
+    "node_modules/d2l-cpd/src/logos/sbg-logo.js"
   ],
   "lint": {
     "rules": [
