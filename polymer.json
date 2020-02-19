@@ -24,7 +24,11 @@
     "web-components/d2l-program-outcomes-picker.js",
     "web-components/d2l-tabs.js",
     "web-components/d2l-activity-exemptions.js",
-    "web-components/d2l-quick-eval.js"
+    "web-components/d2l-quick-eval.js",
+    "web-components/d2l-content-store.js",
+    "web-components/d2l-consistent-evaluation.js",
+    "web-components/d2l-user-feedback.js",
+    "web-components/d2l-cpd-report.js"
   ],
   "extraDependencies": [
     "node_modules/@d2l/d2l-attachment/locales/*.json",
@@ -39,7 +43,8 @@
     "node_modules/d2l-html-editor/skin-4.3.7/**",
     "node_modules/d2l-html-editor/langs/**",
     "node_modules/d2l-html-editor/d2l_lang_plugin/**",
-    "node_modules/d2l-html-editor/**/*.css"
+    "node_modules/d2l-html-editor/**/*.css",
+    "node_modules/d2l-cpd/locales/**.json"
   ],
   "lint": {
     "rules": [

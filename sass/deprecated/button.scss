@@ -12,7 +12,7 @@
 
 @mixin _d2l-button-shared() {
 	border-radius: 0.3rem;
-	border-style: solid;
+	border-style: none;
 	border-width: 1px;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -36,18 +36,17 @@
 	@include _d2l-button-shared();
 	@include _d2l-button-clear-focus();
 	font-family: inherit;
-	padding: 0.5rem 1.5rem;
+	padding: 0.55rem 1.5rem;
 	@include d2l-label-text();
 	&::-moz-focus-inner {
 		border: 0;
 	}
 	&, &[disabled]:hover, &[disabled]:focus, &[active][disabled] {
-		background-color: $d2l-color-regolith;
-		border-color: $d2l-color-mica;
+		background-color: $d2l-color-gypsum;
 		color: $d2l-color-ferrite;
 	}
 	&:hover, &:focus, &[active], &.d2l-button-hover, &.d2l-button-focus {
-		background-color: $d2l-color-gypsum;
+		background-color: $d2l-color-mica;
 	}
 	&:focus, &.d2l-button-focus {
 		@include _d2l-button-focus();
@@ -58,7 +57,6 @@
 	}
 	&[primary], &[primary][disabled]:hover, &[primary][disabled]:focus,  &[primary][active][disabled] {
 		background-color: $d2l-color-celestine;
-		border-color: $d2l-color-celestine-minus-1;
 		color: #ffffff;
 	}
 	&[primary]:hover, &[primary].d2l-button-hover, &[primary]:focus, &[primary].d2l-button-focus, &[primary][active] {
@@ -74,9 +72,7 @@
 @mixin _vui-button(
 		$color,
 		$background,
-		$borderColor,
-		$hoverBackground,
-		$hoverBorderColor
+		$hoverBackground
 	) {
 
 	color: $color;
@@ -91,7 +87,7 @@
 	cursor: pointer;
 	display: inline-block;
 	min-height: calc(2rem + 2px);
-	padding: 0.5rem 1.5rem;
+	padding: 0.55rem 1.5rem;
 	text-align: center;
 	user-select: none;
 	vertical-align: middle;
@@ -108,7 +104,7 @@
 	&[disabled]:hover,
 	&[disabled]:focus {
 		background-color: $background;
-		border: 1px solid $borderColor;
+		border: none;
 		color: $color;
 		outline: none;
 		text-decoration: none;
@@ -132,7 +128,6 @@
 
 	&:hover,
 	&:focus {
-		border-color: $hoverBorderColor;
 		background-color: $hoverBackground;
 	}
 
@@ -184,10 +179,8 @@ button.d2l-button {
 .vui-button {
 	@include _vui-button(
 			$color: $d2l-color-ferrite,
-			$background: $d2l-color-sylvite,
-			$borderColor: $d2l-color-mica,
-			$hoverBackground: $d2l-color-gypsum,
-			$hoverBorderColor: $d2l-color-mica
+			$background: $d2l-color-gypsum,
+			$hoverBackground: $d2l-color-mica
 		);
 }
 
@@ -195,8 +188,6 @@ button.d2l-button {
 	@include _vui-button(
 			$color: #ffffff,
 			$background: $d2l-color-celestine,
-			$borderColor: $d2l-color-celestine-minus-1,
-			$hoverBackground: $d2l-color-celestine-minus-1,
-			$hoverBorderColor: $d2l-color-celestine-minus-1
+			$hoverBackground: $d2l-color-celestine-minus-1
 		);
 }
