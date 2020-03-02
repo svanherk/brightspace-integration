@@ -66,7 +66,7 @@
     "d2l-awards-leaderboard-ui": "Brightspace/awards-leaderboard-ui#semver:0.1",
     "d2l-button-group": "BrightspaceUI/button-group#semver:^3",
     "d2l-consistent-evaluation": "BrightspaceHypermediaComponents/consistent-evaluation#semver:^0",
-    "d2l-content-store": "Brightspace/d2l-content-store#semver:^0",
+    "d2l-content-store": "Brightspace/d2l-content-store",
     "d2l-cpd": "Brightspace/continuous-professional-development#semver:^1",
     "d2l-fetch": "Brightspace/d2l-fetch.git#semver:^2",
     "d2l-fetch-auth": "^1.5.2",
