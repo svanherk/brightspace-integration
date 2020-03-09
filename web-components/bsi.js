@@ -88,7 +88,6 @@ import 'd2l-navigation/d2l-navigation-separator.js';
 import 'd2l-navigation/d2l-navigation.js';
 import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
-import 'd2l-polymer-behaviors/d2l-gestures-swipe.js';
 import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-simple-overlay/d2l-simple-overlay.js';
 import 'd2l-tooltip/d2l-tooltip.js';
@@ -104,6 +103,10 @@ setCancelSyntheticClickEvents(false);
 
 import {announce} from '../node_modules/@brightspace-ui/core/helpers/announce.js';
 window.D2L.Announce = announce;
+
+import {registerGestureSwipe} from '../node_modules/@brightspace-ui/core/helpers/gestures.js';
+window.D2L.Gestures = window.D2L.Gestures || {};
+window.D2L.Gestures.Swipe = {register: registerGestureSwipe};
 
 import {clearDismissible, setDismissible} from '../node_modules/@brightspace-ui/core/helpers/dismissible.js';
 window.D2L.Dismissible = {
