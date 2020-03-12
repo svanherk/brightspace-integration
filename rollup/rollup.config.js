@@ -1,18 +1,56 @@
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import copy from 'rollup-plugin-copy';
+import postcss from 'rollup-plugin-postcss';
+import { uglify } from 'rollup-plugin-uglify';
+import autoprefixer from 'autoprefixer';
 
-export default {
+const jsConfig = {
+	input: './js/bsi.js',
 	plugins: [
-		resolve({
-			browser: true
-		}),
 		commonjs(),
-		json()
+		copy({
+			targets: [
+				{src: 'node_modules/@brightspace-ui/core/components/icons/images', dest: './build'},
+				{src: 'email-icons', dest: './build/images'},
+				{src: 'nav-icons', dest: './build/images'},
+				{src: 'node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js', dest: './build'},
+				{src: 'node_modules/regenerator-runtime/runtime.js', dest: './build', rename: 'regenerator-runtime.js'}
+			]
+		})
 	],
 	output: {
+		file: './build/bsi.js',
 		format: 'iife',
 		name: 'BSI',
-		sourcemap: true
+		plugins: [uglify()]
 	}
 };
+
+const cssConfigs = [
+	'./sass/bsi.scss',
+	'./sass/datagrid/datagrid.scss',
+	'./sass/homepages/homepages.scss'
+].map((path) => {
+	const name = path.substring(
+		path.lastIndexOf('/') + 1,
+		path.lastIndexOf('.')
+	);
+	return {
+		input: path,
+		plugins: [
+			postcss({
+				extract: true,
+				minimize: true, /* uses cssnano */
+				plugins: [autoprefixer()],
+				use: [
+					['sass', {outputStyle: 'expanded'}]
+				]
+			})
+		],
+		output: {
+			file: `./build/${name}.css`
+		}
+	};
+});
+
+export default [jsConfig].concat(cssConfigs);

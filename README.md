@@ -44,13 +44,13 @@ To point your Brightspace instance at the local integration project, there are t
 
 Option 1:
 
-In the Config Variable browser of your local instance, set the value of `d2l.System.BsiEndpointOverride` to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`.
+In the Config Variable browser of your local instance, set the value of `d2l.System.BsiEndpointOverride` to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - You will need a trailing `/` (e.g./ `http://10.151.31.134:8080/`).
 
 Option 2:
 
 1. Go to your `{instance}/config/Infrastructure` directory
 2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
-3. Change the `polymer-3` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - note the trailing `/`
+3. Change the `polymer-3` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - You will need a trailing `/` (e.g./ `http://10.151.31.134:8080/`)
 4. Restart IIS
 
 The config file will get overwritten during an LMS build.
