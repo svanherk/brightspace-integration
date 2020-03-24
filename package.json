@@ -103,7 +103,6 @@
     "http-server": "^0.11.1",
     "imagemin": "^7",
     "imagemin-optipng": "^7",
-    "jquery-vui-change-tracking": "Brightspace/jquery-valence-ui-change-tracking#semver:^1",
     "mocha": "^6.0.2",
     "moment-timezone": "^0.5.25",
     "node-sass": "^4",
