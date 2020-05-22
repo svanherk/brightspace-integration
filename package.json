@@ -73,7 +73,7 @@
     "d2l-fetch-dedupe": "^1.1.0",
     "d2l-fetch-simple-cache": "^1.0.0",
     "d2l-image-banner-overlay": "Brightspace/d2l-image-banner-overlay#semver:^4",
-    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#semver:^11",
+    "d2l-my-courses": "Brightspace/d2l-my-courses-ui#v11.10.0-cert-fix-1",
     "d2l-my-dashboards": "github:Brightspace/d2l-my-dashboards-ui#semver:^3",
     "d2l-navigation": "BrightspaceUI/navigation#semver:^4",
     "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#semver:^2",
