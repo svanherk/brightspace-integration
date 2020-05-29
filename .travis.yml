@@ -6,7 +6,7 @@ sudo: false
 before_install: if [[ `npm -v` != 6.8.0 ]]; then npm i -g npm@6.8.0; fi
 script:
 - npm run test:ci
-- travis_wait npm run build
+- travis_wait 30 npm run build
 - npm run build:lang
 - npm run build:unbundled
 - |
