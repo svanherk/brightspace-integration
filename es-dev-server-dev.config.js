@@ -18,6 +18,5 @@ module.exports = {
 	],
 	nodeResolve: true,
 	port: 8080,
-	preserveSymlinks: true,
-	watch: true
+	preserveSymlinks: true
 };
