@@ -6,7 +6,6 @@ import unbundle
 import unittest
 
 from unbundle import READ
-from unbundle import POLYMER
 from unbundle import IMPORT_STYLE
 from unbundle import IMPORT_STYLE_ESM
 from unbundle import RELATIVE_PATH_CONFIG
@@ -36,7 +35,7 @@ class TestUnbundler(unittest.TestCase):
         self.test_unbundler.modify_config_file()
         
         expected_data = {
-            POLYMER: "",
+            "endpoint": "",
             IMPORT_STYLE: IMPORT_STYLE_ESM,
             "env": "dev"
         }
