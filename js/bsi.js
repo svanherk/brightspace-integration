@@ -1,4 +1,3 @@
-import './polyfills.js';
 import webComponentsReady from './d2l-web-components-ready.js';
 import FastDom from './d2l-fastdom.js';
 import FastDomPromised from '../node_modules/fastdom/extensions/fastdom-promised.js';
