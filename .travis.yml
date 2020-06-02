@@ -2,6 +2,10 @@ language: node_js
 node_js:
 - "12"
 sudo: false
+branches:
+  only:
+  - master
+  - /20.*/
 # npm > 6.8.0 doesn't support our github semver references, so downgrade
 before_install: if [[ `npm -v` != 6.8.0 ]]; then npm i -g npm@6.8.0; fi
 script:
