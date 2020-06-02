@@ -16,7 +16,6 @@ WRITE = "w"
 NAME = "name"
 WINDOWS = "nt"
 ERROR_CODE = 1
-POLYMER = "polymer-3"
 PACKAGE = "package.json"
 IMPORT_STYLE_ESM = "esm"
 IMPORT_STYLE = "import-style"
@@ -81,7 +80,7 @@ class Unbundler:
             with open(os.path.join(self.path_to_lms, RELATIVE_PATH_CONFIG), WRITE) as data_file:
                 data = {}
 
-                data[POLYMER] = self.web_server_path
+                data["endpoint"] = self.web_server_path
                 data[IMPORT_STYLE] = IMPORT_STYLE_ESM
                 data["env"] = "dev"
 

@@ -59,7 +59,7 @@ Option 2:
 
 1. Go to your `{instance}/config/Infrastructure` directory
 2. Edit `D2L.LP.Web.UI.Html.Bsi.config.json`
-3. Change the `polymer-3` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - You will need a trailing `/` (e.g./ `http://10.151.31.134:8080/`)
+3. Change the `endpoint` property to the `brightspace-integration (BSI)` localhost server (or your computer's hostname) - You will need a trailing `/` (e.g./ `http://10.151.31.134:8080/`)
 4. Restart IIS
 
 The config file will get overwritten during an LMS build.
@@ -158,7 +158,7 @@ npm run build
 ```
 
 Follow the instructions above for pointing your Brightspace instance at the local integration project.
-In addition to adding your local BSI endpoint to the `polymer-3` config, add a new property `"import-style": "esm"`.
+In addition to adding your local BSI endpoint to the `endpoint` config, add a new property `"import-style": "esm"`.
 This instructs the LMS to reference web components using standard `import` script tags rather than using `amd` style defines.
 
 Now start the `es-dev-server` by running
@@ -239,7 +239,7 @@ A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%2
 This will ensure that the LP (and new CD builds) are using the latest version of BSI.
 
 Note that this is only done on LMS `master`. For hotfixes or updates to branches you'll need to update LP manually by creating a pull request on the appropriate branch in LP
-that updates the `polymer-3` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
+that updates the `endpoint` line of [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json)
 
 *If you have other dependent Core Lms changes, please make sure you merge those lms changes before bumping BSI.*
 
