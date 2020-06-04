@@ -82,8 +82,6 @@ import 'd2l-organizations/components/d2l-organization-consortium/d2l-organizatio
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 // SaveStatus (MVC)
 import 'd2l-save-status/d2l-save-status.js';
-// PersonalMenuHandle
-import 'd2l-users/components/d2l-profile-image.js';
 
 window.D2L = window.D2L || {};
 

@@ -49,7 +49,7 @@ import 'd2l-navigation/d2l-navigation.js';
 //import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
 //import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 //import 'd2l-save-status/d2l-save-status.js';
-//import 'd2l-users/components/d2l-profile-image.js';
+import 'd2l-users/components/d2l-profile-image.js';
 
 window.d2lWCLoaded = true;
 if (window.D2L.WebComponentsLoaded !== undefined) {
