@@ -76,8 +76,6 @@ import '@d2l/switch/d2l-switch.js';
 import 'd2l-button-group/d2l-action-button-group.js';
 // ActionButtons (legacy), GridActionContainer (MVC)
 import 'd2l-button-group/d2l-button-group.js';
-// OrganizationConsortiumTabs
-import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
 // CollapsibleSection (MVC), Homepages
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 
