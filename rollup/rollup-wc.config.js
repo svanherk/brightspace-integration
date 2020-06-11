@@ -19,6 +19,7 @@ const componentFiles = [
 	'./node_modules/d2l-navigation/d2l-navigation-main-header.js',
 	'./node_modules/d2l-navigation/d2l-navigation-separator.js',
 	'./node_modules/d2l-navigation/d2l-navigation.js',
+	'./node_modules/d2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js',
 	'./node_modules/d2l-save-status/d2l-save-status.js',
 	'./node_modules/d2l-users/components/d2l-profile-image-base.js',
 	'./web-components/d2l-opt-in-flyout-webcomponent.js',

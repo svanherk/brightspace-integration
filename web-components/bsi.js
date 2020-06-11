@@ -46,7 +46,7 @@ import 'd2l-navigation/d2l-navigation-main-footer.js';
 import 'd2l-navigation/d2l-navigation-main-header.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
 import 'd2l-navigation/d2l-navigation.js';
-//import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
+import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
 //import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 import 'd2l-save-status/d2l-save-status.js';
 import 'd2l-users/components/d2l-profile-image.js';
