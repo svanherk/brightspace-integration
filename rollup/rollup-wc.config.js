@@ -7,6 +7,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/alert/alert.js',
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',
 	'./node_modules/@brightspace-ui/core/components/button/button-icon.js',
+	'./node_modules/@d2l/switch/d2l-switch.js',
 	'./node_modules/d2l-navigation/d2l-navigation-band.js',
 	'./node_modules/d2l-navigation/d2l-navigation-button-notification-icon.js',
 	'./node_modules/d2l-navigation/d2l-navigation-button.js',
