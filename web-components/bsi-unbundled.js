@@ -80,8 +80,6 @@ import 'd2l-button-group/d2l-button-group.js';
 import 'd2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js';
 // CollapsibleSection (MVC), Homepages
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
-// SaveStatus (MVC)
-import 'd2l-save-status/d2l-save-status.js';
 
 window.D2L = window.D2L || {};
 
