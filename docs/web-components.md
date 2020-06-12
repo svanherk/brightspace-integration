@@ -21,7 +21,7 @@ As a GitHub reference:
 }
 ```
 
-**Important**: do not include minor or patch versions for GitHub-based dependencies
+**Important**: do not include minor or patch versions for GitHub-based dependencies as it can result in duplicate copies of components, and consequently browser errors related to multiple definitions of those components with the same tag name.
 
 Alternately, if your component is published to NPM you can pull it in that way:
 
