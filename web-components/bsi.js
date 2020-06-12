@@ -29,7 +29,7 @@ import '@brightspace-ui/core/components/alert/alert.js';
 //import '@brightspace-ui/core/components/tooltip/tooltip.js';
 
 //import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
-//import '@d2l/switch/d2l-switch.js';
+import '@d2l/switch/d2l-switch.js';
 //import 'd2l-button-group/d2l-action-button-group.js';
 //import 'd2l-button-group/d2l-button-group.js';
 import 'd2l-navigation/d2l-navigation-band.js';

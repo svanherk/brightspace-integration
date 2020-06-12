@@ -70,8 +70,6 @@ import '@brightspace-ui/core/components/more-less/more-less.js';
 import '@brightspace-ui/core/components/tooltip/tooltip.js';
 // ImmersiveNav
 import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
-// LE ItemVisibility
-import '@d2l/switch/d2l-switch.js';
 // Grid (legacy)
 import 'd2l-button-group/d2l-action-button-group.js';
 // ActionButtons (legacy), GridActionContainer (MVC)
