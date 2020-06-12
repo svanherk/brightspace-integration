@@ -50,6 +50,7 @@
     "@polymer/esm-amd-loader": "^1",
     "@polymer/polymer": "^3",
     "@rollup/plugin-commonjs": "^11",
+    "@rollup/plugin-replace": "^2",
     "@webcomponents/webcomponentsjs": "^2",
     "autoprefixer": "^9",
     "babel-eslint": "^10",

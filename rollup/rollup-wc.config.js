@@ -1,5 +1,6 @@
 import { createBasicConfig } from '@open-wc/building-rollup';
 import copy from 'rollup-plugin-copy';
+import replace from '@rollup/plugin-replace';
 import merge from 'deepmerge';
 
 const componentFiles = [
@@ -91,6 +92,10 @@ export default merge(config, {
 				return {src: f, dest: 'build/unbundled/node_modules'};
 			}),
 			flatten: false
+		}),
+		replace({
+			define: 'defineNoYouDont', /* prevents UMD time bomb as fastdom will try to call define() on UMD FRA pages */
+			include: 'node_modules/fastdom/fastdom.js'
 		})
 	]
 });
