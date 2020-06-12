@@ -4,10 +4,6 @@ A set of [Jenkins jobs](https://prod.build.d2l/job/Dev/job/Core%20LMS/job/Sync%2
 
 **Important:** If you have other dependent LMS changes, please make sure you merge those before bumping BSI.
 
-## Hotfixes
+## Release Branches
 
-This automation is only done on LMS `master`. For hotfixes or updates to branches, you'll need to manually update the `endpoint` entry in [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json) on the appropriate branch.
-
-## Config Variable
-
-For testing purposes, you can use the `d2l.System.BsiEndpointOverride` config variable to override the BSI endpoint on a test instance. That way you don't need to wait for a quad site with the above updates to test your BSI changes. This assumes they are not dependent on other LMS changes as well.
+This automation only runs on LMS `master`. For updates to release branches via hotfixes or cert fixes, you'll need to manually update the `endpoint` entry in [D2L.LP.Web.UI.Html.Bsi.config.json](https://git.dev.d2l/projects/CORE/repos/lms/browse/lp/_config/Infrastructure/D2L.LP.Web.UI.Html.Bsi.config.json) on the appropriate branch.
