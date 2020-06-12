@@ -73,22 +73,18 @@ A typical use-case for running a local BSI is to work on a local web component o
 
 **Learn More:** [Web Components and Component-Based Applications in BSI](docs/web-components.md)
 
-## NPM Dependency Locking
+## Making a BSI Release
 
-We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
+To actually release changes to BSI and have them appear in Brightspace, you'll need to update the `package-lock.json` file, do a pull request, merge and wait for the automated tagging & releasing processes to kick in.
 
 ### Refreshing `package-lock.json`
 
-Any command that would normally add or update `package.json` will also update `package-lock.json` -- `npm install`, `npm update` etc. Just be cognizant of the changes you're making.
+We use a `package-lock.json` file to lock our NPM dependencies. This ensures we only pick up changes to dependencies when we explicitly ask for them and are prepared to test them.
 
 To fully refresh the lock file:
 1) Windows: `ri ./node_modules -Recurse -Force` or *nix: `rm -rf ./node_modules`
 2) `rm package-lock.json`
 3) `npm i`
-
-Again, be aware of the new changes you've picked up (which may not be related to your project) when updating BSI.
-
-**Learn More:** [`package-lock` NPM documentation](https://docs.npmjs.com/files/package-locks)
 
 ### Subdependency Conflicts
 
@@ -104,7 +100,11 @@ BSI's CI attempts to detect this error by searching through the `package-lock` f
 
 The most common cause of these errors is multiple projects referencing the same dependency via GitHub using different semver ranges in their `package.json` files. You can search the `package-lock.json` to find them. To solve the problem, ensure that all GitHub dependency references are identical.
 
-## Tagging & Publishing
+### Pull Request
+
+Make a pull request. Be aware of the new changes to the `package-lock.json` file, which may not be related to your project. If you pick up changes from other D2L projects, it's a good pratice to notify those folks in your pull request.
+
+Once your pull request is approved and CI has passed, merge and the automatic tagging & releasing processes will start.
 
 ### Automatic Tagging
 
