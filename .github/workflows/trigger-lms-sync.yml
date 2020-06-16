@@ -1,0 +1,22 @@
+# This workflow triggers the LMS sync whenever there is a new BSI release
+
+name: LMS Sync
+
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  triggerSync:
+    runs-on: self-hosted
+
+    steps:
+    - name: Repository Dispatch
+      # will move this to Brightspace/third-party-actions once we know it's what we want
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        repository: Brightspace/lms
+        event-type: bsi-sync
+        client-payload: '{"ref": "${{ github.ref }}"}'
