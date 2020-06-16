@@ -19,4 +19,4 @@ jobs:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
         repository: Brightspace/lms
         event-type: bsi-sync
-        client-payload: '{"ref": "${{ github.ref }}"}'
+        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
