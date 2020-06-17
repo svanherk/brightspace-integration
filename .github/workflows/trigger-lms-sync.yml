@@ -9,8 +9,8 @@ on:
 
 jobs:
   triggerSync:
-    runs-on: self-hosted
-
+    # self-hosted doesn't work for public repos (security), so need to use ubuntu
+    runs-on: ubuntu-latest
     steps:
     - name: Repository Dispatch
       # will move this to Brightspace/third-party-actions once we know it's what we want
