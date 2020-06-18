@@ -16,7 +16,7 @@ jobs:
       # will move this to Brightspace/third-party-actions once we know it's what we want
       uses: peter-evans/repository-dispatch@v1
       with:
-        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         repository: Brightspace/lms
         event-type: bsi-sync
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
