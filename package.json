@@ -92,7 +92,6 @@
     "eslint-config-brightspace": "^0.9",
     "eslint-plugin-html": "^6",
     "eslint-plugin-sort-class-members": "^1",
-    "fastdom": "^1",
     "frau-publisher": "^2",
     "glob": "^7",
     "mocha": "^6",
