@@ -16,12 +16,12 @@ jobs:
       run: sudo apt-get install -y curl jq
     - name: Get JWT
       id: get-jwt
-      run: bash -e .github/workflows/scripts/get-jwt.sh
+      run: bash -e scripts/get-jwt.sh
       env:
         BSI_SYNC_PEM: ${{ secrets.BSI_SYNC_PEM }}
     - name: Get App Token
       id: get-app-token
-      run: bash -e .github/workflows/scripts/get-app-token.sh
+      run: bash -e scripts/get-app-token.sh
       env:
         BSI_SYNC_JWT: ${{ steps.get-jwt.outputs.jwt }}
     - name: Repository Dispatch
