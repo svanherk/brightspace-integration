@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install dependencies
-      run: sudo apt-get install -y curl jq
+      run: |
+        sudo apt-get install -y curl jq
+        pwd
     - name: Get JWT
       id: get-jwt
       run: .github/workflows/scripts/get-jwt.sh
