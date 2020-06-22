@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install -y curl jq
-        pwd
+        ls -a
     - name: Get JWT
       id: get-jwt
       run: .github/workflows/scripts/get-jwt.sh
