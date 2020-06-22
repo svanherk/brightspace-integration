@@ -1,5 +1,5 @@
 # This workflow triggers the LMS sync whenever there is a new BSI release
-# fake edit6
+# fake edit7
 
 name: LMS Sync
 
