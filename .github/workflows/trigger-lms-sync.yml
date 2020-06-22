@@ -1,12 +1,11 @@
 # This workflow triggers the LMS sync whenever there is a new BSI release
-# fake edit15
 
 name: LMS Sync
 
 on:
-  push:
-    branches:
-      - US117758_bsisync
+  release:
+    types:
+      - released
 
 jobs:
   triggerSync:
