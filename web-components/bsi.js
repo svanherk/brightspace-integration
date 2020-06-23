@@ -26,6 +26,7 @@ import '@brightspace-ui/core/components/inputs/input-search.js';
 //import '@brightspace-ui/core/components/menu/menu-item.js';
 //import '@brightspace-ui/core/components/menu/menu.js';
 import '@brightspace-ui/core/components/more-less/more-less.js';
+import '@brightspace-ui/core/components/switch/switch-visibility.js';
 import '@brightspace-ui/core/components/tooltip/tooltip.js';
 
 import 'd2l-activities/components/d2l-subtitle/d2l-subtitle.js';
