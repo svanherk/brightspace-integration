@@ -24,12 +24,12 @@ import '@brightspace-ui/core/components/button/button-icon.js';
 // ButtonSubtle, MenuFlyout, MenuFlyoutCustom, legacy Actions, legacy Grid actions,
 // legacy ContextMenu placeholder, legacy Actions
 import '@brightspace-ui/core/components/button/button-subtle.js';
-// ActionButtonMenu (legacy), MediaPlayer
+// ActionButtonMenu (legacy)
 import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
 // Navbar, Flyout (MVC), LayoutBuilder
 import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
 // ContextMenu (MVC), PageActions, EditNavbar, NavbarItem, ContextMenu (legacy), ActionButtonMenu (legacy)
-// ButtonMenu (MVC), MediaPlayer
+// ButtonMenu (MVC)
 import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
 // EditNavbar, Homepages
 import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
@@ -41,10 +41,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown.js';
 // Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
 // Custom selector (legacy)
 import '@brightspace-ui/core/components/icons/icon.js';
-// VideoCapture
-import '@brightspace-ui/core/components/inputs/input-checkbox.js';
-// VideoCapture
-import '@brightspace-ui/core/components/inputs/input-text.js';
 // RubricBox
 import '@brightspace-ui/core/components/link/link.js';
 // Loading (MVC), PartialRendering, Dialog (MVC), Dialog (legacy)
@@ -58,13 +54,11 @@ import '@brightspace-ui/core/components/menu/menu-item-radio.js';
 // ConextMenu.Separator, MenuItemSeparator, MobileLinksArea, contextMenu (legacy)
 import '@brightspace-ui/core/components/menu/menu-item-separator.js';
 // EditNavbar, MobileLinksArea, PageActionsMenuItem, Menu (MVC), HomepageManageMenu, ContextMenu,
-// MediaPlayer, contextMenu (legacy)
+// contextMenu (legacy)
 import '@brightspace-ui/core/components/menu/menu-item.js';
 // EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
-// MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
+// contextMenu (legacy), ActionButtons (legacy)
 import '@brightspace-ui/core/components/menu/menu.js';
-// VideoCapture
-import 'd2l-inputs/d2l-input-textarea.js';
 // CollapsibleSection (MVC), Homepages
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 
