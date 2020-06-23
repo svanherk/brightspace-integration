@@ -6,7 +6,7 @@ BSI_VERSION=${REF_ARR[2]}
 echo "Latest BSI tag: $BSI_VERSION"
 
 # Get all "non-branch" commits reachable from master
-MASTER_COMMITS=$(git rev-list --first-parent origin/master)
+MASTER_COMMITS=$(git rev-list --first-parent refs/remotes/origin/master)
 
 # Only use tags that are on one of those commits and
 # have the right kind of name.
