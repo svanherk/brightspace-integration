@@ -12,6 +12,11 @@ jobs:
     # self-hosted doesn't work for public repos (security), so need to use ubuntu
     runs-on: ubuntu-latest
     steps:
+    - name: Verify Release
+      run: bash -e .github/workflows/scripts/verify-release.sh
+      env:
+        GITHUB_TAG: ${{ github.ref }}
+        GITHUB_COMMIT_ID: ${{ github.sha }}
     - uses: Brightspace/third-party-actions@actions/checkout
     - name: Install dependencies
       run: sudo apt-get install -y curl jq
@@ -32,4 +37,4 @@ jobs:
         token: ${{ steps.get-app-token.outputs.token }}
         repository: Brightspace/lms
         event-type: bsi-sync
-        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+        client-payload: '{"bsi-version": "${{ steps.verify-release.outputs.bsi-version }}", "author-email": "${{ steps.verify-release.outputs.author-email }}"}'
