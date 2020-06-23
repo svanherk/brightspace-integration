@@ -14,6 +14,7 @@ jobs:
     steps:
     - uses: Brightspace/third-party-actions@actions/checkout
     - name: Verify Release
+      id: verify-release
       run: bash -e .github/workflows/scripts/verify-release.sh
       env:
         GITHUB_TAG: ${{ github.ref }}
