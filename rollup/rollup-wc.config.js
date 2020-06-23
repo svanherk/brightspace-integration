@@ -11,6 +11,7 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/inputs/input-time.js',
 	'./node_modules/@brightspace-ui/core/components/button/button-icon.js',
 	'./node_modules/@brightspace-ui/core/components/more-less/more-less.js',
+	'./node_modules/@brightspace-ui/core/components/switch/switch-visibility.js',
 	'./node_modules/@brightspace-ui/core/components/tooltip/tooltip.js',
 	'./node_modules/@d2l/switch/d2l-switch.js',
 	'./node_modules/d2l-activities/components/d2l-subtitle/d2l-subtitle.js',
