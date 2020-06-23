@@ -3,25 +3,31 @@
 name: LMS Sync
 
 on:
-  push:
-    branches:
-      - US117758_bsisync
+  release:
+    types:
+      - released
 
 jobs:
   triggerSync:
     # self-hosted doesn't work for public repos (security), so need to use ubuntu
     runs-on: ubuntu-latest
     steps:
+    - name: Verify Release
+      run: bash -e .github/workflows/scripts/verify-release.sh
+      env:
+        GITHUB_TAG: ${{ github.ref }}
+        GITHUB_COMMIT_ID: ${{ github.sha }}
+    - uses: Brightspace/third-party-actions@actions/checkout
     - name: Install dependencies
       run: sudo apt-get install -y curl jq
     - name: Get JWT
       id: get-jwt
-      run: ./github/workflows/scripts/get-jwt.sh
+      run: bash -e .github/workflows/scripts/get-jwt.sh
       env:
         BSI_SYNC_PEM: ${{ secrets.BSI_SYNC_PEM }}
     - name: Get App Token
       id: get-app-token
-      run: ./github/workflows/scripts/get-app-token.sh
+      run: bash -e .github/workflows/scripts/get-app-token.sh
       env:
         BSI_SYNC_JWT: ${{ steps.get-jwt.outputs.jwt }}
     - name: Repository Dispatch
@@ -31,4 +37,4 @@ jobs:
         token: ${{ steps.get-app-token.outputs.token }}
         repository: Brightspace/lms
         event-type: bsi-sync
-        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+        client-payload: '{"bsi-version": "${{ steps.verify-release.outputs.bsi-version }}", "author-email": "${{ steps.verify-release.outputs.author-email }}"}'
