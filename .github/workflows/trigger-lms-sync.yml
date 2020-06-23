@@ -12,12 +12,12 @@ jobs:
     # self-hosted doesn't work for public repos (security), so need to use ubuntu
     runs-on: ubuntu-latest
     steps:
+    - uses: Brightspace/third-party-actions@actions/checkout
     - name: Verify Release
       run: bash -e .github/workflows/scripts/verify-release.sh
       env:
         GITHUB_TAG: ${{ github.ref }}
         GITHUB_COMMIT_ID: ${{ github.sha }}
-    - uses: Brightspace/third-party-actions@actions/checkout
     - name: Install dependencies
       run: sudo apt-get install -y curl jq
     - name: Get JWT
