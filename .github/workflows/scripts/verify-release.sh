@@ -13,7 +13,7 @@ MASTER_COMMITS=$(git rev-list --first-parent origin/master)
 if [[ ! "$MASTER_COMMITS" =~ "${GITHUB_COMMIT_ID}" ]]
 then
   echo "Tag is not reachable from master, we will skip this tag"
-elif  [[ ! "$BSI_VERSION" =~ ^v20\.[0-9]+\.[0-9]+-[0-9]+$ ]] {
+elif  [[ ! "$BSI_VERSION" =~ ^v20\.[0-9]+\.[0-9]+-[0-9]+$ ]]
 then
   echo "The tag name isn't in the proper format for a release tag, we will skip this tag"
 else
