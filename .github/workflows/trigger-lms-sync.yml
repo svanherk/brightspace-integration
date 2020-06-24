@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: Brightspace/third-party-actions@actions/checkout
+      with:
+        fetch-depth: 0
     - name: Verify Release
       id: verify-release
       run: bash -e .github/workflows/scripts/verify-release.sh
