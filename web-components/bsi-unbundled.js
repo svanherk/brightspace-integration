@@ -41,10 +41,6 @@ import '@brightspace-ui/core/components/dropdown/dropdown.js';
 // Competencies (misc JS), Image (legacy), Grades (misc JS), Placeholder (legacy), PartialRendering,
 // Custom selector (legacy)
 import '@brightspace-ui/core/components/icons/icon.js';
-// VideoCapture
-import '@brightspace-ui/core/components/inputs/input-checkbox.js';
-// VideoCapture
-import '@brightspace-ui/core/components/inputs/input-text.js';
 // RubricBox
 import '@brightspace-ui/core/components/link/link.js';
 // Loading (MVC), PartialRendering, Dialog (MVC), Dialog (legacy)
@@ -63,8 +59,6 @@ import '@brightspace-ui/core/components/menu/menu-item.js';
 // EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
 // MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
 import '@brightspace-ui/core/components/menu/menu.js';
-// VideoCapture
-import 'd2l-inputs/d2l-input-textarea.js';
 // CollapsibleSection (MVC), Homepages
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
 
