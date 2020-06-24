@@ -24,12 +24,12 @@ import '@brightspace-ui/core/components/button/button-icon.js';
 // ButtonSubtle, MenuFlyout, MenuFlyoutCustom, legacy Actions, legacy Grid actions,
 // legacy ContextMenu placeholder, legacy Actions
 import '@brightspace-ui/core/components/button/button-subtle.js';
-// ActionButtonMenu (legacy)
+// ActionButtonMenu (legacy), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
 // Navbar, Flyout (MVC), LayoutBuilder
 import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
 // ContextMenu (MVC), PageActions, EditNavbar, NavbarItem, ContextMenu (legacy), ActionButtonMenu (legacy)
-// ButtonMenu (MVC)
+// ButtonMenu (MVC), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-menu.js';
 // EditNavbar, Homepages
 import '@brightspace-ui/core/components/dropdown/dropdown-more.js';
@@ -54,10 +54,10 @@ import '@brightspace-ui/core/components/menu/menu-item-radio.js';
 // ConextMenu.Separator, MenuItemSeparator, MobileLinksArea, contextMenu (legacy)
 import '@brightspace-ui/core/components/menu/menu-item-separator.js';
 // EditNavbar, MobileLinksArea, PageActionsMenuItem, Menu (MVC), HomepageManageMenu, ContextMenu,
-// contextMenu (legacy)
+// MediaPlayer, contextMenu (legacy)
 import '@brightspace-ui/core/components/menu/menu-item.js';
 // EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
-// contextMenu (legacy), ActionButtons (legacy)
+// MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
 import '@brightspace-ui/core/components/menu/menu.js';
 // CollapsibleSection (MVC), Homepages
 import 'd2l-polymer-behaviors/d2l-dom-expand-collapse.js';
