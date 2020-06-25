@@ -22,18 +22,22 @@ jobs:
         GITHUB_TAG: ${{ github.ref }}
         GITHUB_COMMIT_ID: ${{ github.sha }}
     - name: Install dependencies
+      if: ${{ steps.verify-release.outputs.update-bsi == true }}
       run: sudo apt-get install -y curl jq
     - name: Get JWT
       id: get-jwt
+      if: ${{ steps.verify-release.outputs.update-bsi == true }}
       run: bash -e .github/workflows/scripts/get-jwt.sh
       env:
         BSI_SYNC_PEM: ${{ secrets.BSI_SYNC_PEM }}
     - name: Get App Token
       id: get-app-token
+      if: ${{ steps.verify-release.outputs.update-bsi == true }}
       run: bash -e .github/workflows/scripts/get-app-token.sh
       env:
         BSI_SYNC_JWT: ${{ steps.get-jwt.outputs.jwt }}
     - name: Repository Dispatch
+      if: ${{ steps.verify-release.outputs.update-bsi == true }}
       # will move this to Brightspace/third-party-actions once we know it's what we want
       uses: peter-evans/repository-dispatch@v1
       with:
