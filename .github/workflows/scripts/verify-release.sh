@@ -25,4 +25,3 @@ fi
 #AUTHOR_EMAIL=$(git show -s --format='%ae' $GITHUB_COMMIT_ID)
 
 echo "::set-output name=bsi-version::${BSI_VERSION:1}"
-echo "::set-output name=update-bsi::true"
