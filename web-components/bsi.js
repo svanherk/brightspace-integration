@@ -6,6 +6,9 @@ import './bsi-unbundled.js';
 // being imported here
 import '@brightspace-ui/core/components/alert/alert.js';
 //import '@brightspace-ui/core/components/backdrop/backdrop.js';
+import '@brightspace-ui/core/components/breadcrumbs/breadcrumb.js';
+import '@brightspace-ui/core/components/breadcrumbs/breadcrumb-current-page.js';
+import '@brightspace-ui/core/components/breadcrumbs/breadcrumbs.js';
 //import '@brightspace-ui/core/components/button/button-icon.js';
 //import '@brightspace-ui/core/components/button/button-subtle.js';
 import '@brightspace-ui/core/components/button/floating-buttons.js';
