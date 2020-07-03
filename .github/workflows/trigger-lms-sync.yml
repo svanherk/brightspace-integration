@@ -38,8 +38,7 @@ jobs:
         BSI_SYNC_JWT: ${{ steps.get-jwt.outputs.jwt }}
     - name: Repository Dispatch
       if: steps.verify-release.outputs.bsi-version
-      # will move this to Brightspace/third-party-actions once we know it's what we want
-      uses: peter-evans/repository-dispatch@v1
+      uses: Brightspace/third-party-actions@peter-evans/repository-dispatch
       with:
         token: ${{ steps.get-app-token.outputs.token }}
         repository: Brightspace/lms
