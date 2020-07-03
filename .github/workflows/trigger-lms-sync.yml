@@ -44,7 +44,7 @@ jobs:
           github.repos.createDispatchEvent({
             owner: 'Brightspace',
             repo: 'lms',
-            event_type: bsi-sync,
+            event_type: 'bsi-sync',
             client_payload: {
               "bsi-version": "${{ steps.verify-release.outputs.bsi-version }}",
               "author-email": "${{ steps.verify-release.outputs.author-email }}"
