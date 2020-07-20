@@ -48,6 +48,7 @@ const componentFiles = [
 	'./web-components/d2l-tabs.js',
 ];
 const appFiles = [
+	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
 	'./web-components/d2l-activity-editor.js',

@@ -2,6 +2,7 @@
   "npm": true,
   "entrypoint": "web-components/index.html",
   "fragments": [
+    "node_modules/d2l-engagement-dashboard/engagement-dashboard.js",
     "web-components/bsi.js",
     "web-components/d2l-activity-alignments.js",
     "web-components/d2l-activity-collections.js",

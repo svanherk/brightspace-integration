@@ -8,7 +8,7 @@ To integrate a new web component into BSI, perform the following steps:
 
 ### Add Dependency
 
-You can add your component as an NPM dependency either using a GitHub reference or from NPM directly.
+You can add your component as an NPM dependency either using a GitHub reference to a public repo or from NPM directly.
 
 As a GitHub reference:
 
