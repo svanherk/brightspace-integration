@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rimraf build && npm run build:common && npm run build:unbundled",
     "build:common": "rollup -c ./rollup/rollup.config.js",
-    "build:legacy": "cross-env NODE_OPTIONS=--max_old_space_size=4096 polymer build && babel-external-helpers > ./build/babel-helpers.js && cpy \"node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js\" \"build\" && node ./cli/rename-define.js \"./build/esm-amd-loader.min.js\" \"./build/es5-bundled/**/*.js\" \"./build/es6-bundled/**/*.js\"",
+    "build:legacy": "cross-env NODE_OPTIONS=--max_old_space_size=5120 polymer build && babel-external-helpers > ./build/babel-helpers.js && cpy \"node_modules/@polymer/esm-amd-loader/lib/esm-amd-loader.min.js\" \"build\" && node ./cli/rename-define.js \"./build/esm-amd-loader.min.js\" \"./build/es5-bundled/**/*.js\" \"./build/es6-bundled/**/*.js\"",
     "build:lang": "node ./oslo/generate-monolith-xml",
     "build:serge-mapping": "node ./oslo/generate-serge-mapping",
     "build:unbundled": "rollup -c ./rollup/rollup-wc.config.js",
