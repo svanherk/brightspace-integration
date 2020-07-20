@@ -6,6 +6,12 @@ BSI serves as an integration point for our web components and component-based ap
 
 To integrate a new web component into BSI, perform the following steps:
 
+### Make component available to BSI
+
+There are 2 ways to pull something into BSI
+1. Point BSI at a public GitHub repo
+2. Point BSI at a package published to NPM — which is public, but doesn’t necessarily mean the repo from which the published package originated was public
+
 ### Add Dependency
 
 You can add your component as an NPM dependency either using a GitHub reference or from NPM directly.
