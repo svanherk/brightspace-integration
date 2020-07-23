@@ -75,7 +75,6 @@ const appFiles = [
 const staticFiles = [
 	'node_modules/@d2l/d2l-attachment/locales/*.json',
 	'node_modules/@d2l/d2l-attachment/icons/*.svg',
-	'node_modules/d2l-activities/components/d2l-activity-collection-editor/lang/*.js',
 	'node_modules/d2l-activities/components/d2l-activity-editor/**/lang/*.js',
 	'node_modules/d2l-awards-leaderboard-ui/images/**',
 	'node_modules/d2l-awards-leaderboard-ui/lang/*.json',
