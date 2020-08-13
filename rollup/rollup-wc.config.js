@@ -76,6 +76,7 @@ const appFiles = [
 	'./web-components/d2l-quick-eval.js',
 	'./web-components/d2l-content-store.js',
 	'./web-components/d2l-consistent-evaluation.js',
+	'./web-components/d2l-content-creation.js',
 	'./web-components/d2l-user-feedback.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation-admin.js'
