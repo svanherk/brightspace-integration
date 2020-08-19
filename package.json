@@ -99,6 +99,5 @@
     "sinon-chai": "^3",
     "susy": "^2",
     "intl-messageformat-parser": "^3"
-  },
-  "dependencies": {}
+  }
 }
