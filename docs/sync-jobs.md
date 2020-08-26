@@ -1,6 +1,6 @@
 # Brightspace - BSI Sync Jobs
 
-A [trigger-lms-sync](https://github.com/Brightspace/brightspace-integration/blob/master/.github/workflows/trigger-lms-sync.yml) workflow has been configured to run whenever a new BSI release occurs. This workflow triggers an LMS workflow called [bsi-sync](https://github.com/Brightspace/lms/blob/master/.github/workflows/bsi-sync.yml) that automatically updates the LMS to reference the latest BSI version. The `bsi-sync` workflow will automatically create and merge the PR containing this change. 
+A [trigger-lms-sync](https://github.com/Brightspace/brightspace-integration/blob/master/.github/workflows/trigger-lms-sync.yml) workflow has been configured to run whenever a new BSI release occurs. This workflow triggers an LMS workflow called [bsi-sync](https://github.com/Brightspace/lms/blob/master/.github/workflows/bsi-sync.yml) that automatically updates the LMS to reference the latest BSI version. The `bsi-sync` workflow will automatically create <s>and merge</s> the PR containing this change. Currently, you will need to manually self-approve the PR and merge it (don't need to wait for the CI build result).
 
 **Important:** If you have other dependent LMS changes, please make sure you merge those before bumping BSI.
 
