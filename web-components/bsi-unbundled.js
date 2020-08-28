@@ -40,6 +40,8 @@ import '@brightspace-ui/core/components/menu/menu-item.js';
 // EditNavbar, MobileLinksArea, HomepageManageMenu, PageActionsMenu, Menu (MVC), ContextMenu (MVC),
 // MediaPlayer, contextMenu (legacy), ActionButtons (legacy)
 import '@brightspace-ui/core/components/menu/menu.js';
+// StatusIndicator (both legacy and MVC)
+import '@brightspace-ui/core/components/status-indicator/status-indicator.js';
 
 window.D2L = window.D2L || {};
 
