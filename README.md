@@ -50,7 +50,7 @@ Go to the `{instance}/config/Infrastructure` directory and edit `D2L.LP.Web.UI.H
 
 ```json
 {
-  "endpoint":  "http://localhost:8080/",
+  "endpoint": "http://localhost:8080/",
   "env": "dev"
 }
 ```
