@@ -8,6 +8,7 @@ import { setCancelSyntheticClickEvents  } from '@polymer/polymer/lib/utils/setti
 import { announce } from '@brightspace-ui/core/helpers/announce';
 import { registerGestureSwipe } from '@brightspace-ui/core/helpers/gestures.js';
 import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/dismissible';
+import { createClient } from '@brightspace-ui/logging';
 
 // ActionButtonMenu (legacy), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
@@ -78,6 +79,12 @@ window.D2L.Telemetry = {
 		return client;
 	}
 };
+
+window.D2L.Logging = window.D2L.Logging || {};
+window.D2L.Logging.CreateClient = function(appId) {
+	return createClient(appId);
+};
+window.dispatchEvent(new CustomEvent('d2l-logging-loaded'));
 
 /*
  * DE35087 - This was added by Polymer to handle ghost clicks in mobile browsers, but it has negative effects when using VoiceOver on iOS.
