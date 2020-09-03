@@ -37,6 +37,7 @@
     "@brightspace-ui-labs/pagination": "^0",
     "@brightspace-ui/core": "^1",
     "@brightspace-ui/intl": "^3",
+    "@brightspace-ui/logging": "^1.1.0",
     "@koa/cors": "^3",
     "@octokit/rest": "^17",
     "@open-wc/building-rollup": "^1",
