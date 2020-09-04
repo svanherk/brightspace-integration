@@ -66,11 +66,7 @@ window.D2L.Telemetry = {
 	}
 };
 
-window.D2L.Logging = window.D2L.Logging || {};
-window.D2L.Logging.CreateClient = function(appId) {
-	return createClient(appId);
-};
-window.dispatchEvent(new CustomEvent('d2l-logging-loaded'));
+window.dispatchEvent(new CustomEvent('d2l-logging-loaded', { detail: { createClient } }));
 
 /*
  * DE35087 - This was added by Polymer to handle ghost clicks in mobile browsers, but it has negative effects when using VoiceOver on iOS.
