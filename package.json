@@ -36,6 +36,7 @@
     "@brightspace-ui-labs/pagination": "^0",
     "@brightspace-ui-labs/user-feedback": "^1",
     "@brightspace-ui/core": "^1.78.0",
+    "@brightspace-ui/htmleditor": "^0",
     "@brightspace-ui/intl": "^3",
     "@brightspace-ui/logging": "^1.1.0",
     "@d2l/d2l-attachment": "Brightspace/attachment#semver:^1",
