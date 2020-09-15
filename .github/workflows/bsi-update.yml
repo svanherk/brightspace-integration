@@ -1,8 +1,9 @@
 # This workflow runs "npm i" to see if any dependencies have updated.  If so, it opens a PR and approves it.
 
-name: "BSI Update"
+name: BSI Update
 
-on: workflow_dispatch
+on:
+  workflow_dispatch: # manual trigger for testing
 
 jobs:
   build:
