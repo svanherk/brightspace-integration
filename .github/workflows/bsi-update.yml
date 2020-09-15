@@ -6,7 +6,7 @@ on: workflow_dispatch
 
 jobs:
   build:
-    # Must use this because we are public
+    # self-hosted doesn't work for public repos (security), so need to use ubuntu
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,9 @@ jobs:
       
       - name: Check For Changes
         id: check-changes
-        run: echo "::set-output name=changes-exist::$(git diff --exit-code package-lock.json)
+        run: |
+          echo "::set-output name=changes-exist::$(git diff --exit-code package-lock.json)"
+          echo "::set-output name=datetime::$(date +'%Y-%m-%d.%H')"
 
       - name: Create PR
         id: create-pr
@@ -31,11 +33,12 @@ jobs:
         uses: Brightspace/third-party-actions@actions/github-script
         with:
           script: |
+            const dateTime = 
             const createPrResult = await github.pulls.create({
               owner: 'Brightspace',
               repo: 'brightspace-integration',
-              title: 'Updating BSI Dependencies - ${{ date +'%Y-%m-%d %H:%M:%S' }}',
-              head: 'refs/heads/ghworkflow/bsi_update_${{ date +'%Y-%m-%d-%H-%M-%S' }}',
+              title: 'Updating BSI Dependencies - ${{ steps.check-changes.outputs.datetime }}',
+              head: 'refs/heads/ghworkflow/bsi_update_${{ steps.check-changes.outputs.datetime }}',
               base: 'refs/heads/master'
             });
             github.issues.addLabels({
