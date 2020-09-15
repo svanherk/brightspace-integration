@@ -61,7 +61,7 @@ jobs:
           script: |
             github.pulls.createReview({
               owner: 'Brightspace',
-              repo: 'brightsapce-integration',
+              repo: 'brightspace-integration',
               pull_number: process.env.PULL_ID,
               event: 'APPROVE'
             });
