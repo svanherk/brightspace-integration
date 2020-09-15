@@ -46,7 +46,7 @@ jobs:
               owner: 'Brightspace',
               repo: 'brightspace-integration',
               issue_number: createPrResult.data.number,
-              labels: ['auto-merge-bsi']
+              labels: ['auto-merge-update']
             });
             return createPrResult.data.number;
           result-encoding: string
