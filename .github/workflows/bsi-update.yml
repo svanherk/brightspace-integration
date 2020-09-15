@@ -1,0 +1,65 @@
+# This workflow runs "npm i" to see if any dependencies have updated.  If so, it opens a PR and approves it.
+
+name: "BSI Update"
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    # Must use this because we are public
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Fresh Dependency Install
+        run: npm install
+      
+      - name: Check For Changes
+        id: check-changes
+        run: echo "::set-output name=changes-exist::$(git diff --exit-code package-lock.json)
+
+      - name: Create PR
+        id: create-pr
+        if: steps.check-changes.outputs.changes-exist
+        uses: Brightspace/third-party-actions@actions/github-script
+        with:
+          script: |
+            const createPrResult = await github.pulls.create({
+              owner: 'Brightspace',
+              repo: 'brightspace-integration',
+              title: 'Updating BSI Dependencies - ${{ date +'%Y-%m-%d %H:%M:%S' }}',
+              head: 'refs/heads/ghworkflow/bsi_update_${{ date +'%Y-%m-%d-%H-%M-%S' }}',
+              base: 'refs/heads/master'
+            });
+            github.issues.addLabels({
+              owner: 'Brightspace',
+              repo: 'brightspace-integration',
+              issue_number: createPrResult.data.number,
+              labels: ['auto-merge-bsi']
+            });
+            return createPrResult.data.number;
+          result-encoding: string
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Approve PR
+        id: approve-pr
+        if: steps.check-changes.outputs.changes-exist
+        env:
+          PULL_ID: ${{ steps.create-pr.outputs.result }}
+        uses: Brightspace/third-party-actions@actions/github-script
+        with:
+          script: |
+            github.pulls.createReview({
+              owner: 'Brightspace',
+              repo: 'brightsapce-integration',
+              pull_number: process.env.PULL_ID,
+              event: 'APPROVE'
+            });
+          github-token: ${{ secrets.PR_APPROVAL_GITHUB_TOKEN }}
