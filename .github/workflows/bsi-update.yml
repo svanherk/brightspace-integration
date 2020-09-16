@@ -1,4 +1,5 @@
-# This workflow runs "npm i" to see if any dependencies have updated.  If so, it opens a PR and approves it.
+# This workflow runs "npm i" to see if any BSI dependencies have updated.
+# If so, it commits the package-lock changes and opens a PR if one does not already exist.
 
 name: BSI Update
 
@@ -10,6 +11,11 @@ jobs:
     # self-hosted doesn't work for public repos (security), so need to use ubuntu
     runs-on: ubuntu-latest
 
+    timeout-minutes: 20
+
+    env:
+      BRANCH_NAME: ghworkflow/bsi_auto_update
+
     steps:
       - name: Checkout Repository
         uses: Brightspace/third-party-actions@actions/checkout
@@ -19,51 +25,52 @@ jobs:
         with:
           node-version: '12.x'
 
+      - name: Checkout Branch
+        run: git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
+
       - name: Fresh Dependency Install
         run: npm install
       
       - name: Check For Changes
         id: check-changes
-        run: |
-          echo "::set-output name=changes-exist::$(git diff -s --exit-code package-lock.json ; echo $?)"
-          echo "::set-output name=datetime::$(date +'%Y-%m-%d.%H')"
+        run: echo "::set-output name=changes-exist::$(git diff -s --exit-code package-lock.json && echo false || echo true)"
 
-      - name: Create PR
+      - name: Create Commit
+        if: steps.check-changes.outputs.changes-exist
+        run: |
+          git reset --hard origin/master
+          npm install
+          git add package-lock.json
+          git commit -m 'BSI Auto Update Dependencies'
+          git push --force
+
+      - name: Create PR (if needed)
         id: create-pr
         if: steps.check-changes.outputs.changes-exist
         uses: Brightspace/third-party-actions@actions/github-script
         with:
           script: |
-            const dateTime = 
-            const createPrResult = await github.pulls.create({
+            const PRs = await github.pulls.list({
               owner: 'Brightspace',
               repo: 'brightspace-integration',
-              title: 'Updating BSI Dependencies - ${{ steps.check-changes.outputs.datetime }}',
-              head: 'refs/heads/ghworkflow/bsi_update_${{ steps.check-changes.outputs.datetime }}',
+              head: 'refs/heads/${{ env.BRANCH_NAME }}',
               base: 'refs/heads/master'
-            });
-            github.issues.addLabels({
-              owner: 'Brightspace',
-              repo: 'brightspace-integration',
-              issue_number: createPrResult.data.number,
-              labels: ['auto-merge-update']
-            });
-            return createPrResult.data.number;
+            })
+            if (PRs.length === 0) {
+              const createPrResult = await github.pulls.create({
+                owner: 'Brightspace',
+                repo: 'brightspace-integration',
+                title: 'Updating BSI Dependencies',
+                head: 'refs/heads/${{ env.BRANCH_NAME }}',
+                base: 'refs/heads/master'
+              });
+              github.issues.addLabels({
+                owner: 'Brightspace',
+                repo: 'brightspace-integration',
+                issue_number: createPrResult.data.number,
+                labels: ['auto-update']
+              });
+              return createPrResult.data.number;
+            }
           result-encoding: string
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Approve PR
-        id: approve-pr
-        if: steps.check-changes.outputs.changes-exist
-        env:
-          PULL_ID: ${{ steps.create-pr.outputs.result }}
-        uses: Brightspace/third-party-actions@actions/github-script
-        with:
-          script: |
-            github.pulls.createReview({
-              owner: 'Brightspace',
-              repo: 'brightspace-integration',
-              pull_number: process.env.PULL_ID,
-              event: 'APPROVE'
-            });
-          github-token: ${{ secrets.PR_APPROVAL_GITHUB_TOKEN }}
