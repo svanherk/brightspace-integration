@@ -29,7 +29,9 @@ jobs:
         run: git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Fresh Dependency Install
-        run: npm install
+        run: |
+          rm package-lock.json
+          npm install
       
       - name: Check For Changes
         id: check-changes
@@ -39,6 +41,8 @@ jobs:
         if: steps.check-changes.outputs.changes-exist
         run: |
           git reset --hard origin/master
+          rm -rf ./node_modules
+          rm package-lock.json
           npm install
           git config user.name github-actions
           git config user.email github-actions@github.com
