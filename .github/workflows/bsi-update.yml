@@ -1,6 +1,5 @@
 # This workflow runs "npm i" to see if any BSI dependencies have updated.
 # If so, it commits the package-lock changes and opens a PR if one does not already exist.
-
 name: BSI Update
 
 on:
@@ -26,7 +25,9 @@ jobs:
           node-version: '12.x'
 
       - name: Checkout Branch
-        run: git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
+        run: |
+          git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true  
+          git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Fresh Dependency Install
         run: |
@@ -62,9 +63,7 @@ jobs:
               head: 'Brightspace:refs/heads/${{ env.BRANCH_NAME }}',
               base: 'refs/heads/master'
             })
-            console.log(PRs.data)
             if (PRs.data.length === 0) {
-              console.log('Creating PR...')
               const createPrResult = await github.pulls.create({
                 owner: 'Brightspace',
                 repo: 'brightspace-integration',
@@ -78,9 +77,10 @@ jobs:
                 issue_number: createPrResult.data.number,
                 labels: ['auto-update']
               });
+              console.log('Created new PR')
               return createPrResult.data.number;
             } else {
-              console.log('PR already exists...')
+              console.log('PR already exists')
             }
           result-encoding: string
           github-token: ${{ secrets.GITHUB_TOKEN }}
