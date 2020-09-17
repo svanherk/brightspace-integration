@@ -44,7 +44,7 @@ jobs:
           git config user.email github-actions@github.com
           git add package-lock.json
           git commit -m 'BSI Auto Update Dependencies'
-          git push --force --set-upstream origin $BRANCH_NAME
+          git push --force origin $BRANCH_NAME
 
       - name: Create PR (if needed)
         id: create-pr
