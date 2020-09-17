@@ -62,7 +62,8 @@ jobs:
               head: 'refs/heads/${{ env.BRANCH_NAME }}',
               base: 'refs/heads/master'
             })
-            if (PRs.length === 0) {
+            console.log(PRs)
+            if (PRs.data.length === 0) {
               const createPrResult = await github.pulls.create({
                 owner: 'Brightspace',
                 repo: 'brightspace-integration',
