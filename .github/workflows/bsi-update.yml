@@ -36,7 +36,7 @@ jobs:
       
       - name: Check For Changes
         id: check-changes
-        run: echo "::set-output name=changes-exist::$(git diff -s --exit-code package-lock.json && echo false || echo true)"
+        run: echo "::set-output name=changes-exist::$(git diff --exit-code package-lock.json && echo false || echo true)"
 
       - name: Create Commit
         if: steps.check-changes.outputs.changes-exist
