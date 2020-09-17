@@ -59,11 +59,12 @@ jobs:
             const PRs = await github.pulls.list({
               owner: 'Brightspace',
               repo: 'brightspace-integration',
-              head: 'refs/heads/${{ env.BRANCH_NAME }}',
+              head: 'Brightspace:refs/heads/${{ env.BRANCH_NAME }}',
               base: 'refs/heads/master'
             })
-            console.log(PRs)
+            console.log(PRs.data)
             if (PRs.data.length === 0) {
+              console.log('Creating PR...')
               const createPrResult = await github.pulls.create({
                 owner: 'Brightspace',
                 repo: 'brightspace-integration',
@@ -78,6 +79,8 @@ jobs:
                 labels: ['auto-update']
               });
               return createPrResult.data.number;
+            } else {
+              console.log('PR already exists...')
             }
           result-encoding: string
           github-token: ${{ secrets.GITHUB_TOKEN }}
