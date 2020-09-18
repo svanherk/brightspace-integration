@@ -62,6 +62,7 @@ const componentFiles = [
 	'./node_modules/d2l-organizations/components/d2l-organization-consortium/d2l-organization-consortium-tabs.js',
 	'./node_modules/d2l-save-status/d2l-save-status.js',
 	'./node_modules/d2l-users/components/d2l-profile-image-base.js',
+	'./node_modules/d2l-ads-scheduler/src/components/d2l-manage-schedules.js',
 	'./web-components/d2l-opt-in-flyout-webcomponent.js',
 	'./web-components/d2l-scroll-spy.js',
 	'./web-components/d2l-simple-overlay.js',

@@ -84,6 +84,7 @@
     "d2l-table": "BrightspaceUI/table#semver:^2",
     "d2l-teacher-course-creation": "Brightspace/custom-teacher-course-creation#semver:^1",
     "d2l-users": "BrightspaceHypermediaComponents/users#semver:^2",
+    "d2l-ads-scheduler": "Brightspace/custom-ads-scheduler#semver:^1",
     "es-dev-server": "^1",
     "eslint": "^7",
     "eslint-config-brightspace": "^0.9",
