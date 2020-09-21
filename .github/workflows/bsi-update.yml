@@ -3,7 +3,10 @@
 name: BSI Update
 
 on:
-  workflow_dispatch: # manual trigger for testing
+  schedule:
+    - cron: "30 12-23 * * 1-5" # Mon-Fri 8:30AM-7:30PM EDT. 7:30AM-6:30PM EST.
+    - cron: "30 0-1 * * 2-6" # Mon-Fri 8:30PM-9:30PM EDT. 7:30PM-8:30PM EST.
+  workflow_dispatch: # manual trigger
 
 jobs:
   build:
