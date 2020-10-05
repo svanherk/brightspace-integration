@@ -81,6 +81,7 @@ const appFiles = [
 	'./web-components/d2l-activity-exemptions.js',
 	'./web-components/d2l-awards-leaderboard-ui.js',
 	'./web-components/d2l-cpd-report.js',
+	'./web-components/d2l-discovery-app.js',
 	'./web-components/d2l-enrollment-collection-widget.js',
 	'./web-components/d2l-enrollment-summary-view.js',
 	'./web-components/d2l-image-banner-overlay.js',
