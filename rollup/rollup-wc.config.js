@@ -79,6 +79,7 @@ const appFiles = [
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
+	'./web-components/d2l-activity-editor.js',
 	'./web-components/d2l-activity-exemptions.js',
 	'./web-components/d2l-awards-leaderboard-ui.js',
 	'./web-components/d2l-cpd-report.js',
