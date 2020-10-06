@@ -63,3 +63,4 @@ exports.forwardSlash = forwardSlash;
 exports.backSlash = backSlash;
 exports.ForwardSlashChar = ForwardSlashChar;
 exports.validLangObjectName = validLangObjectName;
+exports.ForbiddenCharacters = ForbiddenCharacters;
