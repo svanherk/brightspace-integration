@@ -77,6 +77,7 @@ const appFiles = [
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-assignment-editor/d2l-activity-assignment-editor.js',
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-quiz-editor/d2l-activity-quiz-editor.js',
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
+	'./web-components/d2l-activity-editor.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
 	'./web-components/d2l-activity-exemptions.js',
@@ -134,7 +135,7 @@ export default merge(config, {
 	plugins: [
 		copy({
 			targets: staticFiles.map((f) => {
-				return {src: f, dest: 'build/unbundled/node_modules'};
+				return { src: f, dest: 'build/unbundled/node_modules' };
 			}),
 			flatten: false
 		}),
