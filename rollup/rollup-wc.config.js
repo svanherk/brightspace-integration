@@ -74,10 +74,11 @@ const componentFiles = [
 	'./web-components/intl-messageformat-parser.js'
 ];
 const appFiles = [
+	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-assignment-editor/d2l-activity-assignment-editor.js',
+	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-quiz-editor/d2l-activity-quiz-editor.js',
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
 	'./web-components/d2l-activity-alignments.js',
 	'./web-components/d2l-activity-collections.js',
-	'./web-components/d2l-activity-editor.js',
 	'./web-components/d2l-activity-exemptions.js',
 	'./web-components/d2l-awards-leaderboard-ui.js',
 	'./web-components/d2l-cpd-report.js',
