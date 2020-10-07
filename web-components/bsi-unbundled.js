@@ -9,6 +9,7 @@ import { announce } from '@brightspace-ui/core/helpers/announce';
 import { registerGestureSwipe } from '@brightspace-ui/core/helpers/gestures.js';
 import { clearDismissible, setDismissible } from '@brightspace-ui/core/helpers/dismissible';
 import { createClient } from '@brightspace-ui/logging';
+import { provideInstance, requestInstance } from '@brightspace-ui/core/mixins/provider-mixin.js';
 
 // ActionButtonMenu (legacy), MediaPlayer
 import '@brightspace-ui/core/components/dropdown/dropdown-button.js';
@@ -83,4 +84,9 @@ window.D2L.Dismissible = {
 	Set: function(cb) {
 		return setDismissible(cb);
 	}
+};
+
+window.D2L.Provider = {
+	provideInstance: provideInstance,
+	requestInstance: requestInstance
 };
