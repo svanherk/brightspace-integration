@@ -99,6 +99,7 @@ const appFiles = [
 	'./web-components/d2l-program-outcomes-picker.js',
 	'./web-components/d2l-quick-eval.js',
 	'./web-components/d2l-content-store.js',
+	'./web-components/d2l-content-store-add-content.js',
 	'./web-components/d2l-capture-central.js',
 	'./web-components/d2l-consistent-evaluation.js',
 	'./web-components/d2l-content-creation.js',
