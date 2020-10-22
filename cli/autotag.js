@@ -77,11 +77,11 @@ async function tryGetActiveDevelopmentRelease() {
 	if (releases.TotalResultCount === 2) {
 		const releaseDate = moment.utc(releases.Results[0].ReleaseDate).tz('America/Toronto');
 		if (releaseDate.year() === nowEst.year() && releaseDate.month() === nowEst.month() && releaseDate.date() === nowEst.date()) {
-			if (nowEst.hour() >= 12) {
-				console.log('Last day of release and after noon EST (branch time), using next release.');
+			if (nowEst.hour() >= 10) {
+				console.log('Last day of release and after 10am EST (approximate last build before branching), using next release.');
 				release = releases.Results[1];
 			} else {
-				console.log('Last day of release and before noon EST (branch time), using current release.');
+				console.log('Last day of release and before 10am EST (approximate last build before branching), using current release.');
 			}
 		}
 	}
