@@ -12,12 +12,11 @@ jobs:
 
     timeout-minutes: 5
 
-    env:
-      BRANCH_NAME: ghworkflow/bsi_auto_update
-
     steps:
       - name: Merge Auto Update PRs
         uses: Brightspace/third-party-actions@pascalgn/automerge-action
+        with:
+          args: "--trace"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           # The labels that need to be present for a pull request to be merged
