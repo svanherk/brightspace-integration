@@ -1,0 +1,30 @@
+# This workflow will check for any BSI auto-update PRs and merge them
+# It will only merge them if they are approved and CI has passed
+name: BSI Update Merge
+
+on:
+  workflow_dispatch: # manual trigger
+
+jobs:
+  build:
+    # self-hosted doesn't work for public repos (security), so need to use ubuntu
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 5
+
+    env:
+      BRANCH_NAME: ghworkflow/bsi_auto_update
+
+    steps:
+      - name: Merge Auto Update PRs
+        uses: Brightspace/third-party-actions@pascalgn/automerge-action
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          # The labels that need to be present for a pull request to be merged
+          MERGE_LABELS: "auto-merge"
+          # The labels to automatically remove from a pull request once it has been merged
+          MERGE_REMOVE_LABELS: "auto-merge"
+          # Possible values are merge, rebase, and squash
+          MERGE_METHOD: "merge"
+          # Disabling retries - if CI isn't done, we will try again in ten minutes
+          MERGE_RETRIES: "0"
