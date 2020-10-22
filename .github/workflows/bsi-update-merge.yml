@@ -3,6 +3,9 @@
 name: BSI Update Merge
 
 on:
+  schedule:
+  - cron: "*/10 12-23 * * 1-5" # Every 10 minutes. Mon-Fri 8AM-759PM EDT. 7AM-659PM EST.
+  - cron: "*/10 0-1 * * 2-6" # Every 10 minutes. Mon-Fri 8PM-959PM EDT. 7PM-859PM EST.
   workflow_dispatch: # manual trigger
 
 jobs:
@@ -26,6 +29,6 @@ jobs:
           # Possible values are merge, rebase, and squash
           MERGE_METHOD: "merge"
           # Might need to retry in case the mergeability check is still calculating
-          MERGE_RETRIES: "1"
+          MERGE_RETRIES: "2"
           # The time to sleep between merge retries, in milliseconds
           MERGE_RETRY_SLEEP: "15000"
