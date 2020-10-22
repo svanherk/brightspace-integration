@@ -25,5 +25,7 @@ jobs:
           MERGE_REMOVE_LABELS: "auto-merge"
           # Possible values are merge, rebase, and squash
           MERGE_METHOD: "merge"
-          # Disabling retries - if CI isn't done, we will try again in ten minutes
-          MERGE_RETRIES: "0"
+          # Might need to retry in case the mergeability check is still calculating
+          MERGE_RETRIES: "1"
+          # The time to sleep between merge retries, in milliseconds
+          MERGE_RETRY_SLEEP: "15000"
