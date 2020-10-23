@@ -1,6 +1,6 @@
 # This workflow will check for any BSI auto-update PRs and merge them
 # It will only merge them if they are approved and CI has passed
-name: BSI Update Merge
+name: BSI Merge
 
 on:
   schedule:
