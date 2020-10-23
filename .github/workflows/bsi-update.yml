@@ -83,6 +83,7 @@ jobs:
               console.log('Created new PR')
               return createPrResult.data.number;
             } else {
+              return false;
               console.log('PR already exists')
             }
           result-encoding: string
