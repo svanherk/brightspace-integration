@@ -84,13 +84,12 @@ jobs:
               return createPrResult.data.number;
             } else {
               console.log('PR already exists')
-              return false;
             }
           result-encoding: string
           github-token: ${{ secrets.GITHUB_TOKEN }}
   
       - name: Approve PR
-        if: steps.create-pr.outputs.result
+        if: steps.create-pr.outputs.result != 'undefined'
         env:
           PULL_REQUEST_ID: ${{ steps.create-pr.outputs.result }}
         uses: Brightspace/third-party-actions@actions/github-script
