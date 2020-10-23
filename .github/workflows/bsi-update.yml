@@ -95,7 +95,7 @@ jobs:
         uses: Brightspace/third-party-actions@actions/github-script
         with:
           script: |
-            if (process.env.PULL_REQUEST_ID && process.env.PULL_REQUEST_ID !== 'undefined') {
+            if (process.env.PULL_REQUEST_ID && process.env.PULL_REQUEST_ID != 'undefined') {
               github.pulls.createReview({
                 owner: 'Brightspace',
                 repo: 'brightspace-integration',
