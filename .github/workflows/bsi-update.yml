@@ -89,17 +89,19 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
   
       - name: Approve PR
-        if: steps.create-pr.outputs.result != 'undefined'
+        if: steps.create-pr.outputs.result
         env:
           PULL_REQUEST_ID: ${{ steps.create-pr.outputs.result }}
         uses: Brightspace/third-party-actions@actions/github-script
         with:
           script: |
-            github.pulls.createReview({
-              owner: 'Brightspace',
-              repo: 'brightspace-integration',
-              pull_number: process.env.PULL_REQUEST_ID,
-              event: 'APPROVE'
-            });
-            console.log('PR approved')
+            if (process.env.PULL_REQUEST_ID && process.env.PULL_REQUEST_ID !== 'undefined') {
+              github.pulls.createReview({
+                owner: 'Brightspace',
+                repo: 'brightspace-integration',
+                pull_number: process.env.PULL_REQUEST_ID,
+                event: 'APPROVE'
+              });
+              console.log('PR approved')
+            }
           github-token: ${{ secrets.BSI_AUTO_APPROVE_GITHUB_TOKEN }}
