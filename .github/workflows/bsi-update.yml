@@ -83,8 +83,8 @@ jobs:
               console.log('Created new PR')
               return createPrResult.data.number;
             } else {
-              return false;
               console.log('PR already exists')
+              return false;
             }
           result-encoding: string
           github-token: ${{ secrets.GITHUB_TOKEN }}
