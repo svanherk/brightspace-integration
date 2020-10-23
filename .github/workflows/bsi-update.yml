@@ -103,4 +103,4 @@ jobs:
               event: 'APPROVE'
             });
             console.log('PR approved')
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.BSI_AUTO_APPROVE_GITHUB_TOKEN }}
