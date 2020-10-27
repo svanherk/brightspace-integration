@@ -46,7 +46,6 @@ const componentFiles = [
 	'./node_modules/@brightspace-ui/core/components/tooltip/tooltip.js',
 	'./node_modules/@brightspace-ui/htmleditor/htmleditor.js',
 	'./node_modules/@brightspace-ui-labs/media-player/media-player.js',
-	'./node_modules/@brightspace-hmc/foundation-components/components/activity/editor/d2l-activity-editor.js',
 	'./node_modules/@brightspace-ui-labs/pagination/pagination.js',
 	'./node_modules/d2l-activities/components/d2l-subtitle/d2l-subtitle.js',
 	'./node_modules/d2l-button-group/d2l-button-group.js',
@@ -78,6 +77,7 @@ const componentFiles = [
 	'./web-components/intl-messageformat-parser.js'
 ];
 const appFiles = [
+	'./node_modules/@brightspace-hmc/foundation-components/components/activity/editor/d2l-hc-activity-editor.js',
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-assignment-editor/d2l-activity-assignment-editor.js',
 	'./node_modules/d2l-activities/components/d2l-activity-editor/d2l-activity-quiz-editor/d2l-activity-quiz-editor.js',
 	'./node_modules/d2l-engagement-dashboard/engagement-dashboard.js',
