@@ -109,7 +109,7 @@ const appFiles = [
 	'./node_modules/d2l-content-store-add-content/d2l-content-store-add-content.js',
 	'./web-components/d2l-capture-central.js',
 	'./web-components/d2l-consistent-evaluation.js',
-	'./node_modules/d2l-consistent-evaluation/d2l-consistent-evaluation-popup-rubric.js',
+	'./node_modules/d2l-consistent-evaluation/consistent-evaluation-popup-rubric.js',
 	'./web-components/d2l-content-creation.js',
 	'./web-components/d2l-user-feedback.js',
 	'./node_modules/d2l-teacher-course-creation/src/components/d2l-teacher-course-creation.js',
