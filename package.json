@@ -78,7 +78,7 @@
     "d2l-opt-in-flyout-webcomponent": "Brightspace/d2l-opt-in-flyout-webcomponent#semver:^2",
     "d2l-organizations": "BrightspaceHypermediaComponents/organizations#semver:^5",
     "d2l-outcomes-level-of-achievements": "Brightspace/outcomes-level-of-achievement-ui.git#semver:^3",
-    "d2l-outcomes-overall-achievement": "Brightspace/d2l-outcomes-overall-achievement.git#20.20.12-v1.1.33",
+    "d2l-outcomes-overall-achievement": "Brightspace/d2l-outcomes-overall-achievement.git#v1.1.33-20.20.12-hotfix-1",
     "d2l-outcomes-user-progress": "Brightspace/d2l-outcomes-user-progress.git#semver:^1",
     "d2l-program-outcomes-picker": "Brightspace/program-outcomes-picker#semver:^3",
     "d2l-resize-aware": "BrightspaceUI/resize-aware.git#semver:^1",
