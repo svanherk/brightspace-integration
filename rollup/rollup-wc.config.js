@@ -54,7 +54,6 @@ const componentFiles = [
 	'./node_modules/d2l-activities/components/d2l-subtitle/d2l-subtitle.js',
 	'./node_modules/d2l-button-group/d2l-button-group.js',
 	'./node_modules/d2l-button-group/d2l-action-button-group.js',
-	'./node_modules/d2l-inputs/d2l-input-textarea.js',
 	'./node_modules/d2l-navigation/d2l-navigation-band.js',
 	'./node_modules/d2l-navigation/d2l-navigation-button-notification-icon.js',
 	'./node_modules/d2l-navigation/d2l-navigation-button.js',
