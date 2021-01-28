@@ -36,7 +36,7 @@
     "@brightspace-ui-labs/media-player": "^1",
     "@brightspace-ui-labs/pagination": "^1",
     "@brightspace-ui-labs/user-feedback": "^1",
-    "@brightspace-ui/core": "^1.78.0",
+    "@brightspace-ui/core": "^1.114.0",
     "@brightspace-ui/htmleditor": "^1",
     "@brightspace-ui/intl": "^3",
     "@brightspace-ui/logging": "^1.1.0",

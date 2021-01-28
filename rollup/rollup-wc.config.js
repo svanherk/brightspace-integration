@@ -77,7 +77,8 @@ const componentFiles = [
 	'./web-components/d2l-simple-overlay.js',
 	'./web-components/d2l-table.js',
 	'./web-components/d2l-tabs.js',
-	'./web-components/intl-messageformat-parser.js'
+	'./web-components/intl-messageformat-parser.js',
+	'./web-components/mathjax.js'
 ];
 const appFiles = [
 	'./node_modules/@brightspace-hmc/foundation-components/components/activity/editor/d2l-hc-activity-editor.js',
