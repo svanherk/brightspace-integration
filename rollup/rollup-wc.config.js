@@ -151,7 +151,7 @@ export default merge(config, {
 	plugins: [
 		copy({
 			targets: staticFiles.map((f) => {
-				return {src: f, dest: 'build/unbundled/node_modules'};
+				return { src: f, dest: 'build/unbundled/node_modules' };
 			}),
 			flatten: false
 		}),
