@@ -29,22 +29,10 @@ jobs:
           git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true  
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
-      - name: Fresh Dependency Install
-        run: |
-          rm package-lock.json
-          npm install
-      
-      - name: Check For Changes
-        id: check-changes
-        run: git diff --exit-code package-lock.json || echo "::set-output name=changes-exist::true"
-
       - name: Create Commit
-        if: steps.check-changes.outputs.changes-exist
         run: |
           git reset --hard origin/master
-          rm -rf ./node_modules
           rm package-lock.json
-          npm install
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add package-lock.json
