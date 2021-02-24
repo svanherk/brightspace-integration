@@ -3,9 +3,6 @@
 name: BSI Update
 
 on:
-  schedule:
-    - cron: "30 12-23 * * 1-5" # Mon-Fri 8:30AM-7:30PM EDT. 7:30AM-6:30PM EST.
-    - cron: "30 0-1 * * 2-6" # Mon-Fri 8:30PM-9:30PM EDT. 7:30PM-8:30PM EST.
   workflow_dispatch: # manual trigger
 
 jobs:
@@ -53,55 +50,3 @@ jobs:
           git add package-lock.json
           git commit -m 'BSI Auto Update Dependencies'
           git push --force origin $BRANCH_NAME
-
-      - name: Create PR (if needed)
-        id: create-pr
-        if: steps.check-changes.outputs.changes-exist
-        uses: Brightspace/third-party-actions@actions/github-script
-        with:
-          script: |
-            const PRs = await github.pulls.list({
-              owner: 'Brightspace',
-              repo: 'brightspace-integration',
-              head: 'Brightspace:refs/heads/${{ env.BRANCH_NAME }}',
-              base: 'refs/heads/master'
-            })
-            if (PRs.data.length === 0) {
-              const createPrResult = await github.pulls.create({
-                owner: 'Brightspace',
-                repo: 'brightspace-integration',
-                title: 'Updating BSI Dependencies',
-                head: 'refs/heads/${{ env.BRANCH_NAME }}',
-                base: 'refs/heads/master'
-              });
-              github.issues.addLabels({
-                owner: 'Brightspace',
-                repo: 'brightspace-integration',
-                issue_number: createPrResult.data.number,
-                labels: ['auto-update', 'auto-merge']
-              });
-              console.log('Created new PR')
-              return createPrResult.data.number;
-            } else {
-              console.log('PR already exists')
-            }
-          result-encoding: string
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-  
-      - name: Approve PR
-        if: steps.create-pr.outputs.result
-        env:
-          PULL_REQUEST_ID: ${{ steps.create-pr.outputs.result }}
-        uses: Brightspace/third-party-actions@actions/github-script
-        with:
-          script: |
-            if (process.env.PULL_REQUEST_ID && process.env.PULL_REQUEST_ID !== 'undefined') {
-              github.pulls.createReview({
-                owner: 'Brightspace',
-                repo: 'brightspace-integration',
-                pull_number: process.env.PULL_REQUEST_ID,
-                event: 'APPROVE'
-              });
-              console.log('PR approved')
-            }
-          github-token: ${{ secrets.BSI_AUTO_APPROVE_GITHUB_TOKEN }}
