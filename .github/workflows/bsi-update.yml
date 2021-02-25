@@ -31,10 +31,11 @@ jobs:
 
       - name: Create Commit
         run: |
+          git fetch origin/master
           git reset --hard origin/master
           rm package-lock.json
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add package-lock.json
           git commit -m 'BSI Auto Update Dependencies'
-          git push origin $BRANCH_NAME
+          git push --force origin $BRANCH_NAME
