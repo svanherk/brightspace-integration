@@ -28,6 +28,7 @@ jobs:
         run: |
           git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
+          git push --force origin $BRANCH_NAME
 
       - name: Create Commit
         run: |
