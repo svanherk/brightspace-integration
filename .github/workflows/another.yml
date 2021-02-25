@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: Brightspace/third-party-actions@actions/checkout
 
       - name: Use Node.js
         uses: Brightspace/third-party-actions@actions/setup-node
