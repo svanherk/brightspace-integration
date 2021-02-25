@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: Brightspace/third-party-actions@actions/checkout
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
