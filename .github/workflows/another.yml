@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     # self-hosted doesn't work for public repos (security), so need to use ubuntu
-    runs-on: ubuntu-latest
+    runs-on: Ubuntu-20.04
 
     timeout-minutes: 20
 
