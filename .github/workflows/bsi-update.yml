@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: Brightspace/third-party-actions@actions/checkout
-        with:
-          fetch-depth: 0
 
       - name: Use Node.js
         uses: Brightspace/third-party-actions@actions/setup-node
@@ -28,7 +26,7 @@ jobs:
 
       - name: Checkout Branch
         run: |
-          git fetch -n origin +refs/heads/fixing_gh_auto_update:refs/heads/fixing_gh_auto_update || true
+          git fetch -n origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Create Commit
@@ -37,6 +35,6 @@ jobs:
           rm package-lock.json
           git config user.name github-actions
           git config user.email github-actions@github.com
-          echo "git add package-lock.json"
-          git commit -am 'BSI Auto Update Dependencies'
+          git add package-lock.json
+          git commit -m 'BSI Auto Update Dependencies'
           git push --force origin $BRANCH_NAME
