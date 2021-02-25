@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Repository
         uses: Brightspace/third-party-actions@actions/checkout
         with:
-          fetch-depth: 2
+          fetch-depth: 15
 
       - name: Use Node.js
         uses: Brightspace/third-party-actions@actions/setup-node
