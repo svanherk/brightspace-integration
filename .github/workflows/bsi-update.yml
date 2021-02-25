@@ -30,4 +30,4 @@ jobs:
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
           git diff
           git status
-          git push --force origin $BRANCH_NAME
+          git push --force --progress --verbose origin $BRANCH_NAME
