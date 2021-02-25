@@ -22,7 +22,7 @@ jobs:
       - name: Use Node.js
         uses: Brightspace/third-party-actions@actions/setup-node
         with:
-          node-version: '12.x'
+          node-version: '11.x'
 
       - name: Checkout Branch
         run: |
