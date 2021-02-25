@@ -26,5 +26,7 @@ jobs:
       - name: Checkout Branch
         run: |
           git remote -v
+          git remote set-url origin git@github.com:svanherk/brightspace-integration.git
+          git remote -v
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
           git push --force origin $BRANCH_NAME
