@@ -27,7 +27,7 @@ jobs:
       - name: Checkout Branch
         run: |
           git reset --hard origin/master
-          git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true  
+          git fetch origin +refs/heads/fixing_gh_auto_update:refs/heads/fixing_gh_auto_update
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Create Commit
