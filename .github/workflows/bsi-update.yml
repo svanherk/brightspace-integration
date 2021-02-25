@@ -26,7 +26,7 @@ jobs:
 
       - name: Checkout Branch
         run: |
-          git fetch -n origin +refs/heads/fixing_gh_auto_update:refs/heads/fixing_gh_auto_update
+          git fetch -n origin +refs/heads/fixing_gh_auto_update:refs/heads/fixing_gh_auto_update || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Create Commit
@@ -36,5 +36,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           echo "git add package-lock.json"
-          git commit -m 'BSI Auto Update Dependencies'
+          git commit -am 'BSI Auto Update Dependencies'
           git push --force origin $BRANCH_NAME
