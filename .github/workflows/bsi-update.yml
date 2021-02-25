@@ -29,4 +29,4 @@ jobs:
           git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
           git diff --stat --cached $BRANCH_NAME
-          git push --force origin $BRANCH_NAME
+          git push --all -u
