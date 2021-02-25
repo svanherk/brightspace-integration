@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Repository
         uses: Brightspace/third-party-actions@actions/checkout
         with:
-          fetch-depth: 15
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: Brightspace/third-party-actions@actions/setup-node
@@ -28,7 +28,6 @@ jobs:
 
       - name: Checkout Branch
         run: |
-          git pull origin master
           git fetch -n origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
