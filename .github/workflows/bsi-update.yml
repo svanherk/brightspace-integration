@@ -26,12 +26,11 @@ jobs:
 
       - name: Checkout Branch
         run: |
-          git fetch -n origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
+          git fetch origin 'refs/heads/*:refs/heads/*' || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
 
       - name: Create Commit
         run: |
-          git fetch origin/master
           git reset --hard origin/master
           rm package-lock.json
           git config user.name github-actions
