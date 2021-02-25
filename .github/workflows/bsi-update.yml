@@ -29,14 +29,3 @@ jobs:
           git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
           git push --force origin $BRANCH_NAME
-
-      - name: Create Commit
-        run: |
-          git pull origin master
-          git reset --hard origin/master
-          rm package-lock.json
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add package-lock.json
-          git commit -m 'BSI Auto Update Dependencies'
-          git push --force origin $BRANCH_NAME
