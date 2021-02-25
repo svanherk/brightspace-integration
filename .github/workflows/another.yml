@@ -1,7 +1,7 @@
 
 # This workflow runs "npm i" to see if any BSI dependencies have updated.
 # If so, it commits the package-lock changes and opens a PR if one does not already exist.
-name: BSI Update
+name: Another
 
 on:
   workflow_dispatch: # manual trigger
