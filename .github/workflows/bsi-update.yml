@@ -28,6 +28,5 @@ jobs:
         run: |
           git fetch origin +refs/heads/$BRANCH_NAME:refs/heads/$BRANCH_NAME || true
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
-          git diff
-          git status
+          git diff --stat --cached origin/master
           git push --force --progress --verbose origin $BRANCH_NAME
