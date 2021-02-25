@@ -25,5 +25,6 @@ jobs:
 
       - name: Checkout Branch
         run: |
+          git remote -v
           git checkout $BRANCH_NAME || git checkout -b $BRANCH_NAME
           git push --force origin $BRANCH_NAME
